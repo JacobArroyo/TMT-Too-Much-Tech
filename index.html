@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Too Much Tech | Home</title>
+    <link rel="stylesheet" href="../TMT-Too-Much-Tech/css/style.css">
+    
+    <style>
+        /* --- HERO SECTION --- */
+        .hero {
+            background-color: var(--sage-green);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 5rem 10%;
+            min-height: 60vh;
+        }
+
+        .hero-text {
+            flex: 1;
+            max-width: 500px;
+        }
+
+        .hero-text h1 {
+            font-size: 3rem;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            font-weight: normal;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            margin-bottom: 2rem;
+        }
+
+        .explore-link {
+            font-size: 1rem;
+            font-weight: bold;
+            color: var(--text-dark);
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--text-dark);
+            padding-bottom: 2px;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        /* Placeholder for the illustration */
+        .illustration-placeholder {
+            width: 100%;
+            max-width: 500px;
+            height: 300px;
+            background-color: #aebfab;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-style: italic;
+        }
+
+        /* --- FEATURES SECTION --- */
+        .features {
+            padding: 5rem 10%;
+            text-align: center;
+            position: relative;
+        }
+
+        .features h2 {
+            font-size: 2.5rem;
+            font-weight: normal;
+            display: inline-block;
+            border-bottom: 2px solid var(--text-dark);
+            padding-bottom: 5px;
+            margin-bottom: 1rem;
+        }
+
+        .features > p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 4rem;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 2.5rem 2rem;
+            text-align: left;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .card h3 {
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .card p {
+            color: #666;
+            margin-bottom: 2rem;
+            min-height: 80px;
+        }
+
+        .card-link {
+            font-weight: bold;
+            border-bottom: 1px solid var(--text-dark);
+            padding-bottom: 2px;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* --- BACK TO TOP BUTTON --- */
+        .back-to-top {
+            position: absolute;
+            bottom: -25px;
+            right: 5%;
+            width: 50px;
+            height: 50px;
+            background-color: var(--light-bg);
+            border: 2px solid var(--text-dark);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <span>🧠 TMT</span> 
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#" class="dropdown">Learn</a></li>
+                <li><a href="#" class="dropdown">Solutions</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Your Brain Deserves a Break</h1>
+                <p>Discover how to manage digital fatigue and restore balance to your life in our always-connected world.</p>
+                <a href="#" class="explore-link">Explore &#8594;</a>
+            </div>
+            <div class="hero-image">
+                <div class="illustration-placeholder">
+                    [ Illustration of person with laptop ]
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <h2>Understanding Digital Fatigue</h2>
+            <p>Explore the science, impacts, and solutions for managing your digital wellbeing</p>
+
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-icon">📖</div>
+                    <h3>Learn</h3>
+                    <p>Understand what digital fatigue is and how it affects your mental and physical well being.</p>
+                    <a href="#" class="card-link">Discover more &#8594;</a>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">👁️</div>
+                    <h3>Effects</h3>
+                    <p>Explore the causes and consequences of excessive screen time on your health and productivity.</p>
+                    <a href="#" class="card-link">Learn about impacts &#8594;</a>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">☀️</div>
+                    <h3>Solution</h3>
+                    <p>Discover practical strategies and healthy habits to reduce digital fatigue and reclaim your time.</p>
+                    <a href="#" class="card-link">Find solutions &#8594;</a>
+                </div>
+            </div>
+
+            <a href="#" class="back-to-top">&#8593;</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Too Much Tech</h3>
+                <p>Helping you understand and manage digital fatigue for a healthier relationship with technology.</p>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Sitemap</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">What is Digital Fatigue?</a></li>
+                    <li><a href="#">Causes & Effects</a></li>
+                    <li><a href="#">Solutions</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Connect With Us</h3>
+                <ul class="social-links">
+                    <li><span>f</span> <a href="#">Too Much Tech</a></li>
+                    <li><span>📷</span> <a href="#">@too.much.tech</a></li>
+                    <li><span>✉</span> <a href="mailto:toomuchtech30@gmail.com">toomuchtech30@gmail.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Too Much Tech. All rights reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
