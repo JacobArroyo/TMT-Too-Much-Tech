@@ -5,6 +5,11 @@
   --text-dark: #333;
   --text-light: #fff;
   --accent-color: #d86952;
+  --card-bg: #ffffff;
+  --card-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  --learn-green: #374a3f;
+  --effects-orange: #d86952;
+  --solution-sage: #c1ccc1;
 }
 
 * {
@@ -36,19 +41,16 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: linear-gradient(to left, #374a3f, #2b3b32);
 }
 
 .logo {
   display: flex;
   align-items: center;
   gap: 10px;
-}
-
-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: linear-gradient(to left, #374a3f, #2b3b32);
 }
 
 nav ul {
@@ -80,11 +82,8 @@ nav ul li a.active {
   min-height: 80vh;
   gap: 3rem;
   overflow: hidden;
-
-  background:
-    linear-gradient(rgba(55, 74, 63, 0.75), rgba(18, 27, 22, 0.75)),
+  background: linear-gradient(rgba(55, 74, 63, 0.75), rgba(18, 27, 22, 0.75)),
     url("../media/man-sleeps-lying-front-computer.png");
-
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -118,6 +117,7 @@ nav ul li a.active {
   color: var(--accent-color);
   transition: all 0.3s ease;
   border: 2px solid transparent;
+  display: inline-block;
 }
 
 .explore-link:hover {
@@ -146,6 +146,7 @@ nav ul li a.active {
   padding: 5rem 10%;
   text-align: center;
   position: relative;
+  background-color: var(--light-bg);
 }
 
 .features h2 {
@@ -166,58 +167,180 @@ nav ul li a.active {
 .card-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2.5rem;
+  gap: 2rem;
+  margin-bottom: 3rem;
 }
 
 .card {
-  transition: transform 0.3s ease;
+  background: var(--card-bg);
   border-radius: 12px;
-  padding: 2.5rem 2rem;
-  background: rgb(236, 236, 236);
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: var(--card-shadow);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid #eaeaea;
 }
 
 .card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border-color: transparent;
 }
 
-.card-icon {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
+.card-image-top {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.color-image {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card:hover .color-image {
+  transform: scale(1.05);
+}
+
+.image-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.emoji-icon {
+  font-size: 4rem;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.card:hover .emoji-icon {
+  transform: scale(1.1);
+}
+
+.color-image-learn {
+  background: linear-gradient(135deg, var(--learn-green) 0%, #2b3b32 100%);
+}
+
+.color-image-effects {
+  background: linear-gradient(135deg, var(--effects-orange) 0%, #c45a45 100%);
+}
+
+.color-image-solution {
+  background: linear-gradient(135deg, var(--solution-sage) 0%, #a8b8a8 100%);
+}
+
+.card-content {
+  padding: 1.5rem;
+  flex-grow: 1;
+}
+
+.circle-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1rem;
+}
+
+.circle-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .circle-icon {
+  transform: scale(1.05);
+}
+
+.circle-icon i {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.circle-learn {
+  background: linear-gradient(135deg, var(--learn-green) 0%, #2b3b32 100%);
+  box-shadow: 0 4px 10px rgba(55, 74, 63, 0.3);
+}
+
+.circle-effects {
+  background: linear-gradient(135deg, var(--effects-orange) 0%, #c45a45 100%);
+  box-shadow: 0 4px 10px rgba(216, 105, 82, 0.3);
+}
+
+.circle-solution {
+  background: linear-gradient(135deg, var(--solution-sage) 0%, #a8b8a8 100%);
+  box-shadow: 0 4px 10px rgba(193, 204, 193, 0.3);
 }
 
 .card h3 {
-  color: var(--accent-color);
   font-size: 1.5rem;
-  margin-bottom: 1rem;
-  transition: all 0.3s ease;
-  display: block;
-  border-bottom: 2px solid transparent;
+  font-weight: 600;
+  color: var(--text-dark);
+  letter-spacing: -0.3px;
+  margin: 0;
 }
 
 .card p {
   color: #666;
-  margin-bottom: 2rem;
-  min-height: 80px;
+  line-height: 1.6;
+  font-size: 0.9rem;
+  margin-bottom: 0;
 }
 
-.card-link {
-  font-weight: bold;
-  border-bottom: 2px solid transparent;
-  padding-bottom: 2px;
+.card-button-bottom {
+  background: linear-gradient(135deg, #2c3e2f 0%, #1a2a1d 100%);
+  padding: 1rem 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.card-btn {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
+  justify-content: center;
+  gap: 8px;
+  color: white;
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  width: 100%;
 }
 
-.card-link:hover {
-  border-bottom: 2px solid var(--text-dark);
+.card-btn i {
+  transition: transform 0.3s ease;
+  font-size: 0.8rem;
 }
 
-.card-link:active {
-  border-bottom: 2px solid #999999;
-  color: #999999;
-  opacity: 0.7;
+.card-btn:hover {
+  gap: 12px;
+  color: var(--accent-color);
+}
+
+.card-btn:hover i {
+  transform: translateX(4px);
+}
+
+.card-button-bottom:hover {
+  background: linear-gradient(135deg, #1e2e21 0%, #0f1a11 100%);
 }
 
 .back-to-top {
@@ -235,11 +358,12 @@ nav ul li a.active {
   font-size: 1.5rem;
   cursor: pointer;
   z-index: 10;
+  transition: all 0.3s ease;
 }
 
 .back-to-top:hover {
   background-color: #cccccc;
-  transition: all 0.5s ease;
+  transform: translateY(-3px);
 }
 
 .back-to-top:active {
@@ -294,4 +418,101 @@ footer {
   padding-top: 1.5rem;
   font-size: 0.8rem;
   color: #cccccc;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 4rem 5%;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  nav ul {
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .social-links li {
+    justify-content: center;
+  }
+
+  .features {
+    padding: 3rem 5%;
+  }
+  
+  .card-image-top {
+    height: 180px;
+  }
+  
+  .emoji-icon {
+    font-size: 3rem;
+  }
+  
+  .circle-icon {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .circle-icon i {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .features h2 {
+    font-size: 1.8rem;
+  }
+
+  .card h3 {
+    font-size: 1.3rem;
+  }
+  
+  .card-btn {
+    font-size: 0.8rem;
+  }
+  
+  .circle-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .circle-icon i {
+    font-size: 1.2rem;
+  }
 }
