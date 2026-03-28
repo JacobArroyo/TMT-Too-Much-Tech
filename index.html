@@ -6,9 +6,43 @@
     <title>Too Much Tech | Home</title>
     <link rel="stylesheet" href="css/style.css" />
     <link
+      href="https://fonts.googleapis.com/css?family=Merriweather"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open Sans"
+      rel="stylesheet"
+    />
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
+    <style>
+      .card-image-learn {
+        background:
+          linear-gradient(rgba(90, 155, 230, 0.75), rgba(126, 213, 253, 0.75)),
+          url("media/learn-df.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      .card-image-effects {
+        background:
+          linear-gradient(rgba(245, 144, 144, 0.75), rgba(151, 3, 3, 0.75)),
+          url("media/effects-of-df.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      .card-image-solution {
+        background:
+          linear-gradient(rgba(115, 175, 140, 0.75), rgba(4, 180, 83, 0.75)),
+          url("media/solution-to-df.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -33,16 +67,17 @@
     <main>
       <section class="hero">
         <div class="hero-text">
-          <h1>Your Brain Deserves a Break</h1>
+          <h1>You and Your Brain Deserves a Break.</h1>
           <p>
+            <!-- Change this -->
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime odit
-            corporis aperiam nam atque aspernatur voluptas nihil natus at. Porro
-            facilis quae, nulla consequuntur odit voluptatem necessitatibus
-            sequi deleniti est.
+            corporis aperiam nam atque aspernatur voluptas nihil natus at.
           </p>
+          <br>
           <a href="#explore-df" class="explore-link"
-            >Explore <i class="fa-solid fa-arrow-right"></i
-          ></a>
+            >Explore &nbsp;<i class="fa-solid fa-arrow-right"></i
+            >&nbsp;&nbsp;</a
+          >
         </div>
         <div class="hero-image">
           <div class="illustration-placeholder">
@@ -58,6 +93,8 @@
 
       <section class="features" id="explore-df">
         <h2>Understanding Digital Fatigue</h2>
+        <hr />
+        <br />
         <p>
           Explore the science, impacts, and solutions for managing your digital
           wellbeing
@@ -65,74 +102,83 @@
 
         <div class="card-container">
           <div class="card">
-            <div class="card-image-top">
-              <div class="color-image color-image-learn">
-                <div class="image-overlay">
-                  <i class="fas fa-book emoji-icon"></i>
+            <div class="card-top">
+              <div class="card-image card-image-learn">
+                <div class="overlay">
+                  <h2><i class="fa-solid fa-book"></i>&nbsp;&nbsp;Learn</h2>
                 </div>
               </div>
             </div>
+
             <div class="card-content">
-              <div class="circle-title">
-                <div class="circle-icon circle-learn">
-                  <i class="fas fa-book"></i>
-                </div>
-                <h3>Learn</h3>
-              </div>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, aperiam ut quas cumque hic ea blanditiis ipsum velit sapiente a, ex quisquam vero sint? Voluptas saepe inventore aliquid ullam nam?
+                <!-- Change this -->
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Praesentium, doloribus consequuntur nemo impedit minus similique
+                nam vitae eius corrupti porro minima laboriosam adipisci ad et
+                voluptates illum repellat unde provident.
               </p>
-            </div>
-            <div class="card-button-bottom">
-              <a href="#" class="card-btn">Discover more <i class="fa-solid fa-arrow-right"></i></a>
+              <br /><br />
+              <a href="#">
+                <div class="card-btn">
+                  Read more &nbsp; <i class="fa-solid fa-arrow-right"></i>
+                </div>
+              </a>
             </div>
           </div>
 
           <div class="card">
-            <div class="card-image-top">
-              <div class="color-image color-image-effects">
-                <div class="image-overlay">
-                  <i class="fas fa-eye emoji-icon"></i>
+            <div class="card-top">
+              <div class="card-image card-image-effects">
+                <div class="overlay">
+                  <h2><i class="fa-solid fa-brain"></i>&nbsp;&nbsp;Effects</h2>
                 </div>
               </div>
             </div>
+
             <div class="card-content">
-              <div class="circle-title">
-                <div class="circle-icon circle-effects">
-                  <i class="fas fa-eye"></i>
-                </div>
-                <h3>Effects</h3>
-              </div>
               <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam autem itaque at consequatur, nesciunt distinctio beatae eveniet facilis, veritatis rerum ex accusamus neque non tempore ad iusto praesentium nihil velit.
+                <!-- Change this -->
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Praesentium, doloribus consequuntur nemo impedit minus similique
+                nam vitae eius corrupti porro minima laboriosam adipisci ad et
+                voluptates illum repellat unde provident.
               </p>
-            </div>
-            <div class="card-button-bottom">
-              <a href="#" class="card-btn">Learn about impacts <i class="fa-solid fa-arrow-right"></i></a>
+              <br /><br />
+              <a href="#">
+                <div class="card-btn">
+                  Read more &nbsp;
+                  <i class="fa-solid fa-arrow-right"></i>
+                </div>
+              </a>
             </div>
           </div>
 
           <div class="card">
-            <div class="card-image-top">
-              <div class="color-image color-image-solution">
-                <div class="image-overlay">
-                  <i class="fas fa-lightbulb emoji-icon"></i>
+            <div class="card-top">
+              <div class="card-image card-image-solution">
+                <div class="overlay">
+                  <h2>
+                    <i class="fa-solid fa-lightbulb"></i>&nbsp;&nbsp;Solution
+                  </h2>
                 </div>
               </div>
             </div>
+
             <div class="card-content">
-              <div class="circle-title">
-                <div class="circle-icon circle-solution">
-                  <i class="fas fa-lightbulb"></i>
-                </div>
-                <h3>Solution</h3>
-              </div>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae earum unde voluptates laboriosam explicabo et, alias pariatur dolorum dolore distinctio deserunt asperiores?
+                <!-- Change this -->
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Praesentium, doloribus consequuntur nemo impedit minus similique
+                nam vitae eius corrupti porro minima laboriosam adipisci ad et
+                voluptates illum repellat unde provident.
               </p>
-            </div>
-            <div class="card-button-bottom">
-              <a href="#" class="card-btn">Find solutions <i class="fa-solid fa-arrow-right"></i></a>
+              <br /><br />
+              <a href="#">
+                <div class="card-btn">
+                  Read more &nbsp; <i class="fa-solid fa-arrow-right"></i>
+                </div>
+              </a>
             </div>
           </div>
         </div>
@@ -146,6 +192,7 @@
         <div class="footer-column">
           <h3>Too Much Tech</h3>
           <p>
+            <!-- Change this -->
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
             eius maiores corporis incidunt, animi quos aut nostrum eveniet
             laborum nisi odit quasi, et optio ducimus delectus debitis obcaecati
@@ -166,30 +213,18 @@
         </div>
 
         <div class="footer-column">
-          <h3>Connect With Us</h3>
+          <h3>Connect With Us!</h3>
           <ul class="social-links">
             <li>
-              <img
-                src="media/facebookicon.png"
-                alt="Facebook"
-                style="width: 20px; height: 20px"
-              />
-              <a href="#">Too Much Tech</a>
+              <i class="fa-brands fa-facebook"></i
+              ><a href="#"> Too Much Tech</a>
             </li>
             <li>
-              <img
-                src="media/igicon.png"
-                alt="Instagram"
-                style="width: 20px; height: 20px"
-              />
-              <a href="#">@too.much.tech</a>
+              <i class="fa-brands fa-instagram"></i
+              ><a href="#"> @too.much.tech</a>
             </li>
             <li>
-              <img
-                src="media/emailicon.png"
-                alt="Email"
-                style="width: 20px; height: 20px"
-              />
+              <i class="fa-solid fa-envelope"></i>
               <a href="mailto:toomuchtech30@gmail.com"
                 >toomuchtech30@gmail.com</a
               >
