@@ -62,7 +62,6 @@
         color: #fff;
       }
 
-      /* PURE CSS POPUP (No Javascript Required) */
       .css-popup {
         visibility: hidden;
         opacity: 0;
@@ -83,7 +82,6 @@
         cursor: default;
       }
 
-      /* The little triangle arrow at the bottom of the popup */
       .css-popup::after {
         content: "";
         position: absolute;
@@ -95,16 +93,14 @@
         border-color: #333 transparent transparent transparent;
       }
 
-      /* Show the popup when hovering or clicking the button */
       .social-btn:hover .css-popup,
       .social-btn:focus .css-popup {
         visibility: visible;
         opacity: 1;
       }
 
-      /* CSS One-Click Highlight Trick */
       .copy-text {
-        user-select: all; /* Instantly selects all text when clicked */
+        user-select: all;
         -webkit-user-select: all;
         background-color: rgba(255, 255, 255, 0.15);
         padding: 4px 8px;
@@ -114,7 +110,6 @@
         cursor: copy;
       }
 
-      /* Team Section */
       .team-section {
         padding: 4rem 10%;
       }
@@ -190,32 +185,6 @@
         max-width: 700px;
         margin: 0 auto;
         line-height: 1.6;
-      }
-
-      /* Back to Top Button */
-      .back-to-top {
-        position: fixed;
-        bottom: 30px;
-        right: 30px;
-        background-color: #4CAF50; /* Green accent color */
-        color: white;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.2rem;
-        text-decoration: none;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-        transition: transform 0.3s ease, background-color 0.3s ease;
-        z-index: 1000;
-      }
-
-      .back-to-top:hover {
-        background-color: #333;
-        color: white;
-        transform: translateY(-5px);
       }
     </style>
   </head>

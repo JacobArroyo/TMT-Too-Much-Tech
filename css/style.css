@@ -84,13 +84,6 @@ nav ul li a.active {
   min-height: 80vh;
   gap: 3rem;
   overflow: hidden;
-
-  background:
-    linear-gradient(rgba(55, 74, 63, 0.75), rgba(18, 27, 22, 0.75)),
-    url("../media/man-sleeps-lying-front-computer.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 .hero-text {
@@ -290,14 +283,14 @@ nav ul li a.active {
 }
 
 .back-to-top:hover {
-  background-color: #374a3f;
+  background-color: #506b5b;
   color: white;
   transform: translateY(-5px);
 }
 
 .back-to-top:active {
-  background-color: #27362e;
-  color: var(--dark-green);
+  background-color: var(--dark-green);
+  color: #506b5b;
 }
 
 footer {
