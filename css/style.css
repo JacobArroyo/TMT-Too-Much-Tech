@@ -345,3 +345,9 @@ footer {
   font-size: 0.8rem;
   color: #cccccc;
 }
+
+.copy-text {
+  user-select: all; /* Instantly selects all text when clicked */
+  -webkit-user-select: all;
+  cursor: copy;
+}
