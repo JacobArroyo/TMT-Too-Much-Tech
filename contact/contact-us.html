@@ -8,7 +8,6 @@
     
     <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet" />
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     
     <style>
@@ -16,7 +15,7 @@
       .contact-header {
         text-align: center;
         padding: 4rem 10% 2rem;
-        background-color: #f4f7f6; /* Subtle background for the header */
+        background-color: #f4f7f6;
       }
       .contact-header h1 {
         font-family: 'Merriweather', serif;
@@ -34,6 +33,7 @@
         gap: 1.5rem;
         flex-wrap: wrap;
       }
+      
       .social-btn {
         display: inline-flex;
         align-items: center;
@@ -47,11 +47,66 @@
         font-weight: bold;
         box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         transition: all 0.3s ease;
+        position: relative; /* Required for the CSS Popup */
+        cursor: pointer;
       }
-      .social-btn:hover {
+      
+      .social-btn:hover, .social-btn:focus {
         transform: translateY(-3px);
-        background-color: #4CAF50; /* Adjust to match your theme's accent color */
+        background-color: #4CAF50; 
         color: #fff;
+      }
+
+      /* PURE CSS POPUP (No Javascript Required) */
+      .css-popup {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        bottom: 130%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #333;
+        color: #fff;
+        padding: 10px 15px;
+        border-radius: 6px;
+        white-space: nowrap;
+        font-size: 0.85rem;
+        font-weight: normal;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        z-index: 100;
+        cursor: default;
+      }
+
+      /* The little triangle arrow at the bottom of the popup */
+      .css-popup::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -6px;
+        border-width: 6px;
+        border-style: solid;
+        border-color: #333 transparent transparent transparent;
+      }
+
+      /* Show the popup when hovering or clicking the button */
+      .social-btn:hover .css-popup,
+      .social-btn:focus .css-popup {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      /* CSS One-Click Highlight Trick */
+      .copy-text {
+        user-select: all; /* Instantly selects all text when clicked */
+        -webkit-user-select: all;
+        background-color: rgba(255, 255, 255, 0.15);
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-family: monospace;
+        font-size: 0.95rem;
+        cursor: copy;
       }
 
       /* Team Section */
@@ -66,7 +121,6 @@
       }
       .team-grid {
         display: grid;
-        /* Responsive grid: fits as many 250px columns as possible */
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 2.5rem;
       }
@@ -78,17 +132,14 @@
         text-align: center;
         font-family: 'Open Sans', sans-serif;
       }
-      
-      /* Forces a perfect 1x1 Square for images */
       .team-card img.member-pic {
         width: 100%;
         aspect-ratio: 1 / 1;
-        object-fit: cover; /* Prevents stretching */
-        border-radius: 8px; /* Change to 50% if you want circles */
+        object-fit: cover; 
+        border-radius: 8px; 
         margin-bottom: 1.5rem;
-        background-color: #e9ecef; /* Placeholder color */
+        background-color: #e9ecef; 
       }
-      
       .team-card h3 {
         font-family: 'Merriweather', serif;
         font-size: 1.2rem;
@@ -97,7 +148,7 @@
       }
       .team-card .role {
         font-weight: bold;
-        color: #5a9be6; /* Blue from your reference gradients */
+        color: #5a9be6; 
         margin-bottom: 1rem;
         font-size: 0.9rem;
       }
@@ -111,13 +162,7 @@
         font-size: 0.85rem;
         border-top: 1px solid #eee;
         padding-top: 1rem;
-      }
-      .team-card .contact-info a {
         color: #333;
-        text-decoration: none;
-      }
-      .team-card .contact-info a:hover {
-        color: #5a9be6;
       }
 
       /* Group Photo Section */
@@ -146,11 +191,7 @@
   <body>
     <header>
       <div class="logo">
-        <img
-          src="../media/tmtlogo.png"
-          alt="TMT Logo"
-          style="height: 60px; width: auto"
-        />
+        <img src="../media/tmtlogo.png" alt="TMT Logo" style="height: 60px; width: auto" />
       </div>
       <nav>
         <ul>
@@ -168,15 +209,21 @@
         <h1>Get in Touch</h1>
         <p>Follow us on social media or reach out via email to connect with the Too Much Tech team.</p>
         <div class="social-bar">
-          <a href="https://www.facebook.com/profile.php?id=61582095175845" class="social-btn">
+          <a href="https://www.facebook.com/profile.php?id=61582095175845" class="social-btn" target="_blank">
             <i class="fa-brands fa-facebook" style="color: #1877F2;"></i> Facebook
           </a>
-          <a href="https://www.instagram.com/too.much.tech/" class="social-btn">
+          <a href="https://www.instagram.com/too.much.tech/" class="social-btn" target="_blank">
             <i class="fa-brands fa-instagram" style="color: #E4405F;"></i> Instagram
           </a>
-          <a href="mailto:toomuchtech30@gmail.com" class="social-btn">
+          
+          <div tabindex="0" class="social-btn">
             <i class="fa-solid fa-envelope" style="color: #EA4335;"></i> Gmail
-          </a>
+            <span class="css-popup">
+              Click text to highlight, then Copy:<br><br>
+              <span class="copy-text">toomuchtech30@gmail.com</span>
+            </span>
+          </div>
+
         </div>
       </section>
 
@@ -185,102 +232,102 @@
         <div class="team-grid">
           
           <div class="team-card">
-            <img src="media/member1.jpg" alt="Member 1" class="member-pic" />
+            <img src="media/Jacob.jpg" alt="Member 1" class="member-pic" />
             <h3>Arroyo, Jacob Rex A.</h3>
             <div class="role">Project Manager</div>
             <div class="desc">Alex ensures the team stays on track, coordinating our efforts to deliver the best digital wellness content.</div>
             <div class="contact-info">
-              <i class="fa-solid fa-envelope"></i> <a href="mailto:alex@example.com">alex@example.com</a>
+              <i class="fa-solid fa-envelope"></i> <span class="copy-text">toomuchtech30@gmail.com</span>
             </div>
           </div>
 
           <div class="team-card">
-            <img src="media/member2.jpg" alt="Member 2" class="member-pic" />
+            <img src="media/Asia1x1.jpeg" alt="Member 2" class="member-pic" />
             <h3>Asia, Charles Andres T.</h3>
             <div class="role">Lead Researcher</div>
             <div class="desc">Jordan dives deep into the psychology of digital fatigue to ensure our solutions are science-backed.</div>
             <div class="contact-info">
-              <i class="fa-solid fa-envelope"></i> <a href="mailto:jordan@example.com">jordan@example.com</a>
+              <i class="fa-solid fa-envelope"></i> <span class="copy-text">toomuchtech30@gmail.com</span>
             </div>
           </div>
 
           <div class="team-card">
-            <img src="media/member3.jpg" alt="Member 3" class="member-pic" />
+            <img src="media/Depollo1by1.jpeg" alt="Member 3" class="member-pic" />
             <h3>Depollo, Ralph Geofrey G.</h3>
             <div class="role">Frontend Developer</div>
             <div class="desc">Taylor brings our website to life, writing clean code to ensure a smooth, fatigue-free user experience.</div>
             <div class="contact-info">
-              <i class="fa-solid fa-envelope"></i> <a href="mailto:taylor@example.com">taylor@example.com</a>
+              <i class="fa-solid fa-envelope"></i> <span class="copy-text">toomuchtech30@gmail.com</span>
             </div>
           </div>
 
           <div class="team-card">
-            <img src="media/member4.jpg" alt="Member 4" class="member-pic" />
+            <img src="media/Heaven.png" alt="Member 4" class="member-pic" />
             <h3>Francisco, Heaven Lee Chryzler R.</h3>
             <div class="role">UI/UX Designer</div>
             <div class="desc">Casey designs interfaces that are easy on the eyes, actively working to reduce screen strain.</div>
             <div class="contact-info">
-              <i class="fa-solid fa-envelope"></i> <a href="mailto:casey@example.com">casey@example.com</a>
+              <i class="fa-solid fa-envelope"></i> <span class="copy-text">toomuchtech30@gmail.com</span>
             </div>
           </div>
 
           <div class="team-card">
-            <img src="media/member5.jpg" alt="Member 5" class="member-pic" />
+            <img src="media/marquez].png" alt="Member 5" class="member-pic" />
             <h3>Marquez, Ian Gabriel V.</h3>
             <div class="role">Content Strategist</div>
             <div class="desc">Sam curates all the articles, tips, and resources you find in our learning center.</div>
             <div class="contact-info">
-              <i class="fa-solid fa-envelope"></i> <a href="mailto:sam@example.com">sam@example.com</a>
+              <i class="fa-solid fa-envelope"></i> <span class="copy-text">toomuchtech30@gmail.com</span>
             </div>
           </div>
 
           <div class="team-card">
-            <img src="media/member6.jpg" alt="Member 6" class="member-pic" />
+            <img src="media/Mendoza.png" alt="Member 6" class="member-pic" />
             <h3>Mendoza, Laurence C.</h3>
             <div class="role">Wellness Consultant</div>
             <div class="desc">Morgan applies real-world health practices to digital environments to create actionable solutions.</div>
             <div class="contact-info">
-              <i class="fa-solid fa-envelope"></i> <a href="mailto:morgan@example.com">morgan@example.com</a>
+              <i class="fa-solid fa-envelope"></i> <span class="copy-text">toomuchtech30@gmail.com</span>
             </div>
           </div>
 
           <div class="team-card">
-            <img src="media/member7.jpg" alt="Member 7" class="member-pic" />
+            <img src="media/RACHO1X1.jpg" alt="Member 7" class="member-pic" />
             <h3>Racho, Miko Antonio S.</h3>
             <div class="role">Community Manager</div>
             <div class="desc">Jamie runs our social media channels, keeping our audience engaged without overwhelming them.</div>
             <div class="contact-info">
-              <i class="fa-solid fa-envelope"></i> <a href="mailto:jamie@example.com">jamie@example.com</a>
+              <i class="fa-solid fa-envelope"></i> <span class="copy-text">toomuchtech30@gmail.com</span>
             </div>
           </div>
 
           <div class="team-card">
-            <img src="media/member8.jpg" alt="Member 8" class="member-pic" />
+            <img src="media/RAMOS_JAZZTINEKURT.jpg" alt="Member 8" class="member-pic" />
             <h3>Ramos, Jazztine Kurt U.</h3>
             <div class="role">Data Analyst</div>
             <div class="desc">Riley monitors our site metrics to figure out what content helps our users the most.</div>
             <div class="contact-info">
-              <i class="fa-solid fa-envelope"></i> <a href="mailto:riley@example.com">riley@example.com</a>
+              <i class="fa-solid fa-envelope"></i> <span class="copy-text">toomuchtech30@gmail.com</span>
             </div>
           </div>
 
           <div class="team-card">
-            <img src="media/member9.jpg" alt="Member 9" class="member-pic" />
+            <img src="media/TUNOD 1X1.png" alt="Member 9" class="member-pic" />
             <h3>Tunod, Darene Hanz H.</h3>
             <div class="role">Quality Assurance</div>
             <div class="desc">Avery rigorously tests everything we build so that bugs never add to your digital fatigue.</div>
             <div class="contact-info">
-              <i class="fa-solid fa-envelope"></i> <a href="mailto:avery@example.com">avery@example.com</a>
+              <i class="fa-solid fa-envelope"></i> <span class="copy-text">toomuchtech30@gmail.com</span>
             </div>
           </div>
 
           <div class="team-card">
-            <img src="media/member10.jpg" alt="Member 10" class="member-pic" />
+            <img src="media/Villarta.jpg" alt="Member 10" class="member-pic" />
             <h3>Villarta, Joeshua Louis S.</h3>
             <div class="role">Support Specialist</div>
             <div class="desc">Quinn is your first point of contact for any questions, issues, or feedback you might have.</div>
             <div class="contact-info">
-              <i class="fa-solid fa-envelope"></i> <a href="mailto:quinn@example.com">quinn@example.com</a>
+              <i class="fa-solid fa-envelope"></i> <span class="copy-text">toomuchtech30@gmail.com</span>
             </div>
           </div>
 
@@ -288,7 +335,7 @@
       </section>
 
       <section class="group-photo-section">
-        <img src="media/group-photo.jpg" alt="The Too Much Tech Team Group Photo" />
+        <img src="media/IMG_1586.JPG" alt="The Too Much Tech Team Group Photo" />
         <p>
           <strong>The Too Much Tech Team.</strong> We are a dedicated group of students and professionals who believe that technology should serve us, not drain us. Together, we work to build awareness and provide actionable solutions for digital fatigue.
         </p>
@@ -330,7 +377,7 @@
             </li>
             <li>
               <i class="fa-solid fa-envelope"></i>
-              <a href="mailto:toomuchtech30@gmail.com">toomuchtech30@gmail.com</a>
+              <span class="copy-text" style="color: #ccc; background: transparent; padding: 0;">toomuchtech30@gmail.com</span>
             </li>
           </ul>
         </div>
