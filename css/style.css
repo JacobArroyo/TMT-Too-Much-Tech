@@ -62,15 +62,16 @@ nav ul {
 
 nav ul li a {
   color: var(--text-light);
-  font-size: 0.9rem;
+  font-size: 1rem;
   padding-bottom: 5px;
   border-bottom: 2px solid transparent;
   text-transform: uppercase;
-  transition: border-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 nav ul li a:hover,
 nav ul li a.active {
+  font-weight: bold;
   border-bottom: 2px solid var(--text-light);
 }
 
@@ -131,20 +132,6 @@ nav ul li a.active {
 }
 
 .explore-link:active {
-  color: #9e3d29;
-}
-
-.explore-link i {
-  display: inline-block;
-  transition: all 0.3s ease;
-}
-
-.explore-link:hover i {
-  color: var(--text-light);
-  transform: translateX(8px);
-}
-
-.explore-link:active i {
   color: #9e3d29;
 }
 
@@ -281,30 +268,35 @@ nav ul li a.active {
 }
 
 .back-to-top {
-  position: absolute;
-  bottom: -25px;
-  right: 5%;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: var(--light-bg);
+  color: #374a3f;
   width: 50px;
   height: 50px;
-  background-color: var(--light-bg);
-  border: 3px solid var(--dark-green);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
-  cursor: pointer;
-  z-index: 10;
-  transition: all 0.3s ease;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border: 2px solid var(--dark-green);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+  z-index: 99;
 }
 
 .back-to-top:hover {
-  background-color: #cccccc;
-  transform: translateY(-3px);
+  background-color: #374a3f;
+  color: white;
+  transform: translateY(-5px);
 }
 
 .back-to-top:active {
-  background-color: #999999;
+  background-color: #27362e;
   color: var(--dark-green);
 }
 
