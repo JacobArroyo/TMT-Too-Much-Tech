@@ -125,7 +125,9 @@ nav ul li a.active {
 }
 
 .explore-link:active {
-  color: #9e3d29;
+  color: #cccccc;
+  border: 2px solid #9e3d29;
+  background-color: #9e3d29;
 }
 
 .hero-image {
@@ -350,4 +352,5 @@ footer {
   user-select: all;
   -webkit-user-select: all;
   cursor: copy;
+  background: transparent;
 }
