@@ -347,7 +347,7 @@ footer {
 }
 
 .copy-text {
-  user-select: all; /* Instantly selects all text when clicked */
+  user-select: all;
   -webkit-user-select: all;
   cursor: copy;
 }
