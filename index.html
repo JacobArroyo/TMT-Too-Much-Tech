@@ -18,6 +18,11 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
     <style>
+      /* Smooth scrolling for the whole page */
+      html {
+        scroll-behavior: smooth;
+      }
+
       .card-image-learn {
         background:
           linear-gradient(rgba(90, 155, 230, 0.75), rgba(126, 213, 253, 0.75)),
@@ -42,9 +47,35 @@
         background-position: center;
         background-repeat: no-repeat;
       }
+
+      /* CSS for the Fixed Back to Top Button */
+      .back-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background-color: #4CAF50; /* Adjust color to match your theme if needed */
+        color: white;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        text-decoration: none;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        transition: transform 0.3s ease, background-color 0.3s ease;
+        z-index: 1000;
+      }
+
+      .back-to-top:hover {
+        background-color: #333;
+        color: white;
+        transform: translateY(-5px);
+      }
     </style>
   </head>
-  <body>
+  <body id="top">
     <header>
       <div class="logo">
         <img
@@ -69,7 +100,6 @@
         <div class="hero-text">
           <h1>You and Your Brain Deserves a Break.</h1>
           <p>
-            <!-- Change this -->
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime odit
             corporis aperiam nam atque aspernatur voluptas nihil natus at.
           </p>
@@ -112,7 +142,6 @@
 
             <div class="card-content">
               <p>
-                <!-- Change this -->
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                 Praesentium, doloribus consequuntur nemo impedit minus similique
                 nam vitae eius corrupti porro minima laboriosam adipisci ad et
@@ -138,7 +167,6 @@
 
             <div class="card-content">
               <p>
-                <!-- Change this -->
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                 Praesentium, doloribus consequuntur nemo impedit minus similique
                 nam vitae eius corrupti porro minima laboriosam adipisci ad et
@@ -167,7 +195,6 @@
 
             <div class="card-content">
               <p>
-                <!-- Change this -->
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                 Praesentium, doloribus consequuntur nemo impedit minus similique
                 nam vitae eius corrupti porro minima laboriosam adipisci ad et
@@ -182,9 +209,12 @@
             </div>
           </div>
         </div>
-
-        <a href="#" class="back-to-top"><i class="fa-solid fa-arrow-up"></i></a>
       </section>
+      
+      <a href="#top" class="back-to-top" title="Go to top">
+        <i class="fa-solid fa-arrow-up"></i>
+      </a>
+      
     </main>
 
     <footer>
@@ -192,7 +222,6 @@
         <div class="footer-column">
           <h3>Too Much Tech</h3>
           <p>
-            <!-- Change this -->
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
             eius maiores corporis incidunt, animi quos aut nostrum eveniet
             laborum nisi odit quasi, et optio ducimus delectus debitis obcaecati
@@ -217,16 +246,15 @@
           <ul class="social-links">
             <li>
               <i class="fa-brands fa-facebook"></i
-              ><a href="#"> Too Much Tech</a>
+              ><a href="contact/contact-us.html"> Too Much Tech</a>
             </li>
             <li>
               <i class="fa-brands fa-instagram"></i
-              ><a href="#"> @too.much.tech</a>
+              ><a href="contact/contact-us.html"> @too.much.tech</a>
             </li>
             <li>
               <i class="fa-solid fa-envelope"></i>
-              <a href="mailto:toomuchtech30@gmail.com"
-                >toomuchtech30@gmail.com</a
+              <a href="contact/contact-us.html">toomuchtech30@gmail.com</a
               >
             </li>
           </ul>
