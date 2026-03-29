@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Too Much Tech | Our Purpose</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    
+    <style>
+      /* Smooth scrolling */
+      html { 
+        scroll-behavior: smooth; 
+      }
+
+      /* === STICKY FOOTER FIX === */
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      main {
+        flex: 1; 
+      }
+      /* ========================= */
+
+      /* Page Header */
+      .about-header { text-align: center; padding: 4rem 10% 2rem; background-color: var(--light-bg); }
+      .about-header h1 { margin-bottom: 1rem; color: var(--text-dark); }
+      .about-header p { color: #555; max-width: 700px; margin: 0 auto; }
+      
+      /* Story Sections */
+      .story-section { display: flex; align-items: center; gap: 4rem; padding: 5rem 10%; background-color: #fff; }
+      .story-content { flex: 1; }
+      .story-content h2 { font-size: 2rem; color: var(--dark-green); margin-bottom: 1.5rem; }
+      .story-content p { color: #555; line-height: 1.8; margin-bottom: 1.5rem; }
+      .story-image { flex: 1; }
+      .story-image img { width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); background-color: var(--sage-green); object-fit: cover; }
+      
+      /* Core Values Grid */
+      .values-section { padding: 5rem 10%; background-color: var(--light-bg); text-align: center; }
+      .values-section h2 { font-family: 'Merriweather', serif; font-size: 2rem; margin-bottom: 3rem; color: var(--dark-green); }
+      .values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 3rem; }
+      .value-card { background-color: #fff; padding: 2.5rem 2rem; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: transform 0.3s ease; }
+      .value-card:hover { transform: translateY(-5px); }
+      .value-icon { font-size: 3rem; color: var(--accent-color); margin-bottom: 1.5rem; }
+      .value-card h3 { font-family: 'Merriweather', serif; margin-bottom: 1rem; color: #222; }
+      .value-card p { font-family: 'Open Sans', sans-serif; color: #666; line-height: 1.6; font-size: 0.95rem; }
+
+      @media (max-width: 768px) {
+        .story-section { flex-direction: column; }
+      }
+
+      /* Back to Top Button */
+      .back-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 5%;
+        background-color: var(--light-bg);
+        color: #333;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 2px solid #333;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        z-index: 1000;
+      }
+      .back-to-top:hover {
+        background-color: #333;
+        color: #fff;
+        transform: translateY(-5px);
+      }
+
+      /* Copy Text Trick for Footer */
+      .copy-text { 
+        user-select: all; 
+        -webkit-user-select: all; 
+        background-color: rgba(0, 0, 0, 0.05); 
+        padding: 4px 8px; 
+        border-radius: 4px; 
+        font-family: monospace; 
+        font-size: 0.95rem; 
+        cursor: copy; 
+      }
+    </style>
+  </head>
+  <body id="top">
+    <header>
+      <div class="logo">
+        <img src="../media/tmtlogo.png" alt="TMT Logo" style="height: 60px; width: auto" />
+      </div>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="#">Learn</a></li>
+          <li><a href="#">Solutions</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="../contact/contact-us.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="about-header">
+        <h1>Website Purpose</h1>
+        <p>Discover the core mission and values behind Too Much Tech, and learn why we are dedicated to helping you disconnect to reconnect.</p>
+      </section>
+
+      <section class="story-section">
+        <div class="story-image">
+          <img src="../media/purpose-image.jpg" alt="A person enjoying a screen-free moment in nature" />
+        </div>
+        <div class="story-content">
+          <h2>Why We Exist</h2>
+          <p>In a world where we are constantly bombarded by notifications, emails, and infinite scroll feeds, our brains are working overtime. <strong>Too Much Tech (TMT)</strong> was born out of a simple realization: we are more connected than ever, yet we feel increasingly drained and isolated.</p>
+          <p>Our primary purpose is to bridge the gap between necessary technology use and mental well-being. We dive deep into the science of digital fatigue to provide you with actionable tools, educational resources, and community support to help you unplug when necessary.</p>
+          <p>We don't believe technology is evil—we just believe your brain deserves a break. Our goal is to empower users to reclaim their time and build a healthier, more intentional relationship with their devices.</p>
+        </div>
+      </section>
+
+      <section class="values-section">
+        <h2>Our Core Values</h2>
+        <div class="values-grid">
+          
+          <div class="value-card">
+            <div class="value-icon">
+              <i class="fa-solid fa-scale-balanced"></i>
+            </div>
+            <h3>Intentional Balance</h3>
+            <p>We advocate for using technology as a tool, not a crutch. We help you find the sweet spot between productivity and digital burnout, ensuring your tech serves you, not the other way around.</p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon">
+              <i class="fa-solid fa-leaf"></i>
+            </div>
+            <h3>Mindful Living</h3>
+            <p>We believe in the power of being present. Our solutions encourage structured, screen-free moments that allow your mind to rest, reset naturally, and engage deeply with the physical world.</p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon">
+              <i class="fa-solid fa-handshake-angle"></i>
+            </div>
+            <h3>Empathetic Support</h3>
+            <p>Digital fatigue affects everyone differently. We strive to create a judgment-free community where people can openly share their struggles and discover realistic, adaptable solutions.</p>
+          </div>
+
+        </div>
+      </section>
+
+      <a href="#top" class="back-to-top" title="Go to top">
+        <i class="fa-solid fa-arrow-up"></i>
+      </a>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Too Much Tech</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem eius maiores corporis incidunt, animi quos aut nostrum eveniet laborum nisi odit quasi, et optio ducimus delectus debitis obcaecati accusamus recusandae.</p>
+        </div>
+        <div class="footer-column">
+          <h3>Sitemap</h3>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="#">What is Digital Fatigue?</a></li>
+            <li><a href="#">Causes & Effects</a></li>
+            <li><a href="#">Solutions</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="../contact/contact-us.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Connect With Us!</h3>
+          <ul class="social-links">
+            <li>
+              <i class="fa-brands fa-facebook"></i><a href="https://www.facebook.com/profile.php?id=61582095175845" target="_blank"> Too Much Tech</a>
+            </li>
+            <li>
+              <i class="fa-brands fa-instagram"></i><a href="https://www.instagram.com/too.much.tech/" target="_blank"> @too.much.tech</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <span class="copy-text" style="color: #ccc; background: transparent; padding: 0;">toomuchtech30@gmail.com</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Too Much Tech. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>
