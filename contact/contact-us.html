@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Too Much Tech | Contact Us</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    
+    <style>
+      /* Page Header & Socials */
+      .contact-header {
+        text-align: center;
+        padding: 4rem 10% 2rem;
+        background-color: #f4f7f6; /* Subtle background for the header */
+      }
+      .contact-header h1 {
+        font-family: 'Merriweather', serif;
+        margin-bottom: 1rem;
+        color: #333;
+      }
+      .contact-header p {
+        font-family: 'Open Sans', sans-serif;
+        color: #555;
+        margin-bottom: 2rem;
+      }
+      .social-bar {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+      }
+      .social-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 25px;
+        background-color: #fff;
+        color: #333;
+        text-decoration: none;
+        border-radius: 30px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        transition: all 0.3s ease;
+      }
+      .social-btn:hover {
+        transform: translateY(-3px);
+        background-color: #4CAF50; /* Adjust to match your theme's accent color */
+        color: #fff;
+      }
+
+      /* Team Section */
+      .team-section {
+        padding: 4rem 10%;
+      }
+      .team-section h2 {
+        font-family: 'Merriweather', serif;
+        text-align: center;
+        margin-bottom: 3rem;
+        color: #333;
+      }
+      .team-grid {
+        display: grid;
+        /* Responsive grid: fits as many 250px columns as possible */
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2.5rem;
+      }
+      .team-card {
+        background-color: #fff;
+        padding: 1.5rem;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        text-align: center;
+        font-family: 'Open Sans', sans-serif;
+      }
+      
+      /* Forces a perfect 1x1 Square for images */
+      .team-card img.member-pic {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover; /* Prevents stretching */
+        border-radius: 8px; /* Change to 50% if you want circles */
+        margin-bottom: 1.5rem;
+        background-color: #e9ecef; /* Placeholder color */
+      }
+      
+      .team-card h3 {
+        font-family: 'Merriweather', serif;
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        color: #222;
+      }
+      .team-card .role {
+        font-weight: bold;
+        color: #5a9be6; /* Blue from your reference gradients */
+        margin-bottom: 1rem;
+        font-size: 0.9rem;
+      }
+      .team-card .desc {
+        font-size: 0.85rem;
+        color: #666;
+        line-height: 1.5;
+        margin-bottom: 1.5rem;
+      }
+      .team-card .contact-info {
+        font-size: 0.85rem;
+        border-top: 1px solid #eee;
+        padding-top: 1rem;
+      }
+      .team-card .contact-info a {
+        color: #333;
+        text-decoration: none;
+      }
+      .team-card .contact-info a:hover {
+        color: #5a9be6;
+      }
+
+      /* Group Photo Section */
+      .group-photo-section {
+        padding: 0 10% 4rem;
+        text-align: center;
+      }
+      .group-photo-section img {
+        width: 100%;
+        max-width: 900px;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        margin-bottom: 2rem;
+        background-color: #e9ecef;
+      }
+      .group-photo-section p {
+        font-family: 'Open Sans', sans-serif;
+        color: #555;
+        max-width: 700px;
+        margin: 0 auto;
+        line-height: 1.6;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img
+          src="../media/tmtlogo.png"
+          alt="TMT Logo"
+          style="height: 60px; width: auto"
+        />
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Learn</a></li>
+          <li><a href="#">Solutions</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#" class="active">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="contact-header">
+        <h1>Get in Touch</h1>
+        <p>Follow us on social media or reach out via email to connect with the Too Much Tech team.</p>
+        <div class="social-bar">
+          <a href="https://www.facebook.com/profile.php?id=61582095175845" class="social-btn">
+            <i class="fa-brands fa-facebook" style="color: #1877F2;"></i> Facebook
+          </a>
+          <a href="https://www.instagram.com/too.much.tech/" class="social-btn">
+            <i class="fa-brands fa-instagram" style="color: #E4405F;"></i> Instagram
+          </a>
+          <a href="mailto:toomuchtech30@gmail.com" class="social-btn">
+            <i class="fa-solid fa-envelope" style="color: #EA4335;"></i> Gmail
+          </a>
+        </div>
+      </section>
+
+      <section class="team-section">
+        <h2>Meet the Team</h2>
+        <div class="team-grid">
+          
+          <div class="team-card">
+            <img src="media/member1.jpg" alt="Member 1" class="member-pic" />
+            <h3>Arroyo, Jacob Rex A.</h3>
+            <div class="role">Project Manager</div>
+            <div class="desc">Alex ensures the team stays on track, coordinating our efforts to deliver the best digital wellness content.</div>
+            <div class="contact-info">
+              <i class="fa-solid fa-envelope"></i> <a href="mailto:alex@example.com">alex@example.com</a>
+            </div>
+          </div>
+
+          <div class="team-card">
+            <img src="media/member2.jpg" alt="Member 2" class="member-pic" />
+            <h3>Asia, Charles Andres T.</h3>
+            <div class="role">Lead Researcher</div>
+            <div class="desc">Jordan dives deep into the psychology of digital fatigue to ensure our solutions are science-backed.</div>
+            <div class="contact-info">
+              <i class="fa-solid fa-envelope"></i> <a href="mailto:jordan@example.com">jordan@example.com</a>
+            </div>
+          </div>
+
+          <div class="team-card">
+            <img src="media/member3.jpg" alt="Member 3" class="member-pic" />
+            <h3>Depollo, Ralph Geofrey G.</h3>
+            <div class="role">Frontend Developer</div>
+            <div class="desc">Taylor brings our website to life, writing clean code to ensure a smooth, fatigue-free user experience.</div>
+            <div class="contact-info">
+              <i class="fa-solid fa-envelope"></i> <a href="mailto:taylor@example.com">taylor@example.com</a>
+            </div>
+          </div>
+
+          <div class="team-card">
+            <img src="media/member4.jpg" alt="Member 4" class="member-pic" />
+            <h3>Francisco, Heaven Lee Chryzler R.</h3>
+            <div class="role">UI/UX Designer</div>
+            <div class="desc">Casey designs interfaces that are easy on the eyes, actively working to reduce screen strain.</div>
+            <div class="contact-info">
+              <i class="fa-solid fa-envelope"></i> <a href="mailto:casey@example.com">casey@example.com</a>
+            </div>
+          </div>
+
+          <div class="team-card">
+            <img src="media/member5.jpg" alt="Member 5" class="member-pic" />
+            <h3>Marquez, Ian Gabriel V.</h3>
+            <div class="role">Content Strategist</div>
+            <div class="desc">Sam curates all the articles, tips, and resources you find in our learning center.</div>
+            <div class="contact-info">
+              <i class="fa-solid fa-envelope"></i> <a href="mailto:sam@example.com">sam@example.com</a>
+            </div>
+          </div>
+
+          <div class="team-card">
+            <img src="media/member6.jpg" alt="Member 6" class="member-pic" />
+            <h3>Mendoza, Laurence C.</h3>
+            <div class="role">Wellness Consultant</div>
+            <div class="desc">Morgan applies real-world health practices to digital environments to create actionable solutions.</div>
+            <div class="contact-info">
+              <i class="fa-solid fa-envelope"></i> <a href="mailto:morgan@example.com">morgan@example.com</a>
+            </div>
+          </div>
+
+          <div class="team-card">
+            <img src="media/member7.jpg" alt="Member 7" class="member-pic" />
+            <h3>Racho, Miko Antonio S.</h3>
+            <div class="role">Community Manager</div>
+            <div class="desc">Jamie runs our social media channels, keeping our audience engaged without overwhelming them.</div>
+            <div class="contact-info">
+              <i class="fa-solid fa-envelope"></i> <a href="mailto:jamie@example.com">jamie@example.com</a>
+            </div>
+          </div>
+
+          <div class="team-card">
+            <img src="media/member8.jpg" alt="Member 8" class="member-pic" />
+            <h3>Ramos, Jazztine Kurt U.</h3>
+            <div class="role">Data Analyst</div>
+            <div class="desc">Riley monitors our site metrics to figure out what content helps our users the most.</div>
+            <div class="contact-info">
+              <i class="fa-solid fa-envelope"></i> <a href="mailto:riley@example.com">riley@example.com</a>
+            </div>
+          </div>
+
+          <div class="team-card">
+            <img src="media/member9.jpg" alt="Member 9" class="member-pic" />
+            <h3>Tunod, Darene Hanz H.</h3>
+            <div class="role">Quality Assurance</div>
+            <div class="desc">Avery rigorously tests everything we build so that bugs never add to your digital fatigue.</div>
+            <div class="contact-info">
+              <i class="fa-solid fa-envelope"></i> <a href="mailto:avery@example.com">avery@example.com</a>
+            </div>
+          </div>
+
+          <div class="team-card">
+            <img src="media/member10.jpg" alt="Member 10" class="member-pic" />
+            <h3>Villarta, Joeshua Louis S.</h3>
+            <div class="role">Support Specialist</div>
+            <div class="desc">Quinn is your first point of contact for any questions, issues, or feedback you might have.</div>
+            <div class="contact-info">
+              <i class="fa-solid fa-envelope"></i> <a href="mailto:quinn@example.com">quinn@example.com</a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="group-photo-section">
+        <img src="media/group-photo.jpg" alt="The Too Much Tech Team Group Photo" />
+        <p>
+          <strong>The Too Much Tech Team.</strong> We are a dedicated group of students and professionals who believe that technology should serve us, not drain us. Together, we work to build awareness and provide actionable solutions for digital fatigue.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>Too Much Tech</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+            eius maiores corporis incidunt, animi quos aut nostrum eveniet
+            laborum nisi odit quasi, et optio ducimus delectus debitis obcaecati
+            accusamus recusandae.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h3>Sitemap</h3>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">What is Digital Fatigue?</a></li>
+            <li><a href="#">Causes & Effects</a></li>
+            <li><a href="#">Solutions</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3>Connect With Us!</h3>
+          <ul class="social-links">
+            <li>
+              <i class="fa-brands fa-facebook"></i><a href="#"> Too Much Tech</a>
+            </li>
+            <li>
+              <i class="fa-brands fa-instagram"></i><a href="#"> @too.much.tech</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:toomuchtech30@gmail.com">toomuchtech30@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Too Much Tech. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>
