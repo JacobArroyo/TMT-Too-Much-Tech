@@ -42,6 +42,13 @@
         background-position: center;
         background-repeat: no-repeat;
       }
+
+      /* CSS One-Click Highlight Trick for Footer Email */
+      .copy-text {
+        user-select: all; /* Instantly selects all text when clicked */
+        -webkit-user-select: all;
+        cursor: copy;
+      }
     </style>
   </head>
   <body id="top">
@@ -214,17 +221,14 @@
           <h3>Connect With Us!</h3>
           <ul class="social-links">
             <li>
-              <i class="fa-brands fa-facebook"></i
-              ><a href="contact/contact-us.html"> Too Much Tech</a>
+              <i class="fa-brands fa-facebook"></i><a href="https://www.facebook.com/profile.php?id=61582095175845" target="_blank"> Too Much Tech</a>
             </li>
             <li>
-              <i class="fa-brands fa-instagram"></i
-              ><a href="contact/contact-us.html"> @too.much.tech</a>
+              <i class="fa-brands fa-instagram"></i><a href="https://www.instagram.com/too.much.tech/" target="_blank"> @too.much.tech</a>
             </li>
             <li>
               <i class="fa-solid fa-envelope"></i>
-              <a href="contact/contact-us.html">toomuchtech30@gmail.com</a
-              >
+              <span class="copy-text" style="color: #ccc; background: transparent; padding: 0;">toomuchtech30@gmail.com</span>
             </li>
           </ul>
         </div>
