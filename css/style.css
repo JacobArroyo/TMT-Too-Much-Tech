@@ -25,7 +25,7 @@ html {
 
 body {
   color: var(--text-dark);
-  background-color: var(--light-bg);
+  background-color: white;
   line-height: 1.6;
   font-family: "Open Sans";
 }
@@ -301,6 +301,16 @@ footer {
   padding: 4rem 5% 1.5rem;
 }
 
+.footer-logo {
+  margin-bottom: auto; /* Space between logo and the "Too Much Tech" heading */
+}
+
+.footer-logo img {
+  height: 90px; /* Adjust this value if you want it smaller or bigger */
+  width: auto;
+  opacity: 0.9; /* Slightly fades the logo to match the footer vibe */
+}
+
 .footer-content {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -319,6 +329,7 @@ footer {
   font-size: 0.9rem;
   color: #cccccc;
   margin-bottom: 0.5rem;
+  border-bottom: 1px solid transparent;
 }
 
 .social-links i {
@@ -331,6 +342,11 @@ footer {
 
 .footer-column ul li a:hover {
   color: var(--text-light);
+  border-bottom: 1px solid var(--text-light);
+}
+
+.footer-column a{
+  border-bottom: 1px solid transparent;
 }
 
 .social-links li {
@@ -338,6 +354,7 @@ footer {
   align-items: center;
   gap: 10px;
   margin-bottom: 0.8rem;
+  border-bottom: 1px solid transparent;
 }
 
 .footer-bottom {
