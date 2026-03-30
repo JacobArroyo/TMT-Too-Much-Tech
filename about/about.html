@@ -35,6 +35,19 @@
         margin: 0 auto;
       }
 
+      .about-header-team {
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        padding: 5rem 10%;
+        text-align: center;
+      }
+
+      .about-header-team h2 {
+        color: var(--text-dark);
+        font-size: 2.5rem;
+      }
+
       .story-section {
         display: flex;
         align-items: center;
@@ -110,19 +123,20 @@
         gap: 1.5rem;
         max-width: 100%;
       }
+
       .team-card {
-        background-color: #f5f5f5;
-        padding: 1.2rem;
-        border-radius: 16px;
         text-align: center;
-        transition: all 0.3s ease;
-        display: flex;
-        flex-direction: column;
-        height: 100%;
+        background: #ffffff;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        padding: 1.5rem;
+        border-radius: 20px;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       }
 
       .team-card:hover {
-        transform: translateY(-2px);
+        transform: translateY(-10px);
+        box-shadow: 0 15px 45px rgba(216, 105, 82, 0.1);
       }
 
       .team-card img.member-pic {
@@ -220,7 +234,7 @@
 
       <section class="story-section">
         <div class="story-image">
-          <img src="../media/purpose-image.jpg" alt="Screen-free moment" />
+          <img src="../media/purpose-image.jpg" alt="A person enjoying a screen-free moment in nature" />
         </div>
         <div class="story-content">
           <h2>Why We Exist</h2>
@@ -248,7 +262,7 @@
 
       <section class="story-section alt-bg">
         <div class="story-image">
-          <img src="../media/background-image1.jpg" alt="Team Collaboration" />
+          <img src="../media/background-image1.jpg" alt="Team members collaborating on research" />
         </div>
         <div class="story-content">
           <h2>The Origin Story</h2>
@@ -301,9 +315,9 @@
           </div>
         </div>
       </section>
-      <section class="about-header">
+      <section class="about-header-team">
         <div class="card-image-learn"></div>
-        <h1>Meet The Team</h1>
+        <h2>Meet The Team</h2>
       </section>
       <section class="team-section">
         <div class="team-grid">
@@ -311,72 +325,84 @@
             <img src="media/Jacob.jpg" class="member-pic" />
             <h3>Arroyo, Jacob Rex A.</h3>
             <div class="role">Developer & Nav Expert</div>
+            <br>
             <div class="desc">
-              Leads development and navigation architecture, ensuring smooth
+              Leads development and navigation, ensuring smooth
               user experience.
             </div>
+            <br>
             <div class="contact-info">
               <i class="fa-solid fa-envelope"></i
-              ><a class="copy-text">toomuchtech30@gmail.com</a>
+              ><a class="copy-text">arroyo.jacobrex@ue.edu.ph</a>
             </div>
           </div>
           <div class="team-card">
             <img src="media/Asia1x1.jpeg" class="member-pic" />
             <h3>Asia, Charles Andres T.</h3>
             <div class="role">UI Designer</div>
+            <br>
             <div class="desc">
               Designs interfaces that are easy on the eyes, reducing screen
               strain.
             </div>
+            <br>
             <div class="contact-info">
               <i class="fa-solid fa-envelope"></i
-              ><a class="copy-text">toomuchtech30@gmail.com</a>
+              ><a class="copy-text">asia.charlesandres@ue.edu.ph</a>
             </div>
           </div>
           <div class="team-card">
             <img src="media/Depollo1by1.jpeg" class="member-pic" />
             <h3>Depollo, Ralph Geofrey G.</h3>
             <div class="role">Content Manager</div>
+            <br>
             <div class="desc">
               Curates articles, tips, and resources for our learning center.
             </div>
+            <br>
             <div class="contact-info">
               <i class="fa-solid fa-envelope"></i
-              ><a class="copy-text">toomuchtech30@gmail.com</a>
+              ><a class="copy-text">depollo.ralphgeofrey@ue.edu.ph</a>
             </div>
           </div>
           <div class="team-card">
             <img src="media/Heaven.png" class="member-pic" />
             <h3>Francisco, Heaven Lee C. R.</h3>
             <div class="role">Nav Expert</div>
+            <br>
             <div class="desc">
               Keeps team on track, coordinating digital wellness content
               delivery.
             </div>
+            <br>
             <div class="contact-info">
               <i class="fa-solid fa-envelope"></i
-              ><a class="copy-text">toomuchtech30@gmail.com</a>
+              ><a class="copy-text">francisco.heavenleechryzler@ue.edu.ph</a>
             </div>
           </div>
           <div class="team-card">
             <img src="media/marquez].png" class="member-pic" />
             <h3>Marquez, Ian Gabriel V.</h3>
-            <div class="role">Content Manager</div>
+            <div class="role">Developer</div>
+            <br>
             <div class="desc">
-              Creates engaging content to combat digital fatigue effectively.
+              Brings website to life with clean, efficient code.
             </div>
+            <br>
             <div class="contact-info">
               <i class="fa-solid fa-envelope"></i
-              ><a class="copy-text">toomuchtech30@gmail.com</a>
+              ><a class="copy-text">marquez.iangabriel@ue.edu.ph</a>
             </div>
           </div>
           <div class="team-card">
             <img src="media/Mendoza.png" class="member-pic" />
             <h3>Mendoza, Laurence C.</h3>
             <div class="role">Developer</div>
+            <br>
             <div class="desc">
               Brings website to life with clean, efficient code.
             </div>
+            <br>
             <div class="contact-info">
               <i class="fa-solid fa-envelope"></i
               ><a class="copy-text">mendoza.laurence@ue.edu.ph</a>
@@ -386,48 +412,56 @@
             <img src="media/RACHO1X1.jpg" class="member-pic" />
             <h3>Racho, Miko Antonio S.</h3>
             <div class="role">Content Manager</div>
+            <br>
             <div class="desc">
               Organizes learning materials on digital wellness topics.
             </div>
+            <br>
             <div class="contact-info">
               <i class="fa-solid fa-envelope"></i
-              ><a class="copy-text">toomuchtech30@gmail.com</a>
+              ><a class="copy-text">racho.mikoantonio@ue.edu.ph</a>
             </div>
           </div>
           <div class="team-card">
             <img src="media/RAMOS_JAZZTINEKURT.jpg" class="member-pic" />
             <h3>Ramos, Jazztine Kurt U.</h3>
             <div class="role">QA Tester</div>
+            <br>
             <div class="desc">
               Rigorous testing to ensure bug-free, smooth experience.
             </div>
+            <br>
             <div class="contact-info">
               <i class="fa-solid fa-envelope"></i
-              ><a class="copy-text">toomuchtech30@gmail.com</a>
+              ><a class="copy-text">ramos.jazztinekurt@ue.edu.ph</a>
             </div>
           </div>
           <div class="team-card">
             <img src="media/TUNOD 1X1.png" class="member-pic" />
             <h3>Tunod, Darene Hanz H.</h3>
             <div class="role">Content Manager</div>
+            <br>
             <div class="desc">
               Creates educational content for healthier digital habits.
             </div>
+            <br>
             <div class="contact-info">
               <i class="fa-solid fa-envelope"></i
-              ><a class="copy-text">toomuchtech30@gmail.com</a>
+              ><a class="copy-text">tunod.darenehanz@ue.edu.ph</a>
             </div>
           </div>
           <div class="team-card">
             <img src="media/Villarta.jpg" class="member-pic" />
             <h3>Villarta, Joeshua Louis S.</h3>
             <div class="role">QA Tester</div>
+            <br>
             <div class="desc">
               First point of contact for user feedback and support.
             </div>
+            <br>
             <div class="contact-info">
               <i class="fa-solid fa-envelope"></i
-              ><a class="copy-text">toomuchtech30@gmail.com</a>
+              ><a class="copy-text">villarta.joeshualouis@ue.edu.ph</a>
             </div>
           </div>
         </div>
