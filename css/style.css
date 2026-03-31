@@ -71,8 +71,9 @@ nav ul li a {
 
 nav ul li a:hover,
 nav ul li a.active {
+  transition: all 0.3s ease;
   font-weight: bold;
-  border-bottom: 2px solid var(--text-light);
+  border-bottom: 2px solid var(--accent-color);
 }
 
 .hero {
@@ -108,25 +109,23 @@ nav ul li a.active {
 }
 
 .explore-link {
-  font-size: 1rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: var(--accent-color);
-  transition: all 0.3s ease;
   display: inline-block;
-  padding: 10px 15px;
-  border-radius: 7px;
-  border: 2px solid var(--accent-color);
+  padding: 10px 22px;
+  background-color: var(--dark-green);
+  color: #fff;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
 }
 
 .explore-link:hover {
   background-color: var(--accent-color);
-  color: var(--text-light);
+  transform: scale(1.05);
 }
 
 .explore-link:active {
   color: #cccccc;
-  border: 2px solid #9e3d29;
   background-color: #9e3d29;
 }
 
@@ -262,6 +261,107 @@ nav ul li a.active {
   background-color: #9e3d29;
 }
 
+.article-layout {
+  display: flex;
+  max-width: 1700px;
+  margin: 0 auto;
+  padding: 5rem 10% 5rem;
+  gap: 4rem;
+}
+
+.navigation-header {
+  padding: 20px 17%;
+  position: sticky;
+  z-index: 1001;
+  top: 50px;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--dark-green);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+.back-link:hover {
+  position: sticky;
+  transform: translateX(-5px);
+  color: var(--accent-color);
+}
+
+.article-sidebar {
+  flex: 0 0 280px;
+  position: sticky;
+  top: 150px;
+  height: fit-content;
+}
+
+.article-sidebar ul {
+  list-style: none;
+  border-left: 2px solid var(--sage-green);
+}
+
+.sidebar-item {
+  display: block;
+  padding: 0.8rem 1.2rem;
+  color: #666;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+  margin-left: -2px;
+}
+
+.sidebar-item:hover,
+.sidebar-item.is-active {
+  color: var(--dark-green);
+  font-weight: bold;
+  border-left-color: var(--accent-color);
+  background-color: var(--light-bg);
+}
+.article-author {
+  font-weight: bold;
+  color: var(--dark-green);
+}
+
+.article-main-content h2 {
+  color: var(--dark-green);
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+.article-text {
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  color: #444;
+  font-size: 1.05rem;
+}
+
+.video-aspect-ratio {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  background: #000;
+  border-radius: 15px;
+  margin-top: 2.5rem;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.video-aspect-ratio iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
 .back-to-top {
   position: fixed;
   bottom: 30px;
@@ -345,7 +445,7 @@ footer {
   border-bottom: 1px solid var(--text-light);
 }
 
-.footer-column a{
+.footer-column a {
   border-bottom: 1px solid transparent;
 }
 
