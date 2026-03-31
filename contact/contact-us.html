@@ -11,6 +11,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     
     <style>
+      /* Enables smooth scrolling back to the top */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* === STICKY FOOTER & SPACING FIX === */
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; 
+      }
+      
+      main {
+        flex: 1; 
+        display: flex;
+        flex-direction: column;
+        background-color: #f4f7f6; /* Fills empty space with the header's background color */
+      }
+      /* =================================== */
+
+      /* Page Header & Socials */
       .contact-header {
         flex: 1; /* Allows the header to stretch out */
         display: flex;
@@ -22,10 +43,12 @@
         background-color: #f4f7f6;
       }
       .contact-header h1 {
+        font-family: 'Merriweather', serif;
         margin-bottom: 1rem;
         color: #333;
       }
       .contact-header p {
+        font-family: 'Open Sans', sans-serif;
         color: #555;
         margin-bottom: 2.5rem;
       }
@@ -94,6 +117,43 @@
       .social-btn:focus .css-popup {
         visibility: visible;
         opacity: 1;
+      }
+
+      .copy-text {
+        user-select: all;
+        -webkit-user-select: all;
+        background-color: rgba(255, 255, 255, 0.15);
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-family: monospace;
+        font-size: 0.95rem;
+        cursor: copy;
+      }
+      
+      /* Back to Top Button */
+      .back-to-top {
+        position: fixed;
+        bottom: 30px;
+        right: 5%;
+        background-color: #f4f7f6; 
+        color: #333; 
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 2px solid #333; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        z-index: 1000;
+      }
+
+      .back-to-top:hover {
+        background-color: #333;
+        color: #fff;
+        transform: translateY(-5px);
       }
     </style>
   </head>
