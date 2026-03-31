@@ -298,17 +298,17 @@ nav ul li a.active {
 footer {
   background-color: var(--dark-green);
   color: var(--text-light);
-  padding: 4rem 5% 1.5rem;
+  padding: 4rem 10% 1.5rem;
 }
 
 .footer-logo {
-  margin-bottom: auto; /* Space between logo and the "Too Much Tech" heading */
+  margin-bottom: auto;
 }
 
 .footer-logo img {
-  height: 90px; /* Adjust this value if you want it smaller or bigger */
+  height: 90px;
   width: auto;
-  opacity: 0.9; /* Slightly fades the logo to match the footer vibe */
+  opacity: 0.9;
 }
 
 .footer-content {

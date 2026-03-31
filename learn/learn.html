@@ -18,73 +18,138 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
+
     <style>
-      .learn-header {
-        text-align: center;
-        padding: 4rem 10% 2rem;
+      .story-section {
+        display: flex;
+        align-items: center;
+        gap: 4rem;
+        padding: 5rem 10% 2rem;
+        background-color: #fff;
+      }
+
+      .story-content {
+        flex: 1;
+      }
+
+      .story-content h2 {
+        font-size: 2.2rem;
+        color: var(--dark-green);
+        margin-bottom: 1.5rem;
+      }
+
+      .story-content p {
+        color: #555;
+        line-height: 1.8;
+        margin-bottom: 1.5rem;
+      }
+
+      .story-image {
+        flex: 1;
+      }
+
+      .story-image img {
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .learn-grid-section {
+        padding: 4rem 10% 6rem;
         background-color: var(--light-bg);
       }
-      .learn-header h1 {
-        margin-bottom: 1rem;
-        color: var(--text-dark);
-      }
-      .learn-header p {
-        color: #555;
-        max-width: 700px;
+
+      .topic-card-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2.5rem;
+        max-width: 1200px;
         margin: 0 auto;
       }
 
-      .learn-header-team {
+      .learn-card {
+        background-color: #ffffff;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+
+      .learn-card:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      }
+
+      .learn-card-content {
+        padding: 24px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .learn-card-title {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #1f2937;
+        margin-bottom: 12px;
         position: relative;
-        background-size: cover;
-        background-position: center;
-        padding: 5rem 10%;
-        text-align: center;
+        padding-bottom: 10px;
       }
 
-      .learn-header-team h2 {
-        color: var(--text-dark);
-        font-size: 2.5rem;
+      .learn-card-title::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 40px;
+        height: 3px;
+        background-color: var(--accent-color);
+        transition: width 0.3s ease;
       }
 
-      .values-section {
-        padding: 5rem 10%;
-        background-color: #fff;
-        text-align: center;
+      .learn-card:hover .learn-card-title::after {
+        width: 80px;
       }
-      .values-section h2 {
-        font-size: 2rem;
-        margin-bottom: 3rem;
-        color: var(--dark-green);
+
+      .learn-card-description {
+        font-size: 0.9rem;
+        color: #4b5563;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        flex-grow: 1;
       }
-      .values-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 3rem;
+
+      .learn-card-footer {
+        padding-top: 16px;
+        border-top: 1px solid #eee;
       }
-      .value-card {
-        background-color: var(--light-bg);
-        padding: 2.5rem 2rem;
-        border-radius: 12px;
-        transition: transform 0.3s ease;
+
+      .learn-card-button {
+        display: inline-block;
+        padding: 10px 22px;
+        background-color: var(--dark-green);
+        color: #fff;
+        border-radius: 25px;
+        font-weight: 600;
+        font-size: 0.85rem;
+        transition: all 0.3s ease;
       }
-      .value-card:hover {
-        transform: translateY(-5px);
-      }
-      .value-icon {
-        font-size: 3rem;
-        color: var(--accent-color);
-        margin-bottom: 1.5rem;
+
+      .learn-card-button:hover {
+        background-color: var(--accent-color);
+        transform: scale(1.05);
       }
     </style>
   </head>
+
   <body id="top">
     <header>
       <div class="logo">
         <img
           src="../media/tmtlogo.png"
           alt="TMT Logo"
-          title="Too Much Tech Logo"
           style="height: 60px; width: auto"
         />
       </div>
@@ -100,51 +165,304 @@
     </header>
 
     <main>
-      <section class="learn-header">
-        <h1>Learn more about Digital Fatigue</h1>
-        <p>
-          Discover the core mission and the dedicated individuals working to
-          build a healthier digital world.
-        </p>
+      <section class="story-section">
+        <div class="story-image">
+          <img
+            src="media/confused-person-infront-of-a-laptop.jpg"
+            alt="A confused person infront of a laptop"
+          />
+        </div>
+
+        <div class="story-content">
+          <h2>Learn more about Digital Fatigue</h2>
+
+          <p>
+            Have you ever found yourself staring at a screen for hours, reading
+            the same sentence over and over while your
+
+            <strong> eyes feel heavy </strong> and your
+
+            <strong>focus begins to blur?</strong> That "foggy" sensation isn't
+            just common tiredness—it is digital fatigue,
+          </p>
+
+          <p>
+            It happens when our "biological hardware"—our brains and
+            eyes—struggles to process the infinite stream of data, blue light,
+            and constant notifications we encounter every day.
+          </p>
+
+          <p>
+            By understanding the science behind why our screens drain us, we can
+            move past the<strong> "infinite scroll"</strong> and start building
+            a more intentional, balanced relationship with the technology we
+            use.
+          </p>
+        </div>
+      </section>
+
+      <div style="text-align: center; padding: 3rem 0">
+        <a href="#learn-topics" class="explore-link">
+          Explore All Topics &nbsp; <i class="fa-solid fa-arrow-down"></i>
+        </a>
+      </div>
+
+      <section id="learn-topics" class="learn-grid-section">
+        <div class="topic-card-container">
+          <div class="learn-card">
+            <div
+              class="learn-card-image"
+              style="
+                height: 180px;
+                background:
+                  linear-gradient(
+                    rgba(131, 131, 131, 0.75),
+                    rgba(180, 180, 180, 0.75)
+                  ),
+                  url(../media/drained-at-laptop.png);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+              "
+            ></div>
+            <div class="learn-card-content">
+              <h3 class="learn-card-title">Understanding Digital Fatigue</h3>
+              <p class="learn-card-description">
+                Uncover the science, symptoms, and essential strategies to
+                reclaim your focus and well-being.
+              </p>
+              <div class="learn-card-footer">
+                <a class="learn-card-button" href="#">Read more</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="learn-card">
+            <div
+              class="learn-card-image"
+              style="
+                height: 180px;
+                background:
+                  linear-gradient(
+                    rgba(178, 252, 209, 0.75),
+                    rgba(68, 255, 152, 0.75)
+                  ),
+                  url(media/socia-media-tricks.jpg);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+              "
+            ></div>
+            <div class="learn-card-content">
+              <h3 class="learn-card-title">Social Media Tricks</h3>
+              <p class="learn-card-description">
+                How platforms use psychological triggers to keep you scrolling
+                and how to break the loop.
+              </p>
+              <div class="learn-card-footer">
+                <a class="learn-card-button" href="#">Read more</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="learn-card">
+            <div
+              class="learn-card-image"
+              style="
+                height: 180px;
+                background:
+                  linear-gradient(
+                    rgba(255, 200, 200, 0.75),
+                    rgba(111, 252, 106, 0.75)
+                  ),
+                  url(media/school-df.jpg);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+              "
+            ></div>
+            <div class="learn-card-content">
+              <h3 class="learn-card-title">School and Work Burnout</h3>
+              <p class="learn-card-description">
+                Navigating the thin line between digital productivity and total
+                mental exhaustion.
+              </p>
+              <div class="learn-card-footer">
+                <a class="learn-card-button" href="#">Read more</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="learn-card">
+            <div
+              class="learn-card-image"
+              style="
+                height: 180px;
+                background:
+                  linear-gradient(
+                    rgba(177, 125, 211, 0.75),
+                    rgba(169, 43, 173, 0.75)
+                  ),
+                  url(media/design-df.webp);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+              "
+            ></div>
+            <div class="learn-card-content">
+              <h3 class="learn-card-title">Website Design and HCI</h3>
+              <p class="learn-card-description">
+                Exploring how Human-Computer Interaction influences our digital
+                health and behaviors.
+              </p>
+              <div class="learn-card-footer">
+                <a class="learn-card-button" href="#">Read more</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="learn-card">
+            <div
+              class="learn-card-image"
+              style="
+                height: 180px;
+                background:
+                  linear-gradient(
+                    rgba(111, 166, 180, 0.75),
+                    rgba(17, 38, 133, 0.75)
+                  ),
+                  url(media/tech-df.jpg);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+              "
+            ></div>
+            <div class="learn-card-content">
+              <h3 class="learn-card-title">What Tech Does to Your Body</h3>
+              <p class="learn-card-description">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              </p>
+              <div class="learn-card-footer">
+                <a class="learn-card-button" href="#">Read more</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="learn-card">
+            <div
+              class="learn-card-image"
+              style="
+                height: 180px;
+                background:
+                  linear-gradient(
+                    rgba(60, 72, 179, 0.75),
+                    rgba(177, 26, 26, 0.75)
+                  ),
+                  url(media/df-in-ph.webp);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+              "
+            ></div>
+            <div class="learn-card-content">
+              <h3 class="learn-card-title">
+                Digital Fatigue in the Philippines
+              </h3>
+              <p class="learn-card-description">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              </p>
+              <div class="learn-card-footer">
+                <a class="learn-card-button" href="#">Read more</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="learn-card">
+            <div
+              class="learn-card-image"
+              style="
+                height: 180px;
+                background:
+                  linear-gradient(
+                    rgba(55, 74, 63, 0.75),
+                    rgba(18, 27, 22, 0.75)
+                  ),
+                  url(media/socia-media-tricks.jpg);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+              "
+            ></div>
+            <div class="learn-card-content">
+              <h3 class="learn-card-title">From iPad Kids to Seniors</h3>
+              <p class="learn-card-description">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              </p>
+              <div class="learn-card-footer">
+                <a class="learn-card-button" href="#">Read more</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="learn-card">
+            <div
+              class="learn-card-image"
+              style="
+                height: 180px;
+                background:
+                  linear-gradient(
+                    rgba(55, 74, 63, 0.75),
+                    rgba(18, 27, 22, 0.75)
+                  ),
+                  url(media/socia-media-tricks.jpg);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+              "
+            ></div>
+            <div class="learn-card-content">
+              <h3 class="learn-card-title">When Fun Becomes a Chore</h3>
+              <p class="learn-card-description">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              </p>
+              <div class="learn-card-footer">
+                <a class="learn-card-button" href="#">Read more</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="learn-card">
+            <div
+              class="learn-card-image"
+              style="
+                height: 180px;
+                background:
+                  linear-gradient(
+                    rgba(55, 74, 63, 0.75),
+                    rgba(18, 27, 22, 0.75)
+                  ),
+                  url(media/socia-media-tricks.jpg);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+              "
+            ></div>
+            <div class="learn-card-content">
+              <h3 class="learn-card-title">Test Your Fatigue Levels</h3>
+              <p class="learn-card-description">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              </p>
+              <div class="learn-card-footer">
+                <a class="learn-card-button" href="#">Read more</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <a href="#top" class="back-to-top" title="Go to top">
         <i class="fa-solid fa-arrow-up"></i>
       </a>
-
-      <section class="values-section">
-        <h2>Our Core Values</h2>
-        <div class="values-grid">
-          <div class="value-card">
-            <div class="value-icon">
-              <i class="fa-solid fa-scale-balanced"></i>
-            </div>
-            <h3>Intentional Balance</h3>
-            <p>
-              We advocate for using technology as a tool, not a crutch. We help
-              you find the sweet spot between productivity and digital burnout.
-            </p>
-          </div>
-          <div class="value-card">
-            <div class="value-icon"><i class="fa-solid fa-leaf"></i></div>
-            <h3>Mindful Living</h3>
-            <p>
-              We believe in the power of being present. Our solutions encourage
-              structured, screen-free moments to rest and reset naturally.
-            </p>
-          </div>
-          <div class="value-card">
-            <div class="value-icon">
-              <i class="fa-solid fa-handshake-angle"></i>
-            </div>
-            <h3>Empathetic Support</h3>
-            <p>
-              Digital fatigue affects everyone differently. We strive to create
-              a judgment-free community with realistic, adaptable solutions.
-            </p>
-          </div>
-        </div>
-      </section>
     </main>
 
     <footer>
@@ -155,25 +473,22 @@
           </div>
           <h3>Too Much Tech</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-            eius maiores corporis incidunt, animi quos aut nostrum eveniet
-            laborum nisi odit quasi, et optio ducimus delectus debitis obcaecati
-            accusamus recusandae.
+            We are a dedicated group of students and professionals who believe
+            technology should serve us, not drain us. Together, we work to build
+            awareness for digital wellness.
           </p>
         </div>
-
         <div class="footer-column">
           <h3>Sitemap</h3>
           <ul>
             <li><a href="../index.html">Home</a></li>
-            <li><a href="#">What is Digital Fatigue?</a></li>
+            <li><a href="../learn/learn.html">Learn</a></li>
             <li><a href="../learn/effect.html">Causes & Effects</a></li>
             <li><a href="../solution/solution.html">Solutions</a></li>
             <li><a href="../about/about.html">About Us</a></li>
             <li><a href="../contact/contact-us.html">Contact Us</a></li>
           </ul>
         </div>
-
         <div class="footer-column">
           <h3>Connect With Us!</h3>
           <ul class="social-links">
@@ -182,8 +497,7 @@
               ><a
                 href="https://www.facebook.com/profile.php?id=61582095175845"
                 target="_blank"
-              >
-                Too Much Tech</a
+                >Too Much Tech</a
               >
             </li>
             <li>
@@ -191,17 +505,12 @@
               ><a
                 href="https://www.instagram.com/too.much.tech/"
                 target="_blank"
-              >
-                @too.much.tech</a
+                >@too.much.tech</a
               >
             </li>
             <li>
-              <i class="fa-solid fa-envelope"></i>
-              <span
-                class="copy-text"
-                style="color: #ccc; background: transparent; padding: 0"
-                >toomuchtech30@gmail.com</span
-              >
+              <i class="fa-solid fa-envelope"></i
+              ><span class="copy-text">toomuchtech30@gmail.com</span>
             </li>
           </ul>
         </div>
