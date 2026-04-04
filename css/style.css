@@ -261,6 +261,7 @@ nav ul li a.active {
   background-color: #9e3d29;
 }
 
+/*Start of Learn Acticle CSS*/
 .article-layout {
   display: flex;
   max-width: 1700px;
@@ -324,9 +325,13 @@ nav ul li a.active {
   border-left-color: var(--accent-color);
   background-color: var(--light-bg);
 }
+
 .article-author {
-  font-weight: bold;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
   color: var(--dark-green);
+  font-size: 0.9rem;
+  font-weight: bold;
 }
 
 .article-main-content h2 {
@@ -340,17 +345,27 @@ nav ul li a.active {
   margin-bottom: 1.5rem;
   color: #444;
   font-size: 1.05rem;
+  text-align: justify;
 }
 
+.reference-text {
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  color: #444;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/*Learn Video/iFrame CSS*/
 .video-aspect-ratio {
   position: relative;
-  padding-bottom: 56.25%;
+  padding-bottom: 50%;
   height: 0;
   overflow: hidden;
   background: #000;
-  border-radius: 15px;
+  border-radius: 10px;
   margin-top: 2.5rem;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
 .video-aspect-ratio iframe {
@@ -359,9 +374,9 @@ nav ul li a.active {
   left: 0;
   width: 100%;
   height: 100%;
-  border: none;
 }
 
+/*Back to top button that is seen althrough out the page*/
 .back-to-top {
   position: fixed;
   bottom: 30px;
@@ -395,14 +410,22 @@ nav ul li a.active {
   color: #506b5b;
 }
 
+/*Start of footer section*/
 footer {
   background-color: var(--dark-green);
   color: var(--text-light);
   padding: 4rem 10% 1.5rem;
 }
 
+.footer-content {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
 .footer-logo {
-  margin-bottom: auto;
+  margin-bottom: 1.5rem;
 }
 
 .footer-logo img {
@@ -411,50 +434,67 @@ footer {
   opacity: 0.9;
 }
 
-.footer-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 3rem;
-  margin-bottom: 3rem;
-}
-
 .footer-column h3 {
   font-size: 1.2rem;
   margin-bottom: 1rem;
-  font-weight: normal;
+  font-weight: 600;
 }
 
-.footer-column p,
-.footer-column li {
+.footer-column p {
   font-size: 0.9rem;
   color: #cccccc;
-  margin-bottom: 0.5rem;
-  border-bottom: 1px solid transparent;
-}
-
-.social-links i {
-  font-size: 1.2rem;
+  line-height: 1.6;
 }
 
 .footer-column ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.footer-column ul li a:hover {
-  color: var(--text-light);
-  border-bottom: 1px solid var(--text-light);
+.footer-column ul li {
+  margin-bottom: 0.5rem;
 }
 
 .footer-column a {
+  text-decoration: none;
+  color: #cccccc;
   border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
 }
 
-.social-links li {
+.footer-column a:hover {
+  color: var(--text-light, #ffffff);
+  border-bottom-color: var(--accent-color);
+}
+
+.social-links {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 0.8rem;
-  border-bottom: 1px solid transparent;
+  gap: 15px;
+}
+
+.social-links a {
+  border-bottom: none;
+}
+
+.social-links i {
+  font-size: 1.4rem;
+  color: #cccccc;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover i {
+  color: var(--text-light, #ffffff);
+  transform: translateY(-2px);
+}
+
+.copy-text {
+  font-size: 0.9rem;
+  color: #cccccc;
+  user-select: all;
+  -webkit-user-select: all;
+  cursor: copy;
 }
 
 .footer-bottom {
@@ -463,11 +503,4 @@ footer {
   padding-top: 1.5rem;
   font-size: 0.8rem;
   color: #cccccc;
-}
-
-.copy-text {
-  user-select: all;
-  -webkit-user-select: all;
-  cursor: copy;
-  background: transparent;
 }
