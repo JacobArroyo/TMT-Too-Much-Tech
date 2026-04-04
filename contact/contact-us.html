@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Too Much Tech | Contact Us</title>
+    <link rel="icon" href="../media/logofavicon.png" type="image/png" />
     <link rel="stylesheet" href="../css/style.css" />
-    
     <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
@@ -27,31 +27,34 @@
         flex: 1; 
         display: flex;
         flex-direction: column;
-        background-color: #f4f7f6; /* Fills empty space with the header's background color */
+        background-color: #f4f7f6;
       }
       /* =================================== */
 
       /* Page Header & Socials */
       .contact-header {
-        flex: 1; /* Allows the header to stretch out */
+        flex: 1;
         display: flex;
         flex-direction: column;
-        justify-content: center; /* Perfectly centers the content vertically */
+        justify-content: center;
         align-items: center;
         text-align: center;
-        padding: 4rem 10%;
+        padding: 4rem 10% 2rem;
         background-color: #f4f7f6;
       }
+      
       .contact-header h1 {
         font-family: 'Merriweather', serif;
         margin-bottom: 1rem;
         color: #333;
       }
+      
       .contact-header p {
         font-family: 'Open Sans', sans-serif;
         color: #555;
         margin-bottom: 2.5rem;
       }
+      
       .social-bar {
         display: flex;
         justify-content: center;
@@ -74,12 +77,17 @@
         transition: all 0.3s ease;
         position: relative; 
         cursor: pointer;
+        border: none;
       }
       
       .social-btn:hover, .social-btn:focus {
         transform: translateY(-3px);
-        background-color: #4CAF50; 
+        background-color: var(--accent-color, #d86952); 
         color: #fff;
+      }
+      
+      .social-btn:hover i, .social-btn:focus i {
+        color: #fff !important;
       }
 
       .css-popup {
@@ -130,6 +138,383 @@
         cursor: copy;
       }
       
+      /* Feedback Form Section */
+      .feedback-section {
+        padding: 2rem 10% 4rem;
+        background-color: #fff;
+      }
+      
+      .feedback-container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: var(--light-bg);
+        border-radius: 20px;
+        padding: 2.5rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        border: 1px solid var(--sage-green);
+        transition: all 0.3s ease;
+      }
+      
+      .feedback-container:hover {
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        border-color: var(--accent-color);
+      }
+      
+      .feedback-container h2 {
+        font-size: 1.8rem;
+        color: var(--dark-green);
+        margin-bottom: 0.5rem;
+        text-align: center;
+      }
+      
+      .feedback-container > p {
+        text-align: center;
+        color: #666;
+        margin-bottom: 2rem;
+        font-size: 0.95rem;
+      }
+      
+      /* ========== MULTI-STEP FORM STYLES ========== */
+      
+      /* Hide all steps by default */
+      .form-step {
+        display: none;
+        animation: fadeInStep 0.5s ease;
+      }
+      
+      @keyframes fadeInStep {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      /* Show step based on radio button selection */
+      #step1-radio:checked ~ .form-container #step1 {
+        display: block;
+      }
+      
+      #step2-radio:checked ~ .form-container #step2 {
+        display: block;
+      }
+      
+      #step3-radio:checked ~ .form-container #step3 {
+        display: block;
+      }
+      
+      /* Star Rating Styles - Step 1 */
+      .rating-section {
+        text-align: center;
+        padding: 2rem;
+        background-color: #fff;
+        border-radius: 16px;
+        border: 1px solid var(--sage-green);
+      }
+      
+      .rating-section h3 {
+        font-size: 1.5rem;
+        color: var(--dark-green);
+        margin-bottom: 0.5rem;
+      }
+      
+      .rating-section p {
+        color: #666;
+        margin-bottom: 1.5rem;
+      }
+      
+      .stars {
+        display: flex;
+        justify-content: center;
+        gap: 0.8rem;
+        flex-direction: row-reverse;
+      }
+      
+      .stars input {
+        display: none;
+      }
+      
+      .stars label {
+        font-size: 3rem;
+        color: #ddd;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        margin-bottom: 0;
+        display: inline-block;
+      }
+      
+      .stars label:hover,
+      .stars label:hover ~ label,
+      .stars input:checked ~ label {
+        color: #ffc107;
+        transform: scale(1.1);
+      }
+      
+      .rating-value-text {
+        margin-top: 1rem;
+        font-size: 1rem;
+        color: var(--accent-color);
+        font-weight: 600;
+      }
+      
+      /* Store selected star value */
+      .star-value {
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        color: #666;
+      }
+      
+      /* Step 2 - Feedback Options */
+      .feedback-step {
+        text-align: center;
+      }
+      
+      .feedback-step h3 {
+        font-size: 1.5rem;
+        color: var(--dark-green);
+        margin-bottom: 0.5rem;
+      }
+      
+      .feedback-step p {
+        color: #666;
+        margin-bottom: 1.5rem;
+      }
+      
+      .feedback-options-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+        margin-bottom: 2rem;
+      }
+      
+      .feedback-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+        cursor: pointer;
+        padding: 1.5rem;
+        background-color: #fff;
+        border: 2px solid var(--sage-green);
+        border-radius: 16px;
+        transition: all 0.3s ease;
+        min-width: 120px;
+      }
+      
+      .feedback-card:hover {
+        border-color: var(--accent-color);
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      }
+      
+      .feedback-card input {
+        display: none;
+      }
+      
+      .feedback-card i {
+        font-size: 2.5rem;
+        color: var(--accent-color);
+      }
+      
+      .feedback-card span {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #555;
+      }
+      
+      .feedback-card small {
+        font-size: 0.7rem;
+        color: #999;
+      }
+      
+      /* Selected feedback card styling */
+      .feedback-card:has(input:checked) {
+        background-color: var(--accent-color);
+        border-color: var(--accent-color);
+      }
+      
+      .feedback-card:has(input:checked) i,
+      .feedback-card:has(input:checked) span,
+      .feedback-card:has(input:checked) small {
+        color: #fff;
+      }
+      
+      /* Button styles */
+      .nav-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 1.5rem;
+      }
+      
+      .nav-btn {
+        display: inline-block;
+        background: linear-gradient(135deg, var(--dark-green) 0%, #2b3b32 100%);
+        color: white;
+        padding: 12px 30px;
+        border-radius: 30px;
+        font-size: 0.9rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        border: none;
+      }
+      
+      .nav-btn:hover {
+        background: linear-gradient(135deg, var(--accent-color) 0%, #c45a45 100%);
+        transform: translateY(-2px);
+      }
+      
+      .nav-btn-back {
+        background: transparent;
+        color: var(--dark-green);
+        border: 2px solid var(--sage-green);
+      }
+      
+      .nav-btn-back:hover {
+        background-color: var(--sage-green);
+        border-color: var(--dark-green);
+        transform: translateY(-2px);
+      }
+      
+      /* Step 3 - Final Form */
+      .final-form-step {
+        text-align: left;
+      }
+      
+      .final-form-step h3 {
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+      
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+      
+      .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        color: var(--dark-green);
+        font-size: 0.9rem;
+      }
+      
+      .form-group label i {
+        margin-right: 8px;
+        color: var(--accent-color);
+      }
+      
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        width: 100%;
+        padding: 12px 15px;
+        border: 1.5px solid var(--sage-green);
+        border-radius: 10px;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        background-color: #fff;
+      }
+      
+      .form-group input:focus,
+      .form-group select:focus,
+      .form-group textarea:focus {
+        outline: none;
+        border-color: var(--accent-color);
+        box-shadow: 0 0 0 3px rgba(216, 105, 82, 0.1);
+      }
+      
+      .form-group textarea {
+        resize: vertical;
+        min-height: 120px;
+      }
+      
+      .required {
+        color: var(--accent-color);
+      }
+      
+      .suggestions-box {
+        background-color: #f9f9f9;
+        border-radius: 12px;
+        padding: 1rem;
+        margin-bottom: 1.5rem;
+      }
+      
+      .suggestions-box p {
+        font-size: 0.85rem;
+        color: #666;
+        margin-bottom: 0.8rem;
+        font-weight: 500;
+      }
+      
+      .suggestions-list {
+        margin-left: 1.5rem;
+        color: #666;
+        font-size: 0.8rem;
+        line-height: 1.8;
+      }
+      
+      .suggestions-list li {
+        margin-bottom: 0.3rem;
+      }
+      
+      .submit-btn {
+        background: linear-gradient(135deg, var(--dark-green) 0%, #2b3b32 100%);
+        color: white;
+        padding: 14px 30px;
+        border: none;
+        border-radius: 30px;
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        width: 100%;
+        font-family: 'Open Sans', sans-serif;
+      }
+      
+      .submit-btn:hover {
+        background: linear-gradient(135deg, var(--accent-color) 0%, #c45a45 100%);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(216, 105, 82, 0.3);
+      }
+      
+      /* Success Message */
+      .success-message {
+        display: none;
+        text-align: center;
+        padding: 2rem;
+        background: linear-gradient(135deg, var(--dark-green) 0%, #2b3b32 100%);
+        border-radius: 16px;
+        color: white;
+        margin-top: 1rem;
+      }
+      
+      .success-message:target {
+        display: block;
+        animation: fadeInStep 0.5s ease;
+      }
+      
+      .success-message i {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+      
+      .success-message h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+      
+      .success-message p {
+        font-size: 0.9rem;
+        opacity: 0.9;
+      }
+      
       /* Back to Top Button */
       .back-to-top {
         position: fixed;
@@ -155,6 +540,67 @@
         color: #fff;
         transform: translateY(-5px);
       }
+      
+      /* Footer Contact Us - No Background */
+      .footer-column .social-links .copy-text {
+        background: transparent;
+        padding: 0;
+        color: #ccc;
+      }
+      
+      /* Hidden radio buttons for navigation */
+      .step-radio {
+        display: none;
+      }
+      
+      /* Responsive */
+      @media (max-width: 768px) {
+        .contact-header {
+          padding: 3rem 5% 1.5rem;
+        }
+        
+        .contact-header h1 {
+          font-size: 1.8rem;
+        }
+        
+        .feedback-section {
+          padding: 2rem 5% 3rem;
+        }
+        
+        .feedback-container {
+          padding: 1.5rem;
+        }
+        
+        .stars label {
+          font-size: 2rem;
+        }
+        
+        .feedback-card {
+          min-width: 100px;
+          padding: 1rem;
+        }
+        
+        .feedback-card i {
+          font-size: 1.8rem;
+        }
+        
+        .feedback-card span {
+          font-size: 0.75rem;
+        }
+        
+        .back-to-top {
+          bottom: 20px;
+          right: 20px;
+          width: 40px;
+          height: 40px;
+          font-size: 1rem;
+        }
+        
+        .nav-btn {
+          padding: 8px 20px;
+          font-size: 0.8rem;
+        }
+      }
     </style>
   </head>
   <body id="top">
@@ -179,18 +625,164 @@
         <p>Follow us on social media or reach out via email to connect with the Too Much Tech team.</p>
         <div class="social-bar">
           <a href="https://www.facebook.com/profile.php?id=61582095175845" class="social-btn" target="_blank">
-            <i class="fa-brands fa-facebook" style="color: #1877F2;"></i> Facebook
+            <i class="fa-brands fa-facebook"></i> Facebook
           </a>
           <a href="https://www.instagram.com/too.much.tech/" class="social-btn" target="_blank">
-            <i class="fa-brands fa-instagram" style="color: #E4405F;"></i> Instagram
+            <i class="fa-brands fa-instagram"></i> Instagram
           </a>
           
           <div tabindex="0" class="social-btn">
-            <i class="fa-solid fa-envelope" style="color: #EA4335;"></i> Gmail
+            <i class="fa-solid fa-envelope"></i> Gmail
             <span class="css-popup">
               Click text to highlight, then Copy:<br><br>
               <span class="copy-text">toomuchtech30@gmail.com</span>
             </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Multi-Step Feedback Form - Pure CSS with Radio Navigation -->
+      <section class="feedback-section">
+        <div class="feedback-container">
+          <h2>We Value Your Feedback</h2>
+          <p>Help us improve your experience by sharing your thoughts with us.</p>
+          
+          <!-- Radio buttons for navigation (hidden) -->
+          <input type="radio" name="step" id="step1-radio" class="step-radio" checked>
+          <input type="radio" name="step" id="step2-radio" class="step-radio">
+          <input type="radio" name="step" id="step3-radio" class="step-radio">
+          
+          <div class="form-container">
+            
+            <!-- STEP 1: Star Rating -->
+            <div id="step1" class="form-step">
+              <div class="rating-section">
+                <h3>How was your experience? ⭐</h3>
+                <p>Please rate your experience with Too Much Tech</p>
+                <div class="stars">
+                  <input type="radio" name="rating" id="star5" value="5">
+                  <label for="star5" title="Excellent">★</label>
+                  <input type="radio" name="rating" id="star4" value="4">
+                  <label for="star4" title="Very Good">★</label>
+                  <input type="radio" name="rating" id="star3" value="3">
+                  <label for="star3" title="Good">★</label>
+                  <input type="radio" name="rating" id="star2" value="2">
+                  <label for="star2" title="Fair">★</label>
+                  <input type="radio" name="rating" id="star1" value="1">
+                  <label for="star1" title="Poor">★</label>
+                </div>
+                <div class="rating-value-text">
+                  <span id="rating-display">Click on a star to rate</span>
+                </div>
+              </div>
+              <div class="nav-buttons">
+                <label for="step2-radio" class="nav-btn" id="nextToStep2">Continue <i class="fa-solid fa-arrow-right"></i></label>
+              </div>
+            </div>
+            
+            <!-- STEP 2: Feedback Options -->
+            <div id="step2" class="form-step">
+              <div class="feedback-step">
+                <h3>Tell us more! 💬</h3>
+                <p>How would you describe your experience with our website?</p>
+                
+                <div class="feedback-options-grid">
+                  <label class="feedback-card">
+                    <input type="radio" name="websiteFeedback" value="Excellent">
+                    <i class="fa-regular fa-face-grin-stars"></i>
+                    <span>Excellent</span>
+                    <small>Loved it!</small>
+                  </label>
+                  <label class="feedback-card">
+                    <input type="radio" name="websiteFeedback" value="Good">
+                    <i class="fa-regular fa-face-smile"></i>
+                    <span>Good</span>
+                    <small>Pretty good</small>
+                  </label>
+                  <label class="feedback-card">
+                    <input type="radio" name="websiteFeedback" value="Average">
+                    <i class="fa-regular fa-face-meh"></i>
+                    <span>Average</span>
+                    <small>It was okay</small>
+                  </label>
+                  <label class="feedback-card">
+                    <input type="radio" name="websiteFeedback" value="Poor">
+                    <i class="fa-regular fa-face-frown"></i>
+                    <span>Poor</span>
+                    <small>Needs work</small>
+                  </label>
+                  <label class="feedback-card">
+                    <input type="radio" name="websiteFeedback" value="Terrible">
+                    <i class="fa-regular fa-face-angry"></i>
+                    <span>Terrible</span>
+                    <small>Very disappointed</small>
+                  </label>
+                </div>
+                
+                <div class="nav-buttons">
+                  <label for="step1-radio" class="nav-btn nav-btn-back"><i class="fa-solid fa-arrow-left"></i> Back</label>
+                  <label for="step3-radio" class="nav-btn">Continue <i class="fa-solid fa-arrow-right"></i></label>
+                </div>
+              </div>
+            </div>
+            
+            <!-- STEP 3: Final Form -->
+            <div id="step3" class="form-step final-form-step">
+              <h3>Almost there! 📝</h3>
+              
+              <form action="#success" method="GET">
+                <div class="form-group">
+                  <label for="name"><i class="fa-solid fa-user"></i> Name (Optional)</label>
+                  <input type="text" id="name" name="name" placeholder="Enter your name">
+                </div>
+                
+                <div class="form-group">
+                  <label for="email"><i class="fa-solid fa-envelope"></i> Email (Optional)</label>
+                  <input type="email" id="email" name="email" placeholder="Enter your email for a response">
+                </div>
+                
+                <div class="form-group">
+                  <label for="feedbackType"><i class="fa-solid fa-tag"></i> Feedback Type</label>
+                  <select id="feedbackType" name="feedbackType">
+                    <option value="general">General Feedback</option>
+                    <option value="bug">Bug Report</option>
+                    <option value="suggestion">Suggestion</option>
+                    <option value="compliment">Compliment</option>
+                    <option value="question">Question</option>
+                  </select>
+                </div>
+                
+                <div class="suggestions-box">
+                  <p><i class="fa-regular fa-lightbulb"></i> Suggestions you can include in your message:</p>
+                  <ul class="suggestions-list">
+                    <li>Great content!</li>
+                    <li>Mobile experience needs improvement</li>
+                    <li>Add more interactive features</li>
+                    <li>Love the design</li>
+                    <li>Too much text</li>
+                    <li>Add video tutorials</li>
+                  </ul>
+                </div>
+                
+                <div class="form-group">
+                  <label for="message"><i class="fa-regular fa-comment"></i> Your Message <span class="required">*</span></label>
+                  <textarea id="message" name="message" placeholder="Please share your feedback, suggestions, or questions..." required></textarea>
+                </div>
+                
+                <div class="nav-buttons">
+                  <label for="step2-radio" class="nav-btn nav-btn-back"><i class="fa-solid fa-arrow-left"></i> Back</label>
+                  <button type="submit" class="nav-btn" style="border: none; cursor: pointer;">Submit Feedback <i class="fa-regular fa-paper-plane"></i></button>
+                </div>
+              </form>
+            </div>
+            
+          </div>
+          
+          <!-- Success Message -->
+          <div id="success" class="success-message">
+            <i class="fa-regular fa-circle-check"></i>
+            <h3>Thank You! 🎉</h3>
+            <p>Your feedback has been submitted successfully. We appreciate your input and will use it to improve Too Much Tech!</p>
           </div>
         </div>
       </section>
@@ -219,7 +811,7 @@
           <h3>Sitemap</h3>
           <ul>
             <li><a href="../index.html">Home</a></li>
-            <li><a href="../learn/learn.html">What is Digital Fatigue?</a></li>
+            <li><a href="../learn/main-topic-1/main-topic-1.html">What is Digital Fatigue?</a></li>
             <li><a href="#">Causes & Effects</a></li>
             <li><a href="#">Solutions</a></li>
             <li><a href="../about/about.html">About Us</a></li>
@@ -228,21 +820,24 @@
         </div>
 
         <div class="footer-column">
-          <h3>Connect With Us!</h3>
-          <ul class="social-links">
-            <li>
-              <i class="fa-brands fa-facebook"></i><a href="https://www.facebook.com/profile.php?id=61582095175845" target="_blank"> Too Much Tech</a>
-            </li>
-            <li>
-              <i class="fa-brands fa-instagram"></i><a href="https://www.instagram.com/too.much.tech/" target="_blank"> @too.much.tech</a>
-            </li>
-            <li>
-              <i class="fa-solid fa-envelope"></i>
-              <span class="copy-text" style="color: #ccc; background: transparent; padding: 0;">toomuchtech30@gmail.com</span>
-            </li>
-          </ul>
+          <h3>Connect With Us</h3>
+          <div class="social-links">
+            <a target="_blank" href="https://www.facebook.com/profile.php?id=61582095175845&sk=about">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a target="_blank" href="https://www.instagram.com/too.much.tech/">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+          <br />
+          <h3>Contact Us</h3>
+          <div class="social-links">
+            <i class="fa-solid fa-envelope"></i>
+            <span class="copy-text" style="background: transparent; padding: 0; color: #ccc;">toomuchtech30@gmail.com</span>
+          </div>
         </div>
       </div>
+
       <div class="footer-bottom">
         &copy; 2026 Too Much Tech. All rights reserved.
       </div>
