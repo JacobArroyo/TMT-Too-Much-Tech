@@ -21,13 +21,13 @@ h2 {
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 90px;
 }
 
 body {
   color: var(--text-dark);
-  background-color: white;
   line-height: 1.6;
-  font-family: "Open Sans";
+  font-family: "Montserrat";
 }
 
 a {
@@ -36,7 +36,6 @@ a {
 }
 
 header {
-  background-color: var(--dark-green);
   color: var(--text-light);
   padding: 1.5rem 5%;
   display: flex;
@@ -45,7 +44,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: linear-gradient(to left, #374a3f, #2b3b32);
+  background: linear-gradient(to right, #273a2f, #33503f);
 }
 
 .logo {
@@ -94,11 +93,12 @@ nav ul li a.active {
 
 .hero-text h1 {
   font-style: italic;
+  font-weight: normal;
   font-size: 3.5rem;
   margin-bottom: 1.2rem;
   line-height: 1.15;
   color: var(--text-light);
-  text-shadow: 2px 2px 8px rgba(0, 36, 2, 0.733);
+  text-shadow: 2px 2px 8px rgba(0, 36, 2, 0.493);
 }
 
 .hero-text p {
@@ -397,6 +397,23 @@ nav ul li a.active {
     transform 0.3s ease,
     background-color 0.3s ease;
   z-index: 99;
+  opacity: 0;
+  pointer-events: none;
+  animation: back-to-top-reveal linear forwards;
+  animation-timeline: scroll();
+  animation-range: 0px 450px;
+}
+
+@keyframes back-to-top-reveal {
+  from {
+    opacity: 0;
+    translate: 0 60px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+    pointer-events: auto;
+  }
 }
 
 .back-to-top:hover {
@@ -412,7 +429,7 @@ nav ul li a.active {
 
 /*Start of footer section*/
 footer {
-  background-color: var(--dark-green);
+  background: linear-gradient(to left, #273a2f, #33503f);
   color: var(--text-light);
   padding: 4rem 10% 1.5rem;
 }
