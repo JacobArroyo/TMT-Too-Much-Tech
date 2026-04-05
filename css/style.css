@@ -27,7 +27,7 @@ body {
   color: var(--text-dark);
   background-color: white;
   line-height: 1.6;
-  font-family: "Open Sans";
+  font-family: "Montserrat";
 }
 
 a {
@@ -36,7 +36,6 @@ a {
 }
 
 header {
-  background-color: var(--dark-green);
   color: var(--text-light);
   padding: 1.5rem 5%;
   display: flex;

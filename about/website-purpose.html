@@ -11,22 +11,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     
     <style>
-      /* Smooth scrolling */
-      html { 
-        scroll-behavior: smooth; 
-      }
-
-      /* === STICKY FOOTER FIX === */
-      body {
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-      }
-      main {
-        flex: 1; 
-      }
-      /* ========================= */
-
       /* Page Header */
       .about-header { text-align: center; padding: 4rem 10% 2rem; background-color: var(--light-bg); }
       .about-header h1 { margin-bottom: 1rem; color: var(--text-dark); }
@@ -52,40 +36,6 @@
 
       @media (max-width: 768px) {
         .story-section { flex-direction: column; }
-      }
-
-      /* Back to Top Button */
-      .back-to-top {
-        position: fixed;
-        bottom: 30px;
-        right: 30px; /* Locked to 30px so it stays firmly on the right side */
-        background-color: var(--light-bg);
-        color: #333;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        border: 2px solid #333;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.2rem;
-        line-height: 0; /* Keeps icon perfectly centered */
-        text-decoration: none;
-        transition: all 0.3s ease;
-        z-index: 1000;
-      }
-      .back-to-top:hover {
-        background-color: #333;
-        color: #fff;
-        transform: translateY(-5px);
-      }
-
-      /* Copy Text Trick for Footer */
-      .copy-text { 
-        user-select: all; 
-        -webkit-user-select: all; 
-        background-color: transparent; 
-        cursor: copy; 
       }
     </style>
   </head>
