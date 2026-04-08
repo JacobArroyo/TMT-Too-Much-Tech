@@ -5,23 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Too Much Tech | Learn More About Digital Fatigue</title>
     <link rel="icon" href="../media/logofavicon.png" type="image/png" />
-    <link rel="stylesheet" href="../css/style.css" />
+
     <link
       href="https://fonts.googleapis.com/css?family=Merriweather"
       rel="stylesheet"
     />
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
-
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/style.css" />
     <style>
       .story-section {
         display: flex;
         align-items: center;
         gap: 4rem;
-        padding: 5rem 10% 2rem;
+        padding: 8rem 10% 2rem;
       }
 
       .story-content {
@@ -29,7 +33,9 @@
       }
 
       .story-content h2 {
-        font-size: 2.2rem;
+        font-size: 4rem;
+        font-weight: bold;
+        font-style: italic;
         color: var(--dark-green);
         margin-bottom: 1.5rem;
       }
@@ -49,6 +55,10 @@
         object-fit: cover;
       }
 
+      .learn-card-image:hover {
+        opacity: 0.9;
+      }
+
       .learn-grid-section {
         padding: 4rem 10% 6rem;
         background-color: var(--light-bg);
@@ -66,10 +76,15 @@
         background-color: #ffffff;
         border-radius: 16px;
         overflow: hidden;
-        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        transition: all 0.4s ease;
         display: flex;
         flex-direction: column;
         height: 100%;
+      }
+
+      .learn-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
       }
 
       .learn-card-content {
@@ -100,62 +115,51 @@
         padding-top: 16px;
         border-top: 1px solid #eee;
       }
-
-      .learn-card-button {
-        display: inline-block;
-        padding: 10px 22px;
-        background-color: var(--dark-green);
-        color: #fff;
-        border-radius: 25px;
-        font-weight: 600;
-        font-size: 0.85rem;
-        transition: all 0.3s ease;
-      }
-
-      .learn-card-button:hover {
-        background-color: var(--accent-color);
-        transform: scale(1.05);
-      }
-
-      .learn-card-button:active {
-        color: #cccccc;
-        background-color: #9e3d29;
-      }
     </style>
   </head>
 
   <body id="top">
+    <script src="../bootstrap/js/bootstrap.js"></script>
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+
     <header>
       <div class="logo">
         <img
           src="../media/tmtlogo.png"
           alt="TMT Logo"
+          title="Too Much Tech Logo"
           style="height: 60px; width: auto"
         />
       </div>
       <nav>
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="#" class="active">Learn</a></li>
-          <li><a href="#">Solutions</a></li>
-          <li><a href="../about/about.html">About</a></li>
-          <li><a href="../contact/contact-us.html">Contact Us</a></li>
+        <ul class="list-unstyled d-flex gap-5">
+          <li>
+            <a href="../index.html">Home</a>
+          </li>
+          <li>
+            <a href="#" class="active">Learn</a>
+          </li>
+          <li>
+            <a href="solutions.html">Solutions</a>
+          </li>
+          <li>
+            <a href="../about/about.html">About</a>
+          </li>
+          <li>
+            <a href="../contact/contact-us.html">Contact Us</a>
+          </li>
         </ul>
       </nav>
     </header>
 
     <main>
       <section class="story-section">
-        <div class="story-image">
-          <img
-            src="media/confused-person-infront-of-a-laptop.jpg"
-            alt="A confused person infront of a laptop"
-          />
-        </div>
-
         <div class="story-content">
-          <h2>Learn more about Digital Fatigue</h2>
-
+          <h2>
+            Learn more about <br />
+            Digital Fatigue
+          </h2>
+          <br />
           <p>
             Have you ever found yourself staring at a screen for hours, reading
             the same sentence over and over while your
@@ -165,19 +169,19 @@
             <strong>focus begins to blur?</strong> That "foggy" sensation isn't
             just common tiredness—it is digital fatigue,
           </p>
-
-          <p>
-            It happens when our "biological hardware"—our brains and
-            eyes—struggles to process the infinite stream of data, blue light,
-            and constant notifications we encounter every day.
-          </p>
-
           <p>
             By understanding the science behind why our screens drain us, we can
             move past the<strong> "infinite scroll"</strong> and start building
             a more intentional, balanced relationship with the technology we
             use.
           </p>
+        </div>
+
+        <div class="story-image">
+          <img
+            src="media/confused-person-infront-of-a-laptop.jpg"
+            alt="A confused person infront of a laptop"
+          />
         </div>
       </section>
 
@@ -190,21 +194,25 @@
       <section id="learn-topics" class="learn-grid-section">
         <div class="topic-card-container">
           <div class="learn-card">
-            <div
-              class="learn-card-image"
-              style="
-                height: 180px;
-                background:
-                  linear-gradient(
-                    rgba(146, 255, 170, 0.75),
-                    rgba(255, 242, 125, 0.75)
-                  ),
-                  url(../media/drained-at-laptop.png);
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
-              "
-            ></div>
+            <a
+              href="understanding-digital-fatigue/understanding-digital-fatigue.html"
+            >
+              <div
+                class="learn-card-image"
+                style="
+                  height: 180px;
+                  background:
+                    linear-gradient(
+                      rgba(197, 197, 197, 0.75),
+                      rgba(63, 63, 63, 0.75)
+                    ),
+                    url(../media/drained-at-laptop.png);
+                  background-size: cover;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                "
+              ></div
+            ></a>
             <div class="learn-card-content">
               <h3 class="learn-card-title">Understanding Digital Fatigue</h3>
               <p class="learn-card-description">
@@ -213,7 +221,7 @@
               </p>
               <div class="learn-card-footer">
                 <a
-                  class="learn-card-button"
+                  class="card-btn"
                   href="understanding-digital-fatigue/understanding-digital-fatigue.html"
                   >Read more</a
                 >
@@ -222,21 +230,23 @@
           </div>
 
           <div class="learn-card">
-            <div
-              class="learn-card-image"
-              style="
-                height: 180px;
-                background:
-                  linear-gradient(
-                    rgba(178, 252, 242, 0.75),
-                    rgba(68, 218, 255, 0.75)
-                  ),
-                  url(media/socia-media-tricks.jpg);
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
-              "
-            ></div>
+            <a href="social-media-tricks/social-media-tricks.html">
+              <div
+                class="learn-card-image"
+                style="
+                  height: 180px;
+                  background:
+                    linear-gradient(
+                      rgba(178, 231, 252, 0.74),
+                      rgba(68, 218, 255, 0.75)
+                    ),
+                    url(media/socia-media-tricks.jpg);
+                  background-size: cover;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                "
+              ></div
+            ></a>
             <div class="learn-card-content">
               <h3 class="learn-card-title">Social Media Tricks</h3>
               <p class="learn-card-description">
@@ -245,7 +255,7 @@
               </p>
               <div class="learn-card-footer">
                 <a
-                  class="learn-card-button"
+                  class="card-btn"
                   href="social-media-tricks/social-media-tricks.html"
                   >Read more</a
                 >
@@ -254,21 +264,23 @@
           </div>
 
           <div class="learn-card">
-            <div
-              class="learn-card-image"
-              style="
-                height: 180px;
-                background:
-                  linear-gradient(
-                    rgba(255, 200, 200, 0.75),
-                    rgba(111, 252, 106, 0.75)
-                  ),
-                  url(media/school-df.jpg);
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
-              "
-            ></div>
+            <a href="school-and-work-burnout/school-and-work-burnout.html">
+              <div
+                class="learn-card-image"
+                style="
+                  height: 180px;
+                  background:
+                    linear-gradient(
+                      rgba(209, 170, 41, 0.75),
+                      rgba(119, 21, 21, 0.75)
+                    ),
+                    url(media/school-df.jpg);
+                  background-size: cover;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                "
+              ></div
+            ></a>
             <div class="learn-card-content">
               <h3 class="learn-card-title">School and Work Burnout</h3>
               <p class="learn-card-description">
@@ -277,7 +289,7 @@
               </p>
               <div class="learn-card-footer">
                 <a
-                  class="learn-card-button"
+                  class="card-btn"
                   href="school-and-work-burnout/school-and-work-burnout.html"
                   >Read more</a
                 >
@@ -286,21 +298,23 @@
           </div>
 
           <div class="learn-card">
-            <div
-              class="learn-card-image"
-              style="
-                height: 180px;
-                background:
-                  linear-gradient(
-                    rgba(177, 125, 211, 0.75),
-                    rgba(169, 43, 173, 0.75)
-                  ),
-                  url(media/design-df.webp);
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
-              "
-            ></div>
+            <a href="">
+              <div
+                class="learn-card-image"
+                style="
+                  height: 180px;
+                  background:
+                    linear-gradient(
+                      rgba(177, 125, 211, 0.75),
+                      rgba(169, 43, 173, 0.75)
+                    ),
+                    url(media/design-pandeic.png);
+                  background-size: cover;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                "
+              ></div
+            ></a>
             <div class="learn-card-content">
               <h3 class="learn-card-title">Website Design and HCI</h3>
               <p class="learn-card-description">
@@ -309,7 +323,7 @@
               </p>
               <div class="learn-card-footer">
                 <a
-                  class="learn-card-button"
+                  class="card-btn"
                   href="website-design-hci/website-design-hci.html"
                   >Read more</a
                 >
@@ -318,48 +332,54 @@
           </div>
 
           <div class="learn-card">
-            <div
-              class="learn-card-image"
-              style="
-                height: 180px;
-                background:
-                  linear-gradient(
-                    rgba(111, 166, 180, 0.75),
-                    rgba(17, 38, 133, 0.75)
-                  ),
-                  url(media/tech-df.jpg);
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
-              "
-            ></div>
+            <a href="">
+              <div
+                class="learn-card-image"
+                style="
+                  height: 180px;
+                  background:
+                    linear-gradient(
+                      rgba(111, 166, 180, 0.75),
+                      rgba(17, 38, 133, 0.75)
+                    ),
+                    url(media/tech-df.jpg);
+                  background-size: cover;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                "
+              ></div
+            ></a>
             <div class="learn-card-content">
               <h3 class="learn-card-title">What Tech Does to Your Body</h3>
               <p class="learn-card-description">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
               </p>
               <div class="learn-card-footer">
-                <a class="learn-card-button" href="physical-health/body-effects.html">Read more</a>
+                <a class="card-btn" href="physical-health/body-effects.html"
+                  >Read more</a
+                >
               </div>
             </div>
           </div>
 
           <div class="learn-card">
-            <div
-              class="learn-card-image"
-              style="
-                height: 180px;
-                background:
-                  linear-gradient(
-                    rgba(60, 72, 179, 0.75),
-                    rgba(177, 26, 26, 0.75)
-                  ),
-                  url(media/df-in-ph.webp);
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
-              "
-            ></div>
+            <a href="">
+              <div
+                class="learn-card-image"
+                style="
+                  height: 180px;
+                  background:
+                    linear-gradient(
+                      rgba(60, 72, 179, 0.75),
+                      rgba(177, 26, 26, 0.75)
+                    ),
+                    url(media/df-in-ph.webp);
+                  background-size: cover;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                "
+              ></div
+            ></a>
             <div class="learn-card-content">
               <h3 class="learn-card-title">
                 Digital Fatigue in the Philippines
@@ -368,61 +388,159 @@
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
               </p>
               <div class="learn-card-footer">
-                <a class="learn-card-button" href="#">Read more</a>
+                <a
+                  class="card-btn"
+                  href="digital-fatigue-philippines/digital-fatigue-philippines.html"
+                  >Read more</a
+                >
               </div>
             </div>
           </div>
 
           <div class="learn-card">
-            <div
-              class="learn-card-image"
-              style="
-                height: 180px;
-                background:
-                  linear-gradient(
-                    rgba(55, 74, 63, 0.75),
-                    rgba(18, 27, 22, 0.75)
-                  ),
-                  url(media/socia-media-tricks.jpg);
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
-              "
-            ></div>
+            <a href="">
+              <div
+                class="learn-card-image"
+                style="
+                  height: 180px;
+                  background:
+                    linear-gradient(
+                      rgba(55, 74, 63, 0.75),
+                      rgba(18, 27, 22, 0.75)
+                    ),
+                    url(media/socia-media-tricks.jpg);
+                  background-size: cover;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                "
+              ></div
+            ></a>
             <div class="learn-card-content">
               <h3 class="learn-card-title">From iPad Kids to Seniors</h3>
               <p class="learn-card-description">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
               </p>
               <div class="learn-card-footer">
-                <a class="learn-card-button" href="#">Read more</a>
+                <a class="card-btn" href="#">Read more</a>
               </div>
             </div>
           </div>
 
           <div class="learn-card">
-            <div
-              class="learn-card-image"
-              style="
-                height: 180px;
-                background:
-                  linear-gradient(
-                    rgba(55, 74, 63, 0.75),
-                    rgba(18, 27, 22, 0.75)
-                  ),
-                  url(media/socia-media-tricks.jpg);
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
-              "
-            ></div>
+            <a href="">
+              <div
+                class="learn-card-image"
+                style="
+                  height: 180px;
+                  background:
+                    linear-gradient(
+                      rgba(55, 74, 63, 0.75),
+                      rgba(18, 27, 22, 0.75)
+                    ),
+                    url(media/socia-media-tricks.jpg);
+                  background-size: cover;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                "
+              ></div
+            ></a>
             <div class="learn-card-content">
               <h3 class="learn-card-title">When Fun Becomes a Chore</h3>
               <p class="learn-card-description">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
               </p>
               <div class="learn-card-footer">
-                <a class="learn-card-button" href="#">Read more</a>
+                <a class="card-btn" href="#">Read more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="solutions"
+        class="learn-grid-section"
+        style="background-color: #ffffff"
+      >
+        <div style="text-align: center; margin-bottom: 4rem">
+          <h2
+            style="
+              font-size: 3rem;
+              font-weight: bold;
+              font-style: italic;
+              color: var(--dark-green);
+            "
+          >
+            Solutions to Digital Fatigue
+          </h2>
+          <p
+            style="
+              color: #555;
+              max-width: 600px;
+              margin: 0 auto;
+              line-height: 1.8;
+            "
+          >
+            Practical steps to help you manage screen time, reduce physical
+            strain, and reclaim your mental energy.
+          </p>
+        </div>
+
+        <div class="topic-card-container">
+          <div class="learn-card">
+            <a href="solutions.html">
+              <div
+                class="learn-card-image"
+                style="
+                  height: 180px;
+                  background:
+                    linear-gradient(
+                      rgba(192, 151, 105, 0.5),
+                      rgba(179, 147, 60, 0.5)
+                    ),
+                    url(/learn/media/digital-detox.png);
+                  background-size: cover;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                "
+              ></div>
+            </a>
+            <div class="learn-card-content">
+              <h3 class="learn-card-title">Digital Detox</h3>
+              <p class="learn-card-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+              <div class="learn-card-footer">
+                <a class="card-btn" href="solutions.html">Read more</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="learn-card">
+            <a href="solutions.html">
+              <div
+                class="learn-card-image"
+                style="
+                  height: 180px;
+                  background:
+                    linear-gradient(
+                      rgba(178, 231, 252, 0.5),
+                      rgba(68, 218, 255, 0.5)
+                    ),
+                    url(/learn/media/digital-wellness.jpg);
+                  background-size: cover;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                "
+              ></div>
+            </a>
+            <div class="learn-card-content">
+              <h3 class="learn-card-title">Digital Wellness</h3>
+              <p class="learn-card-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+              <div class="learn-card-footer">
+                <a class="card-btn" href="solutions.html">Read more</a>
               </div>
             </div>
           </div>
@@ -441,24 +559,23 @@
             <img src="../media/tmtlogo.png" alt="Too Much Tech Logo" />
           </div>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-            eius maiores corporis incidunt, animi quos aut nostrum eveniet
-            laborum nisi odit quasi, et optio ducimus delectus debitis obcaecati
-            accusamus recusandae.
+            An educational platform raising awareness about digital fatigue.
+            Explore our resources to understand the mental and physical impacts
+            of excessive tech use, and learn how to build healthier digital
+            habits today.
           </p>
         </div>
 
         <div class="footer-column">
           <h3>Sitemap</h3>
           <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="../index.html">Home</a></li>
             <li>
-              <a href="learn/learn.html">What is Digital Fatigue?</a>
+              <a href="#">What is Digital Fatigue?</a>
             </li>
-            <li><a href="#">Causes & Effects</a></li>
-            <li><a href="#">Solutions</a></li>
-            <li><a href="about/about.html">About Us</a></li>
-            <li><a href="contact/contact-us.html">Contact Us</a></li>
+            <li><a href="solutions.html">Solutions to Digital Fatigue</a></li>
+            <li><a href="../about/about.html">About Us</a></li>
+            <li><a href="../contact/contact-us.html">Contact Us</a></li>
           </ul>
         </div>
 

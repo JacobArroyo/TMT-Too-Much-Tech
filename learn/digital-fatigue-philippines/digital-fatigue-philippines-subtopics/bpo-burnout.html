@@ -23,9 +23,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/style.css" />
   </head>
 
   <body id="top">
+    <script src="../bootstrap/js/bootstrap.js"></script>
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
     <header>
       <div class="logo">
         <img
@@ -34,10 +38,10 @@
           style="height: 60px; width: auto"
         />
       </div>
-      <nav>
+      <nav class="list-unstyled d-flex gap-5">
         <ul>
           <li><a href="../../../index.html">Home</a></li>
-          <li><a href="../../learn.html">Learn</a></li>
+          <li><a href="../../learn.html" class="active">Learn</a></li>
           <li><a href="#">Solutions</a></li>
           <li><a href="../../../about/about.html">About</a></li>
           <li><a href="../../../contact/contact-us.html">Contact Us</a></li>
@@ -112,11 +116,41 @@
           Author: Ian Gabriel V. Marquez
         </p>
 
+        <div class="article-image-container" style="margin-top: 2.5rem">
+          <a href="../media/BPO-Call-Center-Burnout.jpg" target="_blank">
+            <img
+              src="../media/BPO-Call-Center-Burnout.jpg"
+              alt="Digital Fatigue"
+              title="BPO and Call Center Burnout"
+              style="
+                width: 100%;
+                border-radius: 15px;
+                height: 500px;
+                object-fit: contain;
+              "
+            />
+          </a>
+
+          <p
+            class="reference-text"
+            style="font-size: 0.9rem; font-style: italic; text-align: center"
+          >
+            Source:
+            <a
+              href="https://peopleplacesplates.ph/prioritizing-mental-health-bpo-era/"
+              target="_blank"
+              style="color: blue; text-decoration: underline"
+            >
+              https://peopleplacesplates.ph/prioritizing-mental-health-bpo-era/
+            </a>
+          </p>
+        </div>
+
         <p class="article-text">
           Everyday stress and burnout are commonplace for call center agents and
           workers of all stripes. Similar to runaway stress, call center burnout
-          is caused by persistent work-related stress that is either poorly or
-          completely controlled for an extended period of time.
+          is caused by persistent <b>work-related stress</b> that is either
+          poorly or completely controlled for an extended period of time.
         </p>
 
         <p class="article-text">
@@ -126,19 +160,23 @@
         </p>
 
         <p class="article-text">
-          According to the WHO, burnout symptoms include a sense of tiredness
-          and low energy, a greater mental detachment from one's work, or
-          sentiments of pessimism or cynicism about one's work, a decline in
-          professional effectiveness.
+          According to the WHO, burnout symptoms include a
+          <b>sense of tiredness and low energy</b>, a greater mental detachment
+          from one's work, or sentiments of pessimism or cynicism about one's
+          work, a decline in professional effectiveness.
         </p>
 
         <p class="article-text">
           Both in English and Filipino, to get a broad view of what was going
-          on. What they found was people working in BPOs faced a lot of stress,
-          both physically and mentally, which could lead to problems such as
-          trouble sleeping and getting sick from their work. Even though there
-          are laws about keeping workers safe, not all companies follow them,
-          and not many offer programs to help workers stay healthy.
+          on. What they found was people working in BPOs
+          <b>faced a lot of stress, both physically and mentally</b>, which
+          could
+          <b
+            >lead to problems such as trouble sleeping and getting sick from
+            their work</b
+          >. Even though there are laws about keeping workers safe, not all
+          companies follow them, and not many offer programs to help workers
+          stay healthy.
         </p>
 
         <p class="article-text">
@@ -166,29 +204,29 @@
           <strong>Disadvantages</strong>
         </p>
 
-        <div style="padding: 20px; border-radius: 15px; margin: 2rem 0">
+        <div>
           <ul>
-            <li>
+            <li style="margin-bottom: 15px">
               Long term stress can lead to serious mental health issues such as
               anxiety and depression.
             </li>
-            <li>
+            <li style="margin-bottom: 15px">
               Irregular work hours (night shifts) disrupt sleep patterns and
               physical health.
             </li>
-            <li>
+            <li style="margin-bottom: 15px">
               High pressure and workload can reduce job satisfaction and
               motivation.
             </li>
-            <li>
+            <li style="margin-bottom: 15px">
               Increased risk of employee burnout leads to high turnover rates in
               companies.
             </li>
-            <li>
+            <li style="margin-bottom: 15px">
               Physical health problems such as headaches, fatigue, and weakened
               immune system.
             </li>
-            <li>
+            <li style="margin-bottom: 15px">
               Poor work life balance affects relationships and personal
               well-being.
             </li>
@@ -202,65 +240,94 @@
           >
         </p>
 
-        <div style="padding: 20px; border-radius: 15px; margin: 2rem 0">
+        <div>
           <ol>
-            <li>Build a culture that cares.</li>
+            <strong><li>Build a culture that cares.</li></strong>
             <ul>
-              <li>Create a supportive, employee-first workplace</li>
-              <li>Share the company’s vision to give meaning to work</li>
-              <li>Hold regular 1-on-1 meetings to check in with employees</li>
-              <li>Build trust, connection, and engagement</li>
+              <li style="margin: 20px; list-style-type: disc">
+                Create a supportive, employee-first workplace
+              </li>
+              <li style="margin: 20px; list-style-type: disc">
+                Share the company’s vision to give meaning to work
+              </li>
+              <li style="margin: 20px; list-style-type: disc">
+                Hold regular 1-on-1 meetings to check in with employees
+              </li>
+              <li style="margin: 20px; list-style-type: disc">
+                Build trust, connection, and engagement
+              </li>
             </ul>
 
-            <li>Set clear expectations from the start.</li>
+            <strong><li>Set clear expectations from the start.</li></strong>
             <ul>
-              <li>Avoid confusion by being transparent</li>
-              <li>Clearly define roles and responsibilities</li>
-              <li>Maintain open communication through regular meetings</li>
+              <li style="margin: 20px; list-style-type: disc">
+                Avoid confusion by being transparent
+              </li>
+              <li style="margin: 20px; list-style-type: disc">
+                Clearly define roles and responsibilities
+              </li>
+              <li style="margin: 20px; list-style-type: disc">
+                Maintain open communication through regular meetings
+              </li>
             </ul>
 
-            <li>Provide adequate and ongoing training.</li>
+            <strong><li>Provide adequate and ongoing training.</li></strong>
             <ul>
-              <li>Prepare agents properly and help them grow</li>
-              <li>Offer strong onboarding before taking calls</li>
-              <li>Continue training to improve skills and retention</li>
+              <li style="margin: 20px; list-style-type: disc">
+                Prepare agents properly and help them grow
+              </li>
+              <li style="margin: 20px; list-style-type: disc">
+                Offer strong onboarding before taking calls
+              </li>
+              <li style="margin: 20px; list-style-type: disc">
+                Continue training to improve skills and retention
+              </li>
             </ul>
 
-            <li>Incentivize performance and make work fun.</li>
+            <strong><li>Incentivize performance and make work fun.</li></strong>
             <ul>
-              <li>Keep agents motivated and engaged</li>
-              <li>Use rewards and bonuses for good performance</li>
-              <li>Add friendly competitions and team activities</li>
+              <li style="margin: 20px; list-style-type: disc">
+                Keep agents motivated and engaged
+              </li>
+              <li style="margin: 20px; list-style-type: disc">
+                Use rewards and bonuses for good performance
+              </li>
+              <li style="margin: 20px; list-style-type: disc">
+                Add friendly competitions and team activities
+              </li>
             </ul>
 
-            <li>Provide the right tools and technology.</li>
+            <strong><li>Provide the right tools and technology.</li></strong>
             <ul>
-              <li>Reduce stress by making work easier</li>
-              <li>Use automation and AI to handle repetitive tasks</li>
-              <li>Ensure software is user-friendly and efficient</li>
-              <li>
+              <li style="margin: 20px; list-style-type: disc">
+                Reduce stress by making work easier
+              </li>
+              <li style="margin: 20px; list-style-type: disc">
+                Use automation and AI to handle repetitive tasks
+              </li>
+              <li style="margin: 20px; list-style-type: disc">
+                Ensure software is user-friendly and efficient
+              </li>
+              <li style="margin: 20px; list-style-type: disc">
                 Implement tools like workflow automation and call detection
               </li>
             </ul>
 
-            <li>Create a positive feedback loop of performance.</li>
+            <strong
+              ><li>Create a positive feedback loop of performance.</li></strong
+            >
             <ul>
-              <li>Boost morale through success and productivity</li>
-              <li>Better tools - better performance - happier agents</li>
-              <li>
+              <li style="margin: 20px; list-style-type: disc">
+                Boost morale through success and productivity
+              </li>
+              <li style="margin: 20px; list-style-type: disc">
+                Better tools - better performance - happier agents
+              </li>
+              <li style="margin: 20px; list-style-type: disc">
                 Increased success leads to higher motivation and lower burnout
               </li>
             </ul>
           </ol>
-        </div>
-
-        <div class="article-image-container" style="margin-top: 2.5rem">
-          <img
-            src="../../../media/man-sleeps-lying-front-computer.png"
-            alt="Description of the image"
-            style="width: 100%; border-radius: 15px"
-          />
-          <p class="reference-text">Optional: Picture reference</p>
         </div>
       </article>
 
@@ -273,28 +340,27 @@
       <div class="footer-content">
         <div class="footer-column">
           <div class="footer-logo">
-            <img src="../../../media/tmtlogo.png" alt="Too Much Tech Logo" />
+            <img src="../../../media/tmtlogo.png  " alt="Too Much Tech Logo" />
           </div>
           <h3>Too Much Tech</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-            eius maiores corporis incidunt, animi quos aut nostrum eveniet
-            laborum nisi odit quasi, et optio ducimus delectus debitis obcaecati
-            accusamus recusandae.
+            An educational platform raising awareness about digital fatigue.
+            Explore our resources to understand the mental and physical impacts
+            of excessive tech use, and learn how to build healthier digital
+            habits today.
           </p>
         </div>
 
         <div class="footer-column">
           <h3>Sitemap</h3>
           <ul>
-            <li><a href="../../../index.html">Home</a></li>
+            <li><a href="../../index.html">Home</a></li>
             <li>
-              <a href="../../learn.html">What is Digital Fatigue?</a>
+              <a href="../learn.html">What is Digital Fatigue?</a>
             </li>
-            <li><a href="#">Causes & Effects</a></li>
             <li><a href="#">Solutions</a></li>
-            <li><a href="../../../about/about.html">About Us</a></li>
-            <li><a href="../../../contact/contact-us.html">Contact Us</a></li>
+            <li><a href="../../about/about.html">About Us</a></li>
+            <li><a href="../../contact/contact-us.html">Contact Us</a></li>
           </ul>
         </div>
 

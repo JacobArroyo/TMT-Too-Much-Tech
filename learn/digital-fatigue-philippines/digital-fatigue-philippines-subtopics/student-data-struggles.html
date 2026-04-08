@@ -23,9 +23,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/style.css" />
   </head>
 
   <body id="top">
+    <script src="../bootstrap/js/bootstrap.js"></script>
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
     <header>
       <div class="logo">
         <img
@@ -34,10 +38,10 @@
           style="height: 60px; width: auto"
         />
       </div>
-      <nav>
+      <nav class="list-unstyled d-flex gap-5">
         <ul>
           <li><a href="../../../index.html">Home</a></li>
-          <li><a href="../../learn.html">Learn</a></li>
+          <li><a href="../../learn.html" class="active">Learn</a></li>
           <li><a href="#">Solutions</a></li>
           <li><a href="../../../about/about.html">About</a></li>
           <li><a href="../../../contact/contact-us.html">Contact Us</a></li>
@@ -112,23 +116,56 @@
           Author: Ian Gabriel V. Marquez
         </p>
 
+        <div class="article-image-container" style="margin-top: 2.5rem">
+          <a href="../media/student-data-struggles.jpg" target="_blank">
+            <img
+              src="../media/student-data-struggles.jpg"
+              alt="Digital Fatigue"
+              title="Student Data Struggles"
+              style="
+                width: 100%;
+                border-radius: 15px;
+                height: 500px;
+                object-fit: contain;
+              "
+            />
+          </a>
+
+          <p
+            class="reference-text"
+            style="font-size: 0.9rem; font-style: italic; text-align: center"
+          >
+            Source:
+            <a
+              href="https://www.philstar.com/news-commentary/2025/05/03/2440263/whats-failing-philippine-education-learning-or-leadership"
+              target="_blank"
+              style="color: blue; text-decoration: underline"
+            >
+              https://www.philstar.com/news-commentary/2025/05/03/2440263/whats-failing-philippine-education-learning-or-leadership
+            </a>
+          </p>
+        </div>
+
         <p class="article-text">
           The topic of student data is one that leaves many students, parents,
           and teachers weary. We live in a world where uploading a picture onto
           Facebook is cementing it into the realm of the Internet for all time.
-          It’s not all bad, though; there are many benefits to student data
-          being uploaded into the cloud and used in their education. The
-          question is whether it’s worth it.
+          <b
+            >It’s not all bad, though there are many benefits to student data
+            being uploaded into the cloud and used in their education</b
+          >. The question is whether it’s worth it.
         </p>
 
         <p class="article-text">
           Other studies point out that lack of foundational mastery and even
           grasp of basic literacy and numeracy in early elementary school is
           creating a snowball effect on our students as they go to the higher
-          grades. Lack of training in teachers, brain drain, pitiful learning
-          resources, poor classroom conditions are also being blamed. Many,
-          however, point to the ‘no student left behind’ policy or a blind
-          misapplication of the automatic pass-through system as the main
+          grades.
+          <b
+            >Lack of training in teachers, brain drain, pitiful learning
+            resources, poor classroom conditions are also being blamed</b
+          >. Many, however, point to the ‘no student left behind’ policy or a
+          blind misapplication of the automatic pass-through system as the main
           culprit. With no pressure to learn, students just glide through school
           with some notable exceptions.
         </p>
@@ -151,11 +188,11 @@
           scores on formative assessments, for example, can show how well the
           student is doing comparative to the rest of the class, compared to the
           rest of the school, compared to the rest of the district. As a teacher
-          who works in a district that uses a site like this, called Performance
-          Matters, it is immensely beneficial to see how my students are doing,
-          even if it is only to assure myself that having half the class failing
-          may be because of them not being in the classroom as opposed to be
-          just not being a good teacher.
+          who works in a district that uses a site like this, called
+          <b>Performance Matters</b>, it is immensely beneficial to see how my
+          students are doing, even if it is only to assure myself that having
+          half the class failing may be because of them not being in the
+          classroom as opposed to be just not being a good teacher.
         </p>
 
         <p class="article-text">
@@ -170,9 +207,13 @@
 
         <p class="article-text">
           The Department of Education (DepEd) acknowledges that while enrollment
-          rates have improved, the persistent dropout rates indicate significant
-          internal challenges that need to be addressed to ensure that every
-          child has access to quality education.
+          rates have improved, the
+          <b
+            >persistent dropout rates indicate significant internal
+            challenges</b
+          >
+          that need to be addressed to ensure that every child has access to
+          quality education.
         </p>
 
         <p class="article-text">
@@ -205,15 +246,6 @@
           IT systems for weeks or longer” and we can see how dangerous housing
           student data digitally can be.
         </p>
-
-        <div class="article-image-container" style="margin-top: 2.5rem">
-          <img
-            src="../../../media/man-sleeps-lying-front-computer.png"
-            alt="Description of the image"
-            style="width: 100%; border-radius: 15px"
-          />
-          <p class="reference-text">Optional: Picture reference</p>
-        </div>
       </article>
 
       <a href="#top" class="back-to-top" title="Go to top">
@@ -229,24 +261,23 @@
           </div>
           <h3>Too Much Tech</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-            eius maiores corporis incidunt, animi quos aut nostrum eveniet
-            laborum nisi odit quasi, et optio ducimus delectus debitis obcaecati
-            accusamus recusandae.
+            An educational platform raising awareness about digital fatigue.
+            Explore our resources to understand the mental and physical impacts
+            of excessive tech use, and learn how to build healthier digital
+            habits today.
           </p>
         </div>
 
         <div class="footer-column">
           <h3>Sitemap</h3>
           <ul>
-            <li><a href="../../../index.html">Home</a></li>
+            <li><a href="../../index.html">Home</a></li>
             <li>
-              <a href="../../learn.html">What is Digital Fatigue?</a>
+              <a href="../learn.html">What is Digital Fatigue?</a>
             </li>
-            <li><a href="#">Causes & Effects</a></li>
             <li><a href="#">Solutions</a></li>
-            <li><a href="../../../about/about.html">About Us</a></li>
-            <li><a href="../../../contact/contact-us.html">Contact Us</a></li>
+            <li><a href="../../about/about.html">About Us</a></li>
+            <li><a href="../../contact/contact-us.html">Contact Us</a></li>
           </ul>
         </div>
 

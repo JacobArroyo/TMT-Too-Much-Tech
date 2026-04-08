@@ -23,9 +23,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="../css/style.css" />
   </head>
 
   <body id="top">
+    <script src="../bootstrap/js/bootstrap.js"></script>
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
     <header>
       <div class="logo">
         <img
@@ -34,16 +38,22 @@
           style="height: 60px; width: auto"
         />
       </div>
-      <nav>
+      <nav class="list-unstyled d-flex gap-5">
         <ul>
           <li><a href="../../../index.html">Home</a></li>
-          <li><a href="../../learn.html">Learn</a></li>
+          <li><a href="../../learn.html" class="active">Learn</a></li>
           <li><a href="#">Solutions</a></li>
           <li><a href="../../../about/about.html">About</a></li>
           <li><a href="../../../contact/contact-us.html">Contact Us</a></li>
         </ul>
       </nav>
     </header>
+
+    <style>
+      ul {
+        margin-left: 20px;
+      }
+    </style>
 
     <main class="article-layout">
       <aside class="article-sidebar">
@@ -112,42 +122,75 @@
           Author: Ian Gabriel V. Marquez
         </p>
 
+        <div class="article-image-container" style="margin-top: 2.5rem">
+          <a href="../media/slow-internet-frustration.jpg" target="_blank">
+            <img
+              src="../media/slow-internet-frustration.jpg"
+              alt="Digital Fatigue"
+              title="Slow Internet Frustration"
+              style="
+                width: 100%;
+                border-radius: 15px;
+                height: 500px;
+                object-fit: contain;
+              "
+            />
+          </a>
+
+          <p
+            class="reference-text"
+            style="font-size: 0.9rem; font-style: italic; text-align: center"
+          >
+            Source:
+            <a
+              href="https://www.esquiremag.ph/culture/tech/philippines-internet-a00203-20200820"
+              target="_blank"
+              style="color: blue; text-decoration: underline"
+            >
+              https://www.esquiremag.ph/culture/tech/philippines-internet-a00203-20200820
+            </a>
+          </p>
+        </div>
+
         <p class="article-text">
           In the Philippines, slow and uneven internet access poses significant
-          challenges for digital platforms, particularly in rural areas. With
-          86.75 million active social media users and 80%+ accessing via mobile,
-          creating seamless user experiences is critical.
+          <b>challenges for digital platforms, particularly in rural areas</b>.
+          With 86.75 million active social media users and 80%+ accessing via
+          mobile, creating seamless user experiences is critical.
         </p>
 
         <p class="article-text">
           The government’s $288 million Philippine Digital Infrastructure
           Project (PDIP) aims to expand broadband access, while the Agila
           satellite (launched in December 2024) targets remote areas. Yet, rural
-          users still face inconsistent connections, impacting digital
-          engagement.
+          users still
+          <b>face inconsistent connections, impacting digital engagement</b>.
         </p>
 
         <p class="article-text">
           Regular Internet users frequently experience both positive and bad
           mood states as a result of network connectivity. The effects of
-          Internet abuse and addiction on an individual's cognitive, emotional,
-          behavioral, and interpersonal domains have been the primary focus of
-          recent research. What happens to kids who are unable to use the
-          internet because of connectivity problems, however, is a problem that
-          is rarely discussed. Given this, the current article discusses two
-          cases with negative emotional and behavioral manifestations of
-          increased anger and frustration due to reduced Internet connectivity.
-          This can help draw more research and attention to the need for
-          increased cyber-literacy and incorporation of anger management
-          programs into psychological interventions that address Internet
-          Addiction.
+          Internet
+          <b
+            >abuse and addiction on an individual's cognitive, emotional,
+            behavioral, and interpersonal domains have been the primary focus of
+            recent research</b
+          >. What happens to kids who are unable to use the internet because of
+          connectivity problems, however, is a problem that is rarely discussed.
+          Given this, the current article discusses two cases with negative
+          emotional and behavioral manifestations of increased anger and
+          frustration due to reduced Internet connectivity. This can help draw
+          more research and attention to the need for increased cyber-literacy
+          and incorporation of anger management programs into psychological
+          interventions that address Internet Addiction.
         </p>
 
         <p class="article-text">
           Were you frustrated by lagging browsing, slow downloads, and constant
-          buffering circles? Slow internet basically means slow everything for
-          most of us, but who has an extra afternoon to put it to the gods for
-          gadget troubleshooting? Fortunately, there might be a simple and quick
+          buffering circles?
+          <b>Slow internet basically means slow everything for most of us</b>,
+          but who has an extra afternoon to put it to the gods for gadget
+          troubleshooting? Fortunately, there might be a simple and quick
           solution for your slow home network.
         </p>
 
@@ -164,29 +207,30 @@
           <strong>Slow Internet Got You Down, 5 Possible Reasons.</strong>
         </p>
 
-        <div style="padding: 20px; border-radius: 15px; margin: 2rem 0">
+        <div>
           <ul>
-            <li>
-              Too many connected devices-Having many devices on the same Wi-Fi
-              slows down the connection; disconnect unused devices or upgrade
-              your router.
+            <li style="margin-bottom: 15px">
+              <b>Too many connected devices -</b> Having many devices on the
+              same Wi-Fi slows down the connection; disconnect unused devices or
+              upgrade your router.
             </li>
-            <li>
-              Outdated hardware-Old computers, modems, or routers can reduce
-              speed; upgrading to newer equipment can improve performance.
+            <li style="margin-bottom: 15px">
+              <b>Outdated hardware -</b> Old computers, modems, or routers can
+              reduce speed; upgrading to newer equipment can improve
+              performance.
             </li>
-            <li>
-              Malware or viruses-Infections can slow your system and internet;
-              use updated antivirus software and run regular scans.
+            <li style="margin-bottom: 15px">
+              <b>Malware or viruses -</b> Infections can slow your system and
+              internet; use updated antivirus software and run regular scans.
             </li>
-            <li>
-              Poor Wi-Fi signal-Weak or obstructed signals cause slow internet;
-              place your router centrally or use a Wi-Fi extender.
+            <li style="margin-bottom: 15px">
+              <b>Poor Wi-Fi signal -</b> Weak or obstructed signals cause slow
+              internet; place your router centrally or use a Wi-Fi extender.
             </li>
-            <li>
-              Poor ISP service-Your internet provider may not deliver promised
-              speeds; contact them to fix the issue or consider switching
-              providers.
+            <li style="margin-bottom: 15px">
+              <b>Poor ISP service -</b> Your internet provider may not deliver
+              promised speeds; contact them to fix the issue or consider
+              switching providers.
             </li>
           </ul>
         </div>
@@ -195,55 +239,46 @@
           <strong>How to fix a slow internet connection.</strong>
         </p>
 
-        <div style="padding: 20px; border-radius: 15px; margin: 2rem 0">
+        <div>
           <ul>
-            <li>
+            <li style="margin-bottom: 15px">
               Restarting your modem and router can quickly fix slow internet by
               refreshing the connection and clearing temporary issues.
             </li>
-            <li>
+            <li style="margin-bottom: 15px">
               Network congestion from too many devices or heavy usage can slow
               speeds, so managing connections, limiting usage, or upgrading your
               plan can help.
             </li>
-            <li>
+            <li style="margin-bottom: 15px">
               A weak Wi-Fi signal caused by distance, walls, or interference can
               reduce speed, so placing the router properly or using extenders
               improves coverage.
             </li>
-            <li>
+            <li style="margin-bottom: 15px">
               Loose or damaged cables can disrupt your connection, so checking
               and replacing faulty cables ensures a stable signal.
             </li>
-            <li>
+            <li style="margin-bottom: 15px">
               High latency can cause lag, especially in gaming or video calls,
               and is often affected by distance, network traffic, or connection
               type.
             </li>
-            <li>
+            <li style="margin-bottom: 15px">
               Outdated or overloaded devices can slow performance, so updating
               software, closing unused apps, or upgrading devices can improve
               speed.
             </li>
-            <li>
+            <li style="margin-bottom: 15px">
               ISP network congestion during peak hours can reduce internet
               speed, so using the internet during off-peak times or switching
               providers may help.
             </li>
-            <li>
+            <li style="margin-bottom: 15px" s>
               ISP throttling can intentionally slow your connection, and it can
               be detected by comparing speeds with and without a VPN.
             </li>
           </ul>
-        </div>
-
-        <div class="article-image-container" style="margin-top: 2.5rem">
-          <img
-            src="../../../media/man-sleeps-lying-front-computer.png"
-            alt="Description of the image"
-            style="width: 100%; border-radius: 15px"
-          />
-          <p class="reference-text">Optional: Picture reference</p>
         </div>
       </article>
 
@@ -260,24 +295,23 @@
           </div>
           <h3>Too Much Tech</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-            eius maiores corporis incidunt, animi quos aut nostrum eveniet
-            laborum nisi odit quasi, et optio ducimus delectus debitis obcaecati
-            accusamus recusandae.
+            An educational platform raising awareness about digital fatigue.
+            Explore our resources to understand the mental and physical impacts
+            of excessive tech use, and learn how to build healthier digital
+            habits today.
           </p>
         </div>
 
         <div class="footer-column">
           <h3>Sitemap</h3>
           <ul>
-            <li><a href="../../../index.html">Home</a></li>
+            <li><a href="../../index.html">Home</a></li>
             <li>
-              <a href="../../learn.html">What is Digital Fatigue?</a>
+              <a href="../learn.html">What is Digital Fatigue?</a>
             </li>
-            <li><a href="#">Causes & Effects</a></li>
             <li><a href="#">Solutions</a></li>
-            <li><a href="../../../about/about.html">About Us</a></li>
-            <li><a href="../../../contact/contact-us.html">Contact Us</a></li>
+            <li><a href="../../about/about.html">About Us</a></li>
+            <li><a href="../../contact/contact-us.html">Contact Us</a></li>
           </ul>
         </div>
 

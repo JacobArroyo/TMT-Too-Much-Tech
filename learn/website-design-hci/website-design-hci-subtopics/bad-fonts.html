@@ -9,6 +9,7 @@
     </title>
     <link rel="icon" href="../../../media/logofavicon.png" type="image/png" />
 
+    <link rel="stylesheet" href="../../../bootstrap/css/bootstrap.css" />
     <link rel="stylesheet" href="../../../css/style.css" />
 
     <link
@@ -26,6 +27,9 @@
   </head>
 
   <body id="top">
+    <script src="../../../bootstrap/js/bootstrap.js"></script>
+    <script src="../../../bootstrap/js/bootstrap.bundle.min.js"></script>
+
     <header>
       <div class="logo">
         <img
@@ -35,7 +39,7 @@
         />
       </div>
       <nav>
-        <ul>
+        <ul class="list-unstyled d-flex gap-5">
           <li><a href="../../../index.html">Home</a></li>
           <li><a href="../../learn.html" class="active">Learn</a></li>
           <li><a href="#">Solutions</a></li>
@@ -112,8 +116,21 @@
           <img
             src="../media/bad fonts.jpg"
             alt="Human Computer Interaction"
-            style="width: 100%; border-radius: 15px"
+            title="Bad Fonts"
+            style="width: 100%; border-radius: 15px; height: 500px; object-fit: contain;"
           />
+          <p
+            class="article-text"
+            style="font-size: 0.9rem; font-style: italic; text-align: center"
+          >
+            Source:
+            <a
+              href="https://thepipsqueaker.wordpress.com/2013/02/11/does-your-choice-of-font-signify-you-as-a-terrifying-beast/"
+              target="_view"
+              style="color: blue; text-decoration: underline"
+              >https://thepipsqueaker.wordpress.com/2013/02/11/does-your-choice-of-font-signify-you-as-a-terrifying-beast/
+            </a>
+          </p>
           <p class="reference-text"></p>
         </div>
 
@@ -178,18 +195,16 @@
           <b>function</b>.
         </p>
 
-        <div style="padding: 20px; border-radius: 15px; margin: 2rem 0">
           <h3>There are several common characteristics that make fonts problematic in HCI:</h3>
           <ul class="article-text" style="padding-left: 40px; list-style-type: disc;">
             <li style="margin-bottom: 15px;">
               <b>Overly decorative or script fonts</b> that are hard to read
             </li>
-            <listyle="margin-bottom: 15px;"><b>Very small font sizes</b> that strain the eyes</li>
+            <li style="margin-bottom: 15px;"><b>Very small font sizes</b> that strain the eyes</li>
             <li style="margin-bottom: 15px;"><b>Poor spacing</b> between letters or lines</li>
             <li style="margin-bottom: 15px;"><b>Low contrast</b> between text and background</li>
             <li style="margin-bottom: 15px;"><b>Inconsistent font styles</b> across the interface</li>
           </ul>
-        </div>
 
         <p class="article-text">
           To avoid these issues, designers should prioritize <b>clarity</b> and
@@ -226,10 +241,10 @@
           </div>
           <h3>Too Much Tech</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-            eius maiores corporis incidunt, animi quos aut nostrum eveniet
-            laborum nisi odit quasi, et optio ducimus delectus debitis obcaecati
-            accusamus recusandae.
+            An educational platform raising awareness about digital fatigue.
+            Explore our resources to understand the mental and physical impacts
+            of excessive tech use, and learn how to build healthier digital
+            habits today.
           </p>
         </div>
 
@@ -240,8 +255,7 @@
             <li>
               <a href="../../learn.html">What is Digital Fatigue?</a>
             </li>
-            <li><a href="#">Causes & Effects</a></li>
-            <li><a href="#">Solutions</a></li>
+            <li><a href="#">Solutions to Digital Fatigue</a></li>
             <li><a href="../../../about/about.html">About Us</a></li>
             <li><a href="../../../contact/contact-us.html">Contact Us</a></li>
           </ul>
