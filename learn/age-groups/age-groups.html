@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Too Much Tech | From iPad Kids to Senior</title>
     <link rel="icon" href="../../media/logofavicon.png" type="image/png" />
-    <link rel="stylesheet" href="../../css/style.css" />
+
     <link
       href="https://fonts.googleapis.com/css?family=Merriweather"
       rel="stylesheet"
@@ -18,9 +18,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
   </head>
 
   <body id="top">
+    <script src="../../bootstrap/js/bootstrap.js"></script>
+    <script src="../../bootstrap/js/bootstrap.bundle.min.js"></script>
     <header>
       <div class="logo">
         <img
@@ -30,9 +34,9 @@
         />
       </div>
       <nav>
-        <ul>
+        <ul class="list-unstyled d-flex gap-5">
           <li><a href="../../index.html">Home</a></li>
-          <li><a href="../learn.html">Learn</a></li>
+          <li><a href="../learn.html" class="active">Learn</a></li>
           <li><a href="#">Solutions</a></li>
           <li><a href="../../about/about.html">About</a></li>
           <li><a href="../../contact/contact-us.html">Contact Us</a></li>
@@ -43,14 +47,14 @@
     <main class="article-layout">
       <aside class="article-sidebar">
         <div class="navigation-header">
-          <a href="../learn.html#learn-topics" class="back-link">
+          <a href="../learn.html" class="back-link">
             <i class="fa-solid fa-arrow-left"></i> Go Back to Topics
           </a>
         </div>
         <ul>
           <li>
             <a href="#" class="sidebar-item is-active"
-              >01. Age Groups (The Generation)</a
+              >01. Age Groups (The Generations)</a
             >
           </li>
           <li>
@@ -62,56 +66,56 @@
           </li>
           <li>
             <a
-              href="understanding-digital-fatigue-subtopics/rise-of-the-digital-world.html"
+              href="age-groups-subtopics/gen-z-doomscrolling.html"
               class="sidebar-item"
               >03. Gen Z Doomscrolling</a
             >
           </li>
           <li>
             <a
-              href="understanding-digital-fatigue-subtopics/technology-changed-human-behavior.html"
+              href="age-groups-subtopics/millenial-nostalgia.html"
               class="sidebar-item"
               >04. Millennial Nostalgia</a
             >
           </li>
           <li>
             <a
-              href="understanding-digital-fatigue-subtopics/always-online-culture.html"
+              href="age-groups-subtopics/boomers-and-fake-news.html"
               class="sidebar-item"
               >05. Boomers and Fake News</a
             >
           </li>
           <li>
             <a
-              href="understanding-digital-fatigue-subtopics/information-overload.html"
+              href="age-groups-subtopics/seniors-learning-tech.html"
               class="sidebar-item"
               >06. Seniors Learning Tech</a
             >
           </li>
           <li>
             <a
-              href="understanding-digital-fatigue-subtopics/google-effect.html"
+              href="age-groups-subtopics/parenting-fatigue.html"
               class="sidebar-item"
               >07. Parenting Fatigue</a
             >
           </li>
           <li>
             <a
-              href="understanding-digital-fatigue-subtopics/modern-digital-lifestyle.html"
+              href="age-groups-subtopics/digital-literacy.html"
               class="sidebar-item"
               >08. Digital Literacy</a
             >
           </li>
           <li>
             <a
-              href="understanding-digital-fatigue-subtopics/digital-dependence.html"
+              href="age-groups-subtopics/analog-comeback.html"
               class="sidebar-item"
               >09. Analog Comeback</a
             >
           </li>
           <li>
             <a
-              href="understanding-digital-fatigue-subtopics/neural-plasticity.html"
+              href="age-groups-subtopics/generational-tech-gap.html"
               class="sidebar-item"
               >10. Generational Tech Gap</a
             >
@@ -125,48 +129,83 @@
           Author: Charles Andres Asia
         </p>
 
-         <div class="article-image-container" style="margin-top: 2.5rem">
-          <img
-            src="../age-groups/media/age-groups.jpg"
-            alt="Age Groups"
-            style="width: 100%; border-radius: 15px"
-          />
-          
+        <div class="article-image-container" style="margin-top: 2.5rem">
+          <a
+            href="../../learn/age-groups/media/age-groups.jpg"
+            target="_view"
+            ><img
+              src="../../learn/age-groups/media/age-groups.jpg"
+              alt="Age Groups"
+              title="Age Groups"
+              style="
+                width: 100%;
+                border-radius: 15px;
+                height: 400px;
+                object-fit: contain;
+              "
+          /></a>
+          <p
+            class="article-text"
+            style="font-size: 0.9rem; font-style: italic; text-align: center"
+          >
+            Source: [Your Source URL Here]
+          </p>
         </div>
 
         <p class="article-text">
-          The digital world is <strong>not</strong> a single, unified experience; it is a <strong>fragmented landscape</strong> shaped by the era in which a person was born. This Generational Tech Gap refers to the <strong>deep divide</strong> in how different age groups perceive, use, and value technology. For those <strong>born into the digital era</strong>, screens are a <strong>seamless extension</strong> of their social and cognitive lives, while for older generations, they often represent <strong>complex tools</strong> that require a <strong>steep, sometimes intimidating, learning curve</strong>.
+          The digital world is not a single, unified experience; it is a fragmented landscape shaped by the era in which a person was born. This <strong>"Generational Tech Gap"</strong> refers to the deep divide in how different age groups perceive, use, and value technology. For those born into the <strong>"digital era,"</strong> screens are a seamless extension of their social and cognitive lives, while for older generations, they often represent complex tools that require a steep, sometimes intimidating, learning curve.
         </p>
 
         <p class="article-text">
-          This gap is <strong>not</strong> just about who owns the latest smartphone, but about how technology reshapes the <strong>fundamental human lifecycle.</strong> From toddlers who can swipe a screen before they can tie their shoes to seniors trying to stay connected with their families through complex interfaces, digital habits vary <strong>wildly</strong>. Each generation carries its own set of digital <strong>"scars"</strong> such as the mental burnout from being <strong>"always-on"</strong> and its own unique strengths, like the ability to navigate complex software or verify information with ease.
+          This gap is not just about who owns the latest smartphone, but about how technology reshapes the fundamental human lifecycle. From toddlers who can swipe a screen before they can tie their shoes to seniors trying to stay connected with their families through complex interfaces, digital habits vary wildly. Each generation carries its own set of digital <strong>"scars"</strong> such as the mental burnout from being <strong>"always-on"</strong> and its own unique strengths, like the ability to navigate complex software or verify information with ease.
         </p>
 
         <p class="article-text">
-          Understanding these differences is <strong>essential</strong> for staying connected in a modern, multi-generational society. Whether in the workplace or at the dinner table, these digital profiles <strong>dictate</strong> how we communicate, how we learn, and how we view the world around us. By exploring the nine specific areas below, we can better understand the unique pressures and benefits technology brings to every stage of life, moving from a place of <strong>frustration</strong> to a place of <strong>mutual understanding</strong>.
+          Understanding these differences is essential for staying connected in a modern, multi-generational society. Whether in the workplace or at the dinner table, these <strong>"digital profiles"</strong> dictate how we communicate, how we learn, and how we view the world around us. By exploring the nine specific areas below, we can better understand the unique pressures and benefits technology brings to every stage of life, moving from a place of frustration to a place of mutual understanding.
         </p>
 
         <div style="padding: 10px 10px 10px 0px; border-radius: 15px; margin-top: 20px;">
           <h3>Key Effects on iPad Kids:</h3>
-          <ul class="article-text" style="padding-left: 40px; list-style-type: disc;">
+          <ol class="article-text" style="padding-left: 40px; list-style-type: disc;">
             <li style="margin-bottom: 15px;">
-              <strong>Dopamine Priming:</strong> Short-form, high-stimulation content can shorten attention spans.
+              <b>Dopamine Priming:</b> Short-form, high-stimulation content can shorten attention spans.
             </li>
             <li style="margin-bottom: 15px;">
-              <strong>The Digital Pacifier:</strong> Using tech to regulate emotions can hinder natural self-soothing skills.
+              <b>The Digital Pacifier:</b> Using tech to regulate emotions can hinder natural self-soothing skills.
             </li>
             <li style="margin-bottom: 15px;">
-              <strong>Motor Skill Shifts:</strong> Excessive swiping may lead to difficulties with physical tasks like writing.
+              <b>Motor Skill Shifts:</b> Excessive swiping may lead to difficulties with physical tasks like writing.
             </li>
             <li style="margin-bottom: 15px;">
-              <strong>Instant Gratification Loop:</strong> Constant access to quick rewards (likes, videos, notifications) can reduce patience for long-term goals and delayed rewards.
+              <b>Instant Gratification Loop:</b> Constant access to quick rewards (likes, videos, notifications) can reduce patience for long-term goals and delayed rewards.
             </li>
             <li style="margin-bottom: 15px;">
-              <strong>Reduced Deep Focus:</strong> Frequent multitasking and app-switching can make it harder for kids to concentrate on complex or sustained tasks like reading or problem-solving.
+              <b>Reduced Deep Focus:</b> Frequent multitasking and app-switching can make it harder for kids to concentrate on complex or sustained tasks like reading or problem-solving.
             </li>
-          </ul>
+          </ol>
         </div>
 
+        <div class="video-aspect-ratio">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/fx1iG3lCGhs?si=wFTQwJ5wrm_tEtUB"
+            title="YouTube video player"
+            frameborder="0"
+            allow="
+              accelerometer;
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              gyroscope;
+              picture-in-picture;
+              web-share;
+            "
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          >
+          </iframe>
+        </div>
       </article>
 
       <a href="#top" class="back-to-top" title="Go to top">
@@ -182,10 +221,10 @@
           </div>
           <h3>Too Much Tech</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-            eius maiores corporis incidunt, animi quos aut nostrum eveniet
-            laborum nisi odit quasi, et optio ducimus delectus debitis obcaecati
-            accusamus recusandae.
+            An educational platform raising awareness about digital fatigue.
+            Explore our resources to understand the mental and physical impacts
+            of excessive tech use, and learn how to build healthier digital
+            habits today.
           </p>
         </div>
 
@@ -194,10 +233,9 @@
           <ul>
             <li><a href="../../index.html">Home</a></li>
             <li>
-              <a href="#">Age Groups</a>
+              <a href="#">What is Digital Fatigue?</a>
             </li>
-            <li><a href="#">Causes & Effects</a></li>
-            <li><a href="#">Solutions</a></li>
+            <li><a href="#">Solutions to Digital Fatigue</a></li>
             <li><a href="../../about/about.html">About Us</a></li>
             <li><a href="../../contact/contact-us.html">Contact Us</a></li>
           </ul>
