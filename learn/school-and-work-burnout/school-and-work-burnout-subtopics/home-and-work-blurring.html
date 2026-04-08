@@ -8,8 +8,6 @@
     </title>
     <link rel="icon" href="../../../media/logofavicon.png" type="image/png" />
 
-    <link rel="stylesheet" href="../../../css/style.css" />
-
     <link
       href="https://fonts.googleapis.com/css?family=Merriweather"
       rel="stylesheet"
@@ -22,9 +20,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
+    <link rel="stylesheet" href="../../../bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="../../../css/style.css" />
   </head>
 
   <body id="top">
+    <script src="../../../bootstrap/js/bootstrap.js"></script>
+    <script src="../../../bootstrap/js/bootstrap.bundle.min.js"></script>
     <header>
       <div class="logo">
         <img
@@ -34,7 +36,7 @@
         />
       </div>
       <nav>
-        <ul>
+        <ul class="list-unstyled d-flex gap-5">
           <li><a href="../../../index.html">Home</a></li>
           <li><a href="../../learn.html" class="active">Learn</a></li>
           <li><a href="#">Solutions</a></li>
@@ -116,7 +118,12 @@
               src="../../../learn/school-and-work-burnout/media/homework blurring.jpg"
               alt="Home and Work Blurring"
               title="Home and Work Blurring"
-              style="width: 100%; border-radius: 15px"
+              style="
+                width: 100%;
+                border-radius: 15px;
+                height: 400px;
+                object-fit: contain;
+              "
           /></a>
           <p
             class="article-text"
@@ -163,7 +170,7 @@
           cognitive fatigue.
         </p>
 
-        <ul
+        <ol
           class="article-text"
           style="padding-left: 40px; list-style-type: disc"
         >
@@ -196,14 +203,14 @@
             lingers and affects performance in another, making it harder to be
             fully present in either work or personal life.
           </li>
-        </ul>
+        </ol>
 
         <p class="article-text">
           You can fix this by creating "Physical Cues" like putting your laptop
           away in a drawer when school is over or changing your clothes to
           signal to your brain that the "workday" is officially done.
         </p>
-
+      </article>
 
       <a href="#top" class="back-to-top" title="Go to top">
         <i class="fa-solid fa-arrow-up"></i>
@@ -232,7 +239,7 @@
             <li>
               <a href="#">What is Digital Fatigue?</a>
             </li>
-            <li><a href="#">Solutions</a></li>
+            <li><a href="#">Solutions to Digital Fatigue</a></li>
             <li><a href="../../../about/about.html">About Us</a></li>
             <li><a href="../../../contact/contact-us.html">Contact Us</a></li>
           </ul>
