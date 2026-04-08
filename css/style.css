@@ -37,7 +37,7 @@ a {
 
 header {
   color: var(--text-light);
-  padding: 1.5rem 5%;
+  padding: 1.2rem 7%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -46,17 +46,23 @@ header {
   z-index: 1000;
   background: linear-gradient(to right, #273a2f, #33503f);
 }
+header nav {
+  justify-content: center;
+}
+
+header nav ul {
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
 .logo {
   display: flex;
   align-items: center;
   gap: 10px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 3rem;
 }
 
 nav ul li a {
@@ -76,29 +82,26 @@ nav ul li a.active {
 }
 
 .hero {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 6rem 10%;
-  min-height: 80vh;
-  gap: 3rem;
-  overflow: hidden;
+  padding: 0 10%;
+  min-height: 90vh;
+  width: 100%;
 }
 
 .hero-text {
   flex: 1;
-  max-width: 520px;
+  max-width: 620px;
 }
 
 .hero-text h1 {
   font-style: italic;
   font-weight: normal;
-  font-size: 3.5rem;
+  font-size: 5rem;
   margin-bottom: 1.2rem;
   line-height: 1.15;
   color: var(--text-light);
-  text-shadow: 2px 2px 8px rgba(0, 36, 2, 0.493);
 }
 
 .hero-text p {
@@ -143,7 +146,8 @@ nav ul li a.active {
 }
 
 .features {
-  padding: 5rem 10%;
+  padding: 6rem 10%;
+  min-height: 90vh;
   text-align: center;
   position: relative;
   background-color: var(--light-bg);
@@ -164,7 +168,7 @@ nav ul li a.active {
 }
 
 .card-container {
-  display: grid;
+  display: inline-flex;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin-bottom: 3rem;
@@ -231,42 +235,36 @@ nav ul li a.active {
   line-height: 1.6;
   font-size: 1rem;
   margin-bottom: 0;
+  border-bottom: 1px solid #eee;
 }
 
 .card-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  display: inline-block;
+  padding: 10px 22px;
+  background-color: var(--dark-green);
+  color: #fff;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.85rem;
   transition: all 0.3s ease;
-  font-size: 0.9em;
-  padding: 10px 15px;
-  border: 2px solid var(--accent-color);
-  border-radius: 7px;
-  color: var(--accent-color);
 }
 
 .card-btn:hover {
-  font-weight: bold;
-  color: var(--text-light);
-  border: 2px solid var(--accent-color);
   background-color: var(--accent-color);
+  transform: scale(1.05);
 }
 
 .card-btn:active {
   color: #cccccc;
-  border: 2px solid #9e3d29;
   background-color: #9e3d29;
 }
 
 /*Start of Learn Acticle CSS*/
 .article-layout {
   display: flex;
-  max-width: 1700px;
+  max-width: 1800px;
   margin: 0 auto;
-  padding: 5rem 10% 5rem;
+  padding: 7em 10% 5rem;
   gap: 4rem;
 }
 
@@ -292,7 +290,6 @@ nav ul li a.active {
 
 .back-link:hover {
   position: sticky;
-  transform: translateX(-5px);
   color: var(--accent-color);
 }
 
@@ -306,11 +303,13 @@ nav ul li a.active {
 .article-sidebar ul {
   list-style: none;
   border-left: 2px solid var(--sage-green);
+  padding-left: 0;
+  margin-left: 0;
 }
 
 .sidebar-item {
   display: block;
-  padding: 0.8rem 1.2rem;
+  padding: 0.8rem 1.21rem;
   color: #666;
   font-size: 0.9rem;
   transition: all 0.3s ease;
