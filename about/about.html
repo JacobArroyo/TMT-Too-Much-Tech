@@ -69,7 +69,7 @@
       }
 
       .about-links-section {
-        padding: 4rem 10% 6rem;
+        padding: 4rem 20% 3rem;
         background-color: white;
         display: flex;
         gap: 3rem;
@@ -77,46 +77,26 @@
         flex-wrap: wrap;
       }
 
-      .about-link-box {
-        flex: 1;
-        min-width: 300px;
-        max-width: 500px;
-        background-color: #fff;
-        padding: 3rem 2rem;
-        border-radius: 12px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-      }
-
-      .about-link-box h2 {
-        font-size: 1.8rem;
-        margin-bottom: 1rem;
-        color: #ffffff;
-        z-index: 1;
-        font-weight: bold;
-      }
-
-      .about-link-box p {
-        color: var(--sage-green);
-        margin-bottom: 2rem;
-        z-index: 1;
-      }
-
       .website-purp {
-        background-image: linear-gradient(rgba(55, 74, 63, 0.75), rgba(18, 27, 22, 0.75)), url('/about/media/website-purpose.jpg');
+        background-image:
+          linear-gradient(rgba(55, 74, 63, 0.75), rgba(18, 27, 22, 0.75)),
+          url("/about/media/website-purpose.jpg");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
       }
 
       .project-bg {
-        background-image: linear-gradient(rgba(55, 74, 63, 0.75), rgba(18, 27, 22, 0.75)), url('/about/media/project-background.jpg');
+        background-image:
+          linear-gradient(rgba(55, 74, 63, 0.75), rgba(18, 27, 22, 0.75)),
+          url("/about/media/project-background.jpg");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+      }
+
+      .about-link-box:hover {
+        transform: translateY(-5px);
       }
 
       .team-section {
@@ -135,7 +115,7 @@
         text-align: center;
         background: #ffffff;
         border: 1px solid rgba(0, 0, 0, 0.05);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
         padding: 1.5rem;
         border-radius: 13px;
       }
@@ -184,6 +164,28 @@
       .contact-info:hover a {
         color: var(--accent-color);
       }
+
+      .read-more-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--light-bg);
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        transition:
+          transform 0.3s ease,
+          color 0.3s ease;
+      }
+
+      .read-more-link:hover {
+        position: sticky;
+        color: var(--accent-color);
+      }
+
+      .card-image:hover {
+        opacity: 0.9;
+      }
     </style>
   </head>
 
@@ -231,33 +233,58 @@
       </section>
 
       <section class="about-links-section">
-        <div class="about-link-box website-purp">
-          <div>
-            <h2>Website Purpose</h2>
-            <p>
-              Discover the core mission and values behind Too Much Tech, and
-              learn why we are dedicated to helping you disconnect to reconnect.
-            </p>
+        <div class="card-container">
+          <div class="card">
+            <a href="website-purpose.html">
+              <div class="card-top">
+                <div class="card-image website-purp">
+                  <div class="overlay">
+                    <h2>Website Purpose</h2>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <div class="card-content">
+              <p>
+                Discover the core mission and values behind Too Much Tech, and
+                learn why we are dedicated to helping you disconnect to
+                reconnect. <br />
+                &nbsp;
+              </p>
+              <br />
+              <a href="website-purpose.html">
+                <div class="card-btn">
+                  Read more &nbsp; <i class="fa-solid fa-arrow-right"></i>
+                </div>
+              </a>
+            </div>
           </div>
-          <div>
-            <a href="website-purpose.html" class="explore-link"
-              >Read More &nbsp;<i class="fa-solid fa-arrow-right"></i
-            ></a>
-          </div>
-        </div>
 
-        <div class="about-link-box project-bg">
-          <div>
-            <h2>Project Background</h2>
-            <p>
-              Learn how a shared frustration with digital fatigue evolved into a
-              research-backed initiative to promote healthier screen habits.
-            </p>
-          </div>
-          <div>
-            <a href="project-background.html" class="explore-link"
-              >Read More &nbsp;<i class="fa-solid fa-arrow-right"></i
-            ></a>
+          <div class="card">
+            <a href="project-background.html">
+              <div class="card-top">
+                <div class="card-image project-bg">
+                  <div class="overlay">
+                    <h2>Project Background</h2>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <div class="card-content">
+              <p>
+                Learn how a shared frustration with digital fatigue evolved into
+                a research-backed initiative to promote healthier screen habits.
+                <br />
+                &nbsp;
+              </p>
+              <br />
+              <a href="project-background.html">
+                <div class="card-btn">
+                  Read more &nbsp; <i class="fa-solid fa-arrow-right"></i>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </section>
