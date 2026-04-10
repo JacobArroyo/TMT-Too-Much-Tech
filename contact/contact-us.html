@@ -48,7 +48,7 @@
 
       .social-title {
         margin-bottom: 2rem;
-        color: #333;
+        color: var(--dark-green);
         text-align: left;
       }
 
@@ -74,7 +74,6 @@
       }
 
       .social-box:hover {
-        border-color: #d86952;
         color: #d86952;
       }
 
@@ -246,7 +245,8 @@
     <main>
       <section class="contact-grid">
         <div class="social-side">
-          <h1 class="social-title">Get in Touch</h1>
+          <br />
+          <h2 class="social-title">Get in Touch</h2>
           <div class="social-stack">
             <a
               href="https://www.facebook.com/profile.php?id=61582095175845"
@@ -255,7 +255,7 @@
             >
               <img
                 src="media/facebook.png"
-                alt="Facebook"
+                alt="Facebook Logo"
                 class="social-profile-photo"
               />
               <div class="social-info">
@@ -271,7 +271,7 @@
             >
               <img
                 src="media/instagram.png"
-                alt="Instagram"
+                alt="Instagram Logo"
                 class="social-profile-photo"
               />
               <div class="social-info">
@@ -280,6 +280,19 @@
               </div>
             </a>
           </div>
+          <br /><br />
+          <h2 class="social-title">Contact Us</h2>
+          <a class="social-box">
+            <img
+              src="media/email.png"
+              alt="Gmail Logo"
+              class="social-profile-photo"
+            />
+            <div class="social-info">
+              <span>Email</span>
+              <small class="copy-text">toomuchtech30@gmail.com</small>
+            </div>
+          </a>
         </div>
 
         <div class="feedback-side">
@@ -334,7 +347,8 @@
                   id="message"
                   name="message"
                   placeholder="Please share your feedback or questions..."
-                  rows="5" style="resize: none;"
+                  rows="5"
+                  style="resize: none"
                 ></textarea>
               </div>
 

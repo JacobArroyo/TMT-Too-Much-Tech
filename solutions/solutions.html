@@ -23,19 +23,24 @@
     <style>
       .page-header {
         text-align: center;
-        padding: 5rem 10% 4rem;
-        background-color: white;
+        padding: 8rem 10% 8rem; 
+        background: 
+          linear-gradient(rgba(55, 74, 63, 0.75), rgba(18, 27, 22, 0.75)),
+          url('../media/solutions.png');
+        background-size: cover;
+        background-position: center;
+        background-attachment: scroll;
       }
 
       .page-header h2 {
         font-weight: 800;
         font-size: 2.8rem;
         margin-bottom: 1rem;
-        color: var(--dark-green);
+        color: var(--light-bg);
       }
 
       .page-header p {
-        color: var(--dark-green);
+        color: var(--light-bg);
         font-size: 1.05rem;
         line-height: 1.6;
         max-width: 700px;
@@ -54,7 +59,7 @@
         max-width: 1000px;
         margin: 0 auto;
       }
-
+      
       .solutions-card {
         background-color: #ffffff;
         border-radius: 16px;
@@ -126,34 +131,33 @@
 
     <main>
       <section class="page-header">
-        <h2>Solutions to Digital Fatigue</h2>
-        <p>
-          Breaking free from the strain of endless screen time requires
-          actionable steps. Explore our core strategies to help you disconnect,
-          set healthy boundaries, and protect your physical well-being.
-        </p>
+        <div class="header-flex-container">
+          <div class="header-text">
+            <h2>Solutions to Digital Fatigue</h2>
+            <p>
+              Breaking free from the strain of endless screen time requires
+              actionable steps. Explore our core strategies to help you disconnect,
+              set healthy boundaries, and protect your physical well-being.
+            </p>
+          </div>
+        </div>
       </section>
 
       <section class="solutions-grid-section">
         <div class="topic-card-container">
           <div class="solutions-card">
-            <a href="digital-detox.html">
-              <div
-                class="digital-detox-image"
-                style="
-                  background:
-                    linear-gradient(
-                      rgba(55, 74, 63, 0.4),
-                      rgba(18, 27, 22, 0.6)
-                    ),
-                    url(../media/detox-background.jpg);
-                  height: 200px;
-                  background-size: cover;
-                  background-position: center;
-                  background-repeat: no-repeat;
-                "
-              ></div>
-            </a>
+            <div
+              class="digital-detox-image"
+              style="
+                background:
+                  linear-gradient(rgba(55, 74, 63, 0.4), rgba(18, 27, 22, 0.6)),
+                  url(../media/detox-background.jpg);
+                height: 200px;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+              "
+            ></div>
             <div class="solutions-card-content">
               <h3 class="solutions-card-title">Digital Detox</h3>
               <p class="solutions-card-description">
@@ -162,31 +166,24 @@
                 necessitatibus culpa
               </p>
               <div class="solutions-card-footer">
-                <a class="card-btn" href="digital-detox.html">
-                  Read more
-                </a>
+                <a class="card-btn" href="digital-detox.html"> Read more </a>
               </div>
             </div>
           </div>
 
           <div class="solutions-card">
-            <a href="ergonomics.html">
-              <div
-                class="disconnect-to-reconnect-card-image"
-                style="
-                  background:
-                    linear-gradient(
-                      rgba(55, 74, 63, 0.4),
-                      rgba(18, 27, 22, 0.6)
-                    ),
-                    url(.jpg);
-                  height: 200px;
-                  background-size: cover;
-                  background-position: center;
-                  background-repeat: no-repeat;
-                "
-              ></div>
-            </a>
+            <div
+              class="disconnect-to-reconnect-card-image"
+              style="
+                background:
+                  linear-gradient(rgba(55, 74, 63, 0.4), rgba(18, 27, 22, 0.6)),
+                  url(.jpg);
+                height: 200px;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+              "
+            ></div>
             <div class="solutions-card-content">
               <h3 class="solutions-card-title">Disconnect to Reconnect</h3>
               <p class="solutions-card-description">
@@ -195,9 +192,7 @@
                 necessitatibus culpa
               </p>
               <div class="solutions-card-footer">
-                <a class="card-btn" href="ergonomics.html">
-                  Read more
-                </a>
+                <a class="card-btn" href="ergonomics.html"> Read more </a>
               </div>
             </div>
           </div>
