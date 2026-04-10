@@ -124,7 +124,6 @@ nav ul li a.active {
 
 .explore-link:hover {
   background-color: var(--accent-color);
-  transform: scale(1.05);
 }
 
 .explore-link:active {
@@ -176,17 +175,16 @@ nav ul li a.active {
 
 .card {
   background: linear-gradient(#ebebeb, rgba(255, 255, 255, 0.75));
-  border-radius: 12px;
+  border-radius: 10px;
   overflow: hidden;
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
   height: 100%;
-  border: 1px solid #ebebeb;
+  border: 1px solid #e6e6e6;
 }
 
 .card:hover {
-  transform: translateY(-5px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
@@ -243,7 +241,7 @@ nav ul li a.active {
   padding: 10px 22px;
   background-color: var(--dark-green);
   color: #fff;
-  border-radius: 25px;
+  border-radius: 10px;
   font-weight: 600;
   font-size: 0.85rem;
   transition: all 0.3s ease;
@@ -251,7 +249,6 @@ nav ul li a.active {
 
 .card-btn:hover {
   background-color: var(--accent-color);
-  transform: scale(1.05);
 }
 
 .card-btn:active {
@@ -441,11 +438,11 @@ footer {
 }
 
 .footer-logo {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .footer-logo img {
-  height: 90px;
+  height: 75px;
   width: auto;
   opacity: 0.9;
 }
@@ -501,13 +498,21 @@ footer {
 }
 
 .social-links a:hover i {
-  color: var(--text-light, #ffffff);
+  color: var(--accent-color);
   transform: translateY(-2px);
 }
 
 .copy-text {
   font-size: 0.9rem;
   color: #cccccc;
+  user-select: all;
+  -webkit-user-select: all;
+  cursor: copy;
+}
+
+.copy-text:hover {
+  font-size: 0.9rem;
+  color: var(--accent-color);
   user-select: all;
   -webkit-user-select: all;
   cursor: copy;

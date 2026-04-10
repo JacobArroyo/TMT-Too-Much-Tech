@@ -19,11 +19,12 @@
     />
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.css" />
     <link rel="stylesheet" href="../css/style.css" />
+
     <style>
       .page-header {
         text-align: center;
         padding: 5rem 10% 4rem;
-        background-color: var(--light-bg);
+        background-color: white;
       }
 
       .page-header h2 {
@@ -34,49 +35,76 @@
       }
 
       .page-header p {
-        color: #111;
+        color: var(--dark-green);
         font-size: 1.05rem;
         line-height: 1.6;
         max-width: 700px;
         margin: 0 auto;
       }
 
-      .solutions-links-section {
-        padding: 4rem 20% 5rem;
-        background-color: white;
+      .solutions-grid-section {
+        padding: 4rem 10% 6rem;
+        background-color: var(--light-bg);
+      }
+
+      .topic-card-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2.5rem;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .solutions-card {
+        background-color: #ffffff;
+        border-radius: 16px;
+        overflow: hidden;
+        transition: all 0.4s ease;
         display: flex;
-        gap: 3rem;
-        justify-content: center;
-        flex-wrap: wrap;
+        flex-direction: column;
+        height: 100%;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
       }
 
-      .detox-bg {
-        background-image:
-          linear-gradient(rgba(55, 74, 63, 0.75), rgba(18, 27, 22, 0.75)),
-          url("../media/detox-background.jpg");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+      .solutions-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.062);
       }
 
-      .ergonomics-bg {
-        background-image:
-          linear-gradient(rgba(55, 74, 63, 0.75), rgba(18, 27, 22, 0.75)),
-          url("../media/ergonomics-background.jpg");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+      .solutions-card-content {
+        padding: 24px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
       }
 
-      .card-image:hover {
-        opacity: 0.9;
+      .solutions-card-title {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #1f2937;
+        margin-bottom: 12px;
+        position: relative;
+        padding-bottom: 10px;
+      }
+
+      .solutions-card-description {
+        font-size: 0.95rem;
+        color: #4b5563;
+        line-height: 1.6;
+        margin-bottom: 20px;
+        flex-grow: 1;
+      }
+
+      .solutions-card-footer {
+        padding-top: 16px;
+        border-top: 1px solid #eee;
       }
     </style>
   </head>
 
   <body id="top">
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
-    
+
     <header>
       <div class="logo">
         <img
@@ -100,63 +128,79 @@
       <section class="page-header">
         <h2>Solutions to Digital Fatigue</h2>
         <p>
-          Breaking free from the strain of endless screen time requires actionable steps. Explore our core strategies to help you disconnect, set healthy boundaries, and protect your physical well-being.
+          Breaking free from the strain of endless screen time requires
+          actionable steps. Explore our core strategies to help you disconnect,
+          set healthy boundaries, and protect your physical well-being.
         </p>
       </section>
 
-      <section class="solutions-links-section">
-        <div class="card-container d-flex gap-5">
-          
-          <div class="card">
+      <section class="solutions-grid-section">
+        <div class="topic-card-container">
+          <div class="solutions-card">
             <a href="digital-detox.html">
-              <div class="card-top">
-                <div class="card-image detox-bg">
-                  <div class="overlay">
-                    <h2>Topic Name</h2>
-                  </div>
-                </div>
-              </div>
+              <div
+                class="digital-detox-image"
+                style="
+                  background:
+                    linear-gradient(
+                      rgba(55, 74, 63, 0.4),
+                      rgba(18, 27, 22, 0.6)
+                    ),
+                    url(../media/detox-background.jpg);
+                  height: 200px;
+                  background-size: cover;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                "
+              ></div>
             </a>
-            <div class="card-content">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                <br />
-                &nbsp;
+            <div class="solutions-card-content">
+              <h3 class="solutions-card-title">Digital Detox</h3>
+              <p class="solutions-card-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
+                quos repellat perferendis molestias cumque distinctio voluptates
+                necessitatibus culpa
               </p>
-              <br />
-              <a href="digital-detox.html">
-                <div class="card-btn">
-                  Read more &nbsp; <i class="fa-solid fa-arrow-right"></i>
-                </div>
-              </a>
+              <div class="solutions-card-footer">
+                <a class="card-btn" href="digital-detox.html">
+                  Read more
+                </a>
+              </div>
             </div>
           </div>
 
-          <div class="card">
+          <div class="solutions-card">
             <a href="ergonomics.html">
-              <div class="card-top">
-                <div class="card-image ergonomics-bg">
-                  <div class="overlay">
-                    <h2>Topic Name</h2>
-                  </div>
-                </div>
-              </div>
+              <div
+                class="disconnect-to-reconnect-card-image"
+                style="
+                  background:
+                    linear-gradient(
+                      rgba(55, 74, 63, 0.4),
+                      rgba(18, 27, 22, 0.6)
+                    ),
+                    url(.jpg);
+                  height: 200px;
+                  background-size: cover;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                "
+              ></div>
             </a>
-            <div class="card-content">
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                <br />
-                &nbsp;
+            <div class="solutions-card-content">
+              <h3 class="solutions-card-title">Disconnect to Reconnect</h3>
+              <p class="solutions-card-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
+                quos repellat perferendis molestias cumque distinctio voluptates
+                necessitatibus culpa
               </p>
-              <br />
-              <a href="ergonomics.html">
-                <div class="card-btn">
-                  Read more &nbsp; <i class="fa-solid fa-arrow-right"></i>
-                </div>
-              </a>
+              <div class="solutions-card-footer">
+                <a class="card-btn" href="ergonomics.html">
+                  Read more
+                </a>
+              </div>
             </div>
           </div>
-
         </div>
       </section>
 
