@@ -5,26 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Too Much Tech | Home</title>
     <link rel="icon" href="/media/logofavicon.png" type="image/png" />
-
+    <link rel="stylesheet" href="css/style.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Merriweather"
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css?family=Montserrat"
+      href="https://fonts.googleapis.com/css?family=Open Sans"
       rel="stylesheet"
     />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
-    <link rel="stylesheet" href="css/style.css" />
     <style>
       .hero {
         background:
           linear-gradient(rgba(55, 74, 63, 0.75), rgba(18, 27, 22, 0.75)),
-          url("media/hero-background.png");
+          url("media/man-sleeps-lying-front-computer.png");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -38,7 +36,7 @@
         background-position: center;
         background-repeat: no-repeat;
       }
-      .card-image-about {
+      .card-image-effects {
         background:
           linear-gradient(rgba(245, 144, 144, 0.75), rgba(151, 3, 3, 0.75)),
           url("media/effects-of-df.png");
@@ -53,44 +51,26 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        transition: all 0.3s ease;
-      }
-
-      .card-image:hover {
-        opacity: 0.9;
       }
     </style>
   </head>
   <body id="top">
-    <script src="bootstrap/js/bootstrap.js"></script>
-    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-
     <header>
       <div class="logo">
         <img
-          src="../media/tmtlogo.png"
+          src="media/tmtlogo.png"
           alt="TMT Logo"
           title="Too Much Tech Logo"
           style="height: 60px; width: auto"
         />
       </div>
       <nav>
-        <ul class="list-unstyled d-flex gap-5">
-          <li>
-            <a href="../index.html " class="active">Home</a>
-          </li>
-          <li>
-            <a href="learn/learn.html">Learn</a>
-          </li>
-          <li>
-            <a href="solutions/solutions.html">Solutions</a>
-          </li>
-          <li>
-            <a href="../about/about.html">About</a>
-          </li>
-          <li>
-            <a href="../contact/contact-us.html">Contact Us</a>
-          </li>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="learn/learn.html">Learn</a></li>
+          <li><a href="#">Solutions</a></li>
+          <li><a href="about/about.html">About</a></li>
+          <li><a href="contact/contact-us.html">Contact Us</a></li>
         </ul>
       </nav>
     </header>
@@ -98,49 +78,55 @@
     <main>
       <section class="hero">
         <div class="hero-text">
-          <h1>You and Your Brain Deserve a Break.</h1>
+          <h1>You and Your Brain Deserves a Break.</h1>
           <p>
-            Constant connectivity is exhausting. Step away from the noise,
-            reclaim your focus, and build healthier digital habits.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime odit
+            corporis aperiam nam atque aspernatur voluptas nihil natus at.
           </p>
           <br />
           <a href="#explore-df" class="explore-link"
             >Explore &nbsp;<i class="fa-solid fa-arrow-right"></i
           ></a>
         </div>
+        <div class="hero-image">
+          <div class="illustration-placeholder">
+            <img
+              src="media/drained-at-laptop.png"
+              alt="Person Drained over a laptop"
+              style="object-fit: cover"
+              title="Person Drained over a laptop"
+            />
+          </div>
+        </div>
       </section>
 
       <section class="features" id="explore-df">
-        <h2 style="text-transform: uppercase; font-weight: bold">
-          Understanding Digital Fatigue
-        </h2>
+        <h2>Understanding Digital Fatigue</h2>
         <hr />
         <br />
         <p>
           Explore the science, impacts, and solutions for managing your digital
           wellbeing
         </p>
-        <br />
+
         <div class="card-container">
           <div class="card">
-            <a href="">
-              <div class="card-top">
-                <div class="card-image card-image-learn">
-                  <div class="overlay">
-                    <h2><i class="fa-solid fa-book"></i>&nbsp;&nbsp;Learn</h2>
-                  </div>
+            <div class="card-top">
+              <div class="card-image card-image-learn">
+                <div class="overlay">
+                  <h2><i class="fa-solid fa-book"></i>&nbsp;&nbsp;Learn</h2>
                 </div>
               </div>
-            </a>
+            </div>
+
             <div class="card-content">
               <p>
-                Understand the science and psychology behind digital fatigue.
-                Discover how constant connectivity, excessive screen time, and
-                information overload directly impact your focus, mental health,
-                and daily productivity." <br />
-                &nbsp;
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Praesentium, doloribus consequuntur nemo impedit minus similique
+                nam vitae eius corrupti porro minima laboriosam adipisci ad et
+                voluptates illum repellat unde provident.
               </p>
-              <br />
+              <br /><br />
               <a href="learn/learn.html">
                 <div class="card-btn">
                   Read more &nbsp; <i class="fa-solid fa-arrow-right"></i>
@@ -150,58 +136,51 @@
           </div>
 
           <div class="card">
-            <a href="">
-              <div class="card-top">
-                <div class="card-image card-image-solution">
-                  <div class="overlay">
-                    <h2>
-                      <i class="fa-solid fa-lightbulb"></i>&nbsp;&nbsp;Solution
-                    </h2>
-                  </div>
+            <div class="card-top">
+              <div class="card-image card-image-effects">
+                <div class="overlay">
+                  <h2><i class="fa-solid fa-brain"></i>&nbsp;&nbsp;Effects</h2>
                 </div>
               </div>
-            </a>
+            </div>
 
             <div class="card-content">
               <p>
-                Explore practical strategies to reclaim your time and attention.
-                Learn how to set healthy digital boundaries, implement effective
-                screen-time detoxes, and build sustainable tech habits that work
-                for your lifestyle. <br />
-                &nbsp;
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Praesentium, doloribus consequuntur nemo impedit minus similique
+                nam vitae eius corrupti porro minima laboriosam adipisci ad et
+                voluptates illum repellat unde provident.
               </p>
-              <br />
+              <br /><br />
               <a href="#">
                 <div class="card-btn">
-                  Read more &nbsp; <i class="fa-solid fa-arrow-right"></i>
+                  Read more &nbsp;
+                  <i class="fa-solid fa-arrow-right"></i>
                 </div>
               </a>
             </div>
           </div>
 
           <div class="card">
-            <a href="">
-              <div class="card-top">
-                <div class="card-image card-image-about">
-                  <div class="overlay">
-                    <h2>
-                      <i class="fa-solid fa-circle-info"></i>&nbsp;&nbsp;About
-                      Us
-                    </h2>
-                  </div>
+            <div class="card-top">
+              <div class="card-image card-image-solution">
+                <div class="overlay">
+                  <h2>
+                    <i class="fa-solid fa-lightbulb"></i>&nbsp;&nbsp;Solution
+                  </h2>
                 </div>
               </div>
-            </a>
+            </div>
+
             <div class="card-content">
               <p>
-                We are a dedicated educational platform raising awareness about
-                the hidden costs of our hyper-connected world. Join our topic to
-                foster a healthier relationship with technology and prioritize
-                mental wellness in the digital age. <br />
-                &nbsp;
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Praesentium, doloribus consequuntur nemo impedit minus similique
+                nam vitae eius corrupti porro minima laboriosam adipisci ad et
+                voluptates illum repellat unde provident.
               </p>
-              <br />
-              <a href="about/about.html">
+              <br /><br />
+              <a href="#">
                 <div class="card-btn">
                   Read more &nbsp; <i class="fa-solid fa-arrow-right"></i>
                 </div>
@@ -224,10 +203,10 @@
           </div>
           <h3>Too Much Tech</h3>
           <p>
-            An educational platform raising awareness about digital fatigue.
-            Explore our resources to understand the mental and physical impacts
-            of excessive tech use, and learn how to build healthier digital
-            habits today.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+            eius maiores corporis incidunt, animi quos aut nostrum eveniet
+            laborum nisi odit quasi, et optio ducimus delectus debitis obcaecati
+            accusamus recusandae.
           </p>
         </div>
 
@@ -236,9 +215,12 @@
           <ul>
             <li><a href="#">Home</a></li>
             <li>
-              <a href="learn/learn.html">What is Digital Fatigue?</a>
+              <a href="learn/main-topic-1/main-topic-1.html"
+                >What is Digital Fatigue?</a
+              >
             </li>
-            <li><a href="solutions/solutions.html">Solutions to Digital Fatigue</a></li>
+            <li><a href="#">Causes & Effects</a></li>
+            <li><a href="#">Solutions</a></li>
             <li><a href="about/about.html">About Us</a></li>
             <li><a href="contact/contact-us.html">Contact Us</a></li>
           </ul>
