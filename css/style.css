@@ -541,12 +541,13 @@ footer {
   display: none;
 }
 
-/*START OF RESPONSIVE DESIGN*/ 
+/*START OF RESPONSIVE DESIGN*/
 /*References*/
 /*https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/At-rules/@media*/
 /*https://gist.github.com/gokulkrishh/242e68d1ee94ad05f488*/
 /*https://www.w3schools.com/cssref/atrule_media.php*/
 
+/*HEADER & FOOTER*/
 @media (max-width: 991px) {
   .burger-icon {
     display: flex !important;
@@ -592,5 +593,45 @@ footer {
 
   header nav ul li a {
     font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-logo + h3 {
+    display: none !important;
+  }
+
+  .footer-column:first-child p {
+    display: none !important;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .footer-logo img {
+    margin: 0 auto;
+    display: block;
+    height: 80px;
+  }
+
+  footer ul {
+    padding: 0;
+    list-style: none;
+    text-align: center;
   }
 }
