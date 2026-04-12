@@ -190,7 +190,7 @@ nav ul li a.active {
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 500%;
   border: 1px solid #e6e6e6;
 }
 
@@ -228,6 +228,8 @@ nav ul li a.active {
 .card-content {
   padding: 1.5rem;
   flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .card h2 {
@@ -242,7 +244,7 @@ nav ul li a.active {
   color: #666;
   line-height: 1.6;
   font-size: 1rem;
-  margin-bottom: 0;
+  padding-bottom: 20px;
   border-bottom: 1px solid #eee;
 }
 
@@ -270,7 +272,6 @@ nav ul li a.active {
 .article-layout {
   display: flex;
   max-width: 1800px;
-  margin: 0 auto;
   padding: 7em 10% 5rem;
   gap: 4rem;
 }
@@ -594,6 +595,20 @@ footer {
   header nav ul li a {
     font-size: 18px;
   }
+
+  .story-image {
+    display: none !important;
+  }
+
+  .team-card {
+    margin-bottom: 10px;
+  }
+
+  .copy-text {
+    word-break: break-all;
+    font-size: 15px !important;
+    display: block;
+  }
 }
 
 @media (max-width: 768px) {
@@ -634,4 +649,128 @@ footer {
     list-style: none;
     text-align: center;
   }
+}
+
+@media (max-width: 576px) {
+  .hero-text h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .story-content h2 {
+    font-size: 3.5rem;
+  }
+
+  .story-content p {
+    font-size: 1rem;
+  }
+
+  
+}
+
+@media (max-width: 1450px) {
+  .overlay h2 {
+    font-size: 20px !important;
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    margin-top: 5px;
+  }
+  
+  .submit-btn i {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .who-we-are-section {
+    display: block !important;
+    padding: 40px 20px;
+  }
+
+  .who-we-are-image img {
+    margin-bottom: 20px;
+    max-width: 90%;
+    border-radius: 10px;
+  }
+
+  .who-we-are-content h2,
+  p {
+    margin-bottom: 25px;
+    text-align: center;
+  }
+
+  .submit-btn {
+    font-size: 10px;
+    align-items: center !important;
+  }
+}
+
+/*Article Layout*/
+@media (max-width: 991px) {
+    .article-layout {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 20px;
+        margin-top: 70px;
+    }
+
+    .article-sidebar {
+        width: 100% !important;
+        position: relative;
+        height: auto;
+        margin-bottom: 30px;
+        padding: 1px;
+    }
+
+    .navigation-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 25px 0;
+        width: 100%;
+    }
+
+    .article-sidebar ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        padding: 0 1px;
+    }
+
+    .sidebar-item {
+        padding: 10px;
+        background: #f9f9f9;
+        font-size: 14px;
+        display: block;
+    }
+
+    .article-main-content {
+        width: 100% !important;
+        padding: 90px 0 !important;
+    }
+
+    .article-main-content img {
+        height: auto !important;
+        max-height: 250px;
+        object-fit: cover;
+    }
+
+    .video-aspect-ratio iframe {
+        width: 100% !important;
+        height: 200px !important;
+    }
+
+    .article-main-content h2 {
+        font-size: 24px !important;
+        text-align: center;
+    }
+
+    .article-text {
+        font-size: 16px !important;
+        line-height: 1.6;
+    }
 }
