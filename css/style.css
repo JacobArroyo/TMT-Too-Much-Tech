@@ -666,8 +666,6 @@ footer {
   .story-content p {
     font-size: 1rem;
   }
-
-  
 }
 
 @media (max-width: 1450px) {
@@ -678,7 +676,7 @@ footer {
     margin-bottom: 15px;
     margin-top: 5px;
   }
-  
+
   .submit-btn i {
     display: none !important;
   }
@@ -710,66 +708,66 @@ footer {
 
 /*Article Layout*/
 @media (max-width: 991px) {
-    .article-layout {
-        display: flex;
-        flex-direction: column;
-        padding: 10px 20px;
-        margin-top: 70px;
-    }
+  .article-layout {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    margin-top: 70px;
+  }
 
-    .article-sidebar {
-        width: 100% !important;
-        position: relative;
-        height: auto;
-        margin-bottom: 30px;
-        padding: 1px;
-    }
+  .article-sidebar {
+    width: 100% !important;
+    position: relative;
+    height: auto;
+    margin-bottom: 30px;
+    padding: 1px;
+  }
 
-    .navigation-header {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 25px 0;
-        width: 100%;
-    }
+  .navigation-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 0;
+    width: 100%;
+  }
 
-    .article-sidebar ul {
-        display: flex;
-        flex-direction: column;
-        gap: 0px;
-        padding: 0 1px;
-    }
+  .article-sidebar ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    padding: 0 1px;
+  }
 
-    .sidebar-item {
-        padding: 10px;
-        background: #f9f9f9;
-        font-size: 14px;
-        display: block;
-    }
+  .sidebar-item {
+    padding: 10px;
+    background: #f9f9f9;
+    font-size: 14px;
+    display: block;
+  }
 
-    .article-main-content {
-        width: 100% !important;
-        padding: 90px 0 !important;
-    }
+  .article-main-content {
+    width: 100% !important;
+    padding: 90px 0 !important;
+  }
 
-    .article-main-content img {
-        height: auto !important;
-        max-height: 250px;
-        object-fit: cover;
-    }
+  .article-main-content img {
+    height: auto !important;
+    max-height: 250px;
+    object-fit: cover;
+  }
 
-    .video-aspect-ratio iframe {
-        width: 100% !important;
-        height: 200px !important;
-    }
+  .video-aspect-ratio iframe {
+    width: 100% !important;
+    height: 200px !important;
+  }
 
-    .article-main-content h2 {
-        font-size: 24px !important;
-        text-align: center;
-    }
+  .article-main-content h2 {
+    font-size: 24px !important;
+    text-align: center;
+  }
 
-    .article-text {
-        font-size: 16px !important;
-        line-height: 1.6;
-    }
+  .article-text {
+    font-size: 16px !important;
+    line-height: 1.6;
+  }
 }
